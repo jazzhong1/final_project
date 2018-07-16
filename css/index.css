@@ -8,6 +8,7 @@
 
 .carousel-inner img {
   width: 100%;
+  height: 300px;
   /* Set width to 100% */
   min-height: 200px;
 }
@@ -30,13 +31,26 @@
     margin-right: 0px;
     padding-right: 15px;
   }
+  .carousel-inner img{
+    height: 60px;
+  }
+}
+
+@media (max-width: 376px) {
+  #main-carousel{
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-right: 15px;
+  }
+  .carousel-inner img{
+    height: 30px;
+  }
 }
 
 .img-responsive{
   height: 300px;
   weight: 300px;
 }
-
 
 /*navbar co*/
 
