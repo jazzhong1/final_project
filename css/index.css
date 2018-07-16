@@ -1,5 +1,11 @@
 /*메인 carousel*/
 
+#main-carousel{
+  margin-left:60px;
+  margin-right:70px;
+  padding-right: 100px;
+}
+
 .carousel-inner img {
   width: 100%;
   /* Set width to 100% */
@@ -8,31 +14,44 @@
 
 /* Hide the carousel text when the screen is less than 600 pixels wide */
 
-@media (max-width: 600px) {
+/*나중에 내리기*/
+@media (max-width: 736) {
   .carousel-caption, .icon-bar {
     display: none;
   }
 }
 
-.img-responsive {
+@media (max-width: 600px) {
+  .carousel-caption, .icon-bar, #sidebar {
+    display: none;
+  }
+  #main-carousel{
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-right: 15px;
+  }
+}
+
+.img-responsive{
   height: 300px;
   weight: 300px;
 }
 
+
 /*navbar co*/
 
 .navbar-default {
-  background-color: #F8F8F8;
-  border-color: #E7E7E7;
+  background-color:rgb(255, 232, 232);
+  border-color:rgb(255, 232, 232);
 }
 
 .navbar-default .navbar-nav>li>a {
-  color: #777777;
+  color:rgb(230, 193, 193);
 }
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
-  background-color: #E7E7E7;
-  color: #555555;
+  background-color: rgb(255, 232, 232);
+  color: #ffffff;
 }
 
 /* 네일이미지*/

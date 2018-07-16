@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
+  <link href="js/index.js">
   <link href="css/index.css" rel="stylesheet">
   <style media="screen">
     @media screen and (min-width:768px) {
@@ -28,7 +28,6 @@
         margin-left: -80px;
       }
     }
-
 
     /*hover image*/
 
@@ -117,44 +116,12 @@
     }
   </style>
 
-
-
-  <script type="text/javascript">
-    $(document).ready(function() {
-      var trigger = $('.hamburger'),
-        overlay = $('.overlay'),
-        isClosed = false;
-
-      trigger.click(function() {
-        hamburger_cross();
-      });
-
-      function hamburger_cross() {
-
-        if (isClosed == true) {
-          overlay.hide();
-          trigger.removeClass('is-open');
-          trigger.addClass('is-closed');
-          isClosed = false;
-        } else {
-          overlay.show();
-          trigger.removeClass('is-closed');
-          trigger.addClass('is-open');
-          isClosed = true;
-        }
-      }
-
-      $('[data-toggle="offcanvas"]').click(function() {
-        $('#wrapper').toggleClass('toggled');
-      });
-    });
-  </script>
 </head>
 
 <body>
   <header>
     <br>
-    <nav class="navbar navbar-default" role="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top w3-large" role="navigation">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -164,7 +131,9 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-          <div class="navbar-brand navbar-brand-centered">Today nail</div>
+          <div class="navbar-brand navbar-brand-centered" style="background:rgb(255, 232, 232); width:200px;"><a href="" class="typewrite" data-period="2000" data-type='[ "Hi, Im VipulM.", "I am Creative.", "I Love Design.", "I Love to Develop." ]'>
+    <span class="wrap"></span>
+  </a></div>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -184,20 +153,21 @@
       </div>
       <!-- /.container-fluid -->
     </nav>
-
+    <br> <br>
   </header>
-  <div class="container-fluid ">
+  <div class="container-fluid">
 
-    <div class="row">
+    <div id="main" class="row">
 
-      <div id='sidebar' class="w3-sidebar w3-bar-block w3-white w3-middle w3-border w3-round-xlarge" style="width:45px; height:300px; margin-left:10px">
+      <div id='sidebar' class="w3-sidebar w3-bar-block w3-white w3-middle w3-border w3-round-xlarge" style="width:45px; height:300px; margin-left:10px; background:rgb(245, 226, 228)!important">
         <a href="#" class="w3-bar-item w3-button"><i class="fa fa-home"></i></a>
         <a href="#" class="w3-bar-item w3-button"><i class="fa fa-search"></i></a>
         <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
         <a href="#" class="w3-bar-item w3-button"><i class="fa fa-globe"></i></a>
         <a href="#" class="w3-bar-item w3-button"><i class="fa fa-trash"></i></a>
       </div>
-      <div class="col-xs-11" style="margin-left:60px; margin-right:70px;">
+
+      <div id="main-carousel" class="col-xs-12">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
           <!-- Indicators -->
           <ol class="carousel-indicators">
@@ -243,23 +213,22 @@
           <div class="carousel slide multi-item-carousel" id="theCarousel">
             <div class="carousel-inner">
               <div class="item active">
-                <div class="col-sm-4"><a href="#1"><img src="http://placehold.it/300x300"
-        class="img-responsive"></a></div>
+                <div class="col-xs-4"><a href="#1"><img src="images/image-7.jpg" class="img-responsive"></a></div>
               </div>
               <div class="item">
-                <div class="col-sm-4"><a href="#1"><img src="http://placehold.it/300x300" class="img-responsive"></a></div>
+                <div class="col-xs-4"><a href="#1"><img src="http://placehold.it/300x300" class="img-responsive"></a></div>
               </div>
               <div class="item">
-                <div class="col-sm-4"><a href="#1"><img src="http://placehold.it/300x300" class="img-responsive"></a></div>
+                <div class="col-xs-4"><a href="#1"><img src="http://placehold.it/300x300" class="img-responsive"></a></div>
               </div>
               <div class="item">
-                <div class="col-sm-4"><a href="#1"><img src="http://placehold.it/300x300" class="img-responsive"></a></div>
+                <div class="col-xs-4"><a href="#1"><img src="http://placehold.it/300x300" class="img-responsive"></a></div>
               </div>
               <div class="item">
-                <div class="col-sm-4"><a href="#1"><img src="http://placehold.it/300x300" class="img-responsive"></a></div>
+                <div class="col-xs-4"><a href="#1"><img src="http://placehold.it/300x300" class="img-responsive"></a></div>
               </div>
               <div class="item">
-                <div class="col-sm-4"><a href="#1"><img src="http://placehold.it/300x300" class="img-responsive"></a></div>
+                <div class="col-xs-4"><a href="#1"><img src="http://placehold.it/300x300" class="img-responsive"></a></div>
               </div>
               <!-- add  more items here -->
               <!-- Example item start:  -->
@@ -275,125 +244,125 @@
           </div>
           <br>
 
-        <br>
+          <br>
 
-        <!--네일 이미지시작-->
+          <!--네일 이미지시작-->
 
-        <div class="cover-card col-sm-4">
-          <div class="hovereffect">
-            <img class=" img-responsive nail-main-images" src="images/image-7.jpg">
-            <div class="overlay">
-              <h2>Effect 13</h2>
-              <p>
-                <a href="#">LINK HERE</a>
-              </p>
+          <div class="cover-card col-sm-4">
+            <div class="hovereffect">
+              <img class=" img-responsive nail-main-images" src="images/image-7.jpg">
+              <div class="overlay">
+                <h2>Effect 13</h2>
+                <p>
+                  <a href="#">LINK HERE</a>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="cover-card col-sm-2">
-          <div class="hovereffect">
-            <img class=" img-responsive nail-main-images" src="images/image-6.jpg">
-            <div class="overlay">
-              <h2>Effect 13</h2>
-              <p>
-                <a href="#">LINK HERE</a>
-              </p>
+          <div class="cover-card col-sm-2">
+            <div class="hovereffect">
+              <img class=" img-responsive nail-main-images" src="images/image-6.jpg">
+              <div class="overlay">
+                <h2>Effect 13</h2>
+                <p>
+                  <a href="#">LINK HERE</a>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="cover-card col-sm-6">
-          <div class="hovereffect">
-            <img class=" img-responsive nail-main-images" src="images/image-100.jpg">
-            <div class="overlay">
-              <h2>Effect 13</h2>
-              <p>
-                <a href="#">LINK HERE</a>
-              </p>
+          <div class="cover-card col-sm-6">
+            <div class="hovereffect">
+              <img class=" img-responsive nail-main-images" src="images/image-100.jpg">
+              <div class="overlay">
+                <h2>Effect 13</h2>
+                <p>
+                  <a href="#">LINK HERE</a>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="cover-card col-sm-3">
-          <div class="hovereffect">
-            <img class=" img-responsive nail-main-images" src="images/image-8.jpg">
-            <div class="overlay">
-              <h2>Effect 13</h2>
-              <p>
-                <a href="#">LINK HERE</a>
-              </p>
+          <div class="cover-card col-sm-3">
+            <div class="hovereffect">
+              <img class=" img-responsive nail-main-images" src="images/image-8.jpg">
+              <div class="overlay">
+                <h2>Effect 13</h2>
+                <p>
+                  <a href="#">LINK HERE</a>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="cover-card col-sm-4">
-          <div class="hovereffect">
-            <img class=" img-responsive nail-main-images" src="images/image-9.jpg">
-            <div class="overlay">
-              <h2>Effect 13</h2>
-              <p>
-                <a href="#">LINK HERE</a>
-              </p>
+          <div class="cover-card col-sm-4">
+            <div class="hovereffect">
+              <img class=" img-responsive nail-main-images" src="images/image-9.jpg">
+              <div class="overlay">
+                <h2>Effect 13</h2>
+                <p>
+                  <a href="#">LINK HERE</a>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="cover-card col-sm-3">
-          <div class="hovereffect">
-            <img class=" img-responsive nail-main-images" src="images/image-10.jpg">
-            <div class="overlay">
-              <h2>Effect 13</h2>
-              <p>
-                <a href="#">LINK HERE</a>
-              </p>
+          <div class="cover-card col-sm-3">
+            <div class="hovereffect">
+              <img class=" img-responsive nail-main-images" src="images/image-10.jpg">
+              <div class="overlay">
+                <h2>Effect 13</h2>
+                <p>
+                  <a href="#">LINK HERE</a>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="cover-card col-sm-2">
-          <div class="hovereffect">
-            <img class=" img-responsive nail-main-images" src="images/image-11.jpg">
-            <div class="overlay">
-              <h2>Effect 13</h2>
-              <p>
-                <a href="#">LINK HERE</a>
-              </p>
+          <div class="cover-card col-sm-2">
+            <div class="hovereffect">
+              <img class=" img-responsive nail-main-images" src="images/image-11.jpg">
+              <div class="overlay">
+                <h2>Effect 13</h2>
+                <p>
+                  <a href="#">LINK HERE</a>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="cover-card col-sm-3">
-          <div class="hovereffect">
-            <img class=" img-responsive nail-main-images" src="images/image-11.jpg">
-            <div class="overlay">
-              <h2>Effect 13</h2>
-              <p>
-                <a href="#">LINK HERE</a>
-              </p>
+          <div class="cover-card col-sm-3">
+            <div class="hovereffect">
+              <img class=" img-responsive nail-main-images" src="images/image-11.jpg">
+              <div class="overlay">
+                <h2>Effect 13</h2>
+                <p>
+                  <a href="#">LINK HERE</a>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="cover-card col-sm-5">
-          <div class="hovereffect">
-            <img class=" img-responsive nail-main-images" src="images/image-9.jpg">
-            <div class="overlay">
-              <h2>Effect 13</h2>
-              <p>
-                <a href="#">LINK HERE</a>
-              </p>
+          <div class="cover-card col-sm-5">
+            <div class="hovereffect">
+              <img class=" img-responsive nail-main-images" src="images/image-9.jpg">
+              <div class="overlay">
+                <h2>Effect 13</h2>
+                <p>
+                  <a href="#">LINK HERE</a>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="cover-card col-sm-4">
-          <div class="hovereffect">
-            <img class=" img-responsive nail-main-images" src="images/image-8.jpg">
-            <div class="overlay">
-              <h2>Effect 13</h2>
-              <p>
-                <a href="#">LINK HERE</a>
-              </p>
+          <div class="cover-card col-sm-4">
+            <div class="hovereffect">
+              <img class=" img-responsive nail-main-images" src="images/image-13.png">
+              <div class="overlay">
+                <h2>Effect 13</h2>
+                <p>
+                  <a href="#">LINK HERE</a>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
 
+        </div>
       </div>
     </div>
-  </div>
   </div>
 
   <!--</div>-->
@@ -406,26 +375,87 @@
 
 </html>
 <script type="text/javascript">
-<!--작은 케러셀-->
-// Instantiate the Bootstrap carousel
-$('.multi-item-carousel').carousel({
-  interval: false
-});
 
-// for every slide in carousel, copy the next slide's item in the slide.
-// Do the same for the next, next item.
-$('.multi-item-carousel .item').each(function() {
-  var next = $(this).next();
-  if (!next.length) {
-    next = $(this).siblings(':first');
-  }
-  next.children(':first-child').clone().appendTo($(this));
+//작은케러셀
+  // Instantiate the Bootstrap carousel
+  $('.multi-item-carousel').carousel({
+    interval: false
+  });
 
-  if (next.next().length > 0) {
-    next.next().children(':first-child').clone().appendTo($(this));
-  } else {
-    $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
-  }
-});
+  // for every slide in carousel, copy the next slide's item in the slide.
+  // Do the same for the next, next item.
+  $('.multi-item-carousel .item').each(function() {
+    var next = $(this).next();
+    if (!next.length) {
+      next = $(this).siblings(':first');
+    }
+    next.children(':first-child').clone().appendTo($(this));
+
+    if (next.next().length > 0) {
+      next.next().children(':first-child').clone().appendTo($(this));
+    } else {
+      $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+    }
+  });
+
+
+
+  //made by vipul mirajkar thevipulm.appspot.com
+var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
 
 </script>
