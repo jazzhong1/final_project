@@ -17,154 +17,182 @@
   <link href="css/index2.css" rel="stylesheet">
 
   <style>
-
-
-.badge-default {
-  background-color: rgb(255, 232, 232);
-}
-.badge-primary {
-  background-color: #337ab7;
-}
-.badge-success {
-  background-color: #5cb85c;
-}
-.badge-info {
-  background-color: #5bc0de;
-}
-.badge-warning {
-  background-color: #f0ad4e;
-}
-.badge-danger {
-  background-color: #d9534f;
-}
-
-.navbar-icon-top .navbar-nav>li>a>.fa, .navbar-icon-top .navbar-nav>li>a>.glyphicon {
-    position: relative;
-    width: 36px;
-    font-size: 24px;
-}
-.navbar-icon-top .navbar-nav>li>a>.fa>.badge, .navbar-icon-top .navbar-nav>li>a>.glyphicon>.badge {
-    position: absolute;
-    right: 0;
-    font-family: sans-serif;
-}
-.navbar-icon-top .navbar-nav>li>a>.fa {
-    top: 3px;
-    line-height: 12px;
-}
-.navbar-icon-top .navbar-nav>li>a>.fa>.badge {
-    top: -10px;
-}
-.navbar-icon-top .navbar-nav>li>a>.glyphicon {
-    top: 6px;
-    line-height: 6px;
-}
-.navbar-icon-top .navbar-nav>li>a>.glyphicon>.badge {
-    top: -16px;
-}
-
-@media (min-width: 768px) {
-    .navbar-icon-top .navbar-brand {
-        padding: 25px 15px;
+    .badge-default {
+      background-color: rgb(255, 232, 232);
     }
-    .navbar-icon-top .navbar-text {
+
+    .badge-primary {
+      background-color: #337ab7;
+    }
+
+    .badge-success {
+      background-color: #5cb85c;
+    }
+
+    .badge-info {
+      background-color: #5bc0de;
+    }
+
+    .badge-warning {
+      background-color: #f0ad4e;
+    }
+
+    .badge-danger {
+      background-color: #d9534f;
+    }
+
+    .navbar-icon-top .navbar-nav>li>a>.fa,
+    .navbar-icon-top .navbar-nav>li>a>.glyphicon {
+      position: relative;
+      width: 36px;
+      font-size: 24px;
+    }
+
+    .navbar-icon-top .navbar-nav>li>a>.fa>.badge,
+    .navbar-icon-top .navbar-nav>li>a>.glyphicon>.badge {
+      position: absolute;
+      right: 0;
+      font-family: sans-serif;
+    }
+
+    .navbar-icon-top .navbar-nav>li>a>.fa {
+      top: 3px;
+      line-height: 12px;
+    }
+
+    .navbar-icon-top .navbar-nav>li>a>.fa>.badge {
+      top: -10px;
+    }
+
+    .navbar-icon-top .navbar-nav>li>a>.glyphicon {
+      top: 6px;
+      line-height: 6px;
+    }
+
+    .navbar-icon-top .navbar-nav>li>a>.glyphicon>.badge {
+      top: -16px;
+    }
+
+    @media (min-width: 768px) {
+      .navbar-icon-top .navbar-brand {
+        padding: 25px 15px;
+      }
+      .navbar-icon-top .navbar-text {
         margin-top: 25px;
         margin-bottom: 25px;
-    }
-    .navbar-icon-top .navbar-btn, .navbar-icon-top .navbar-form {
+      }
+      .navbar-icon-top .navbar-btn,
+      .navbar-icon-top .navbar-form {
         margin-top: 18px;
         margin-bottom: 18px;
-    }
-    .navbar-icon-top .navbar-nav>li>a {
+      }
+      .navbar-icon-top .navbar-nav>li>a {
         text-align: center;
         display: table-cell;
         height: 70px;
         vertical-align: middle;
         padding-top: 0;
         padding-bottom: 0;
-    }
-    .navbar-icon-top .navbar-nav>li>a>.fa, .navbar-icon-top .navbar-nav>li>a>.glyphicon {
+      }
+      .navbar-icon-top .navbar-nav>li>a>.fa,
+      .navbar-icon-top .navbar-nav>li>a>.glyphicon {
         display: block;
         width: 48px;
         margin: 2px auto 4px auto;
         top: 0;
         line-height: 24px;
-    }
-    .navbar-icon-top .navbar-nav>li>a>.fa>.badge, .navbar-icon-top .navbar-nav>li>a>.glyphicon>.badge {
+      }
+      .navbar-icon-top .navbar-nav>li>a>.fa>.badge,
+      .navbar-icon-top .navbar-nav>li>a>.glyphicon>.badge {
         top: -7px;
+      }
     }
+
+    .navbar-default .navbar-nav>.open>a,
+    .navbar-default .navbar-nav>.open>a:focus,
+    .navbar-default .navbar-nav>.open>a:hover {
+      color: #555;
+      background-color: #fef2f2;
+    }
+
+    /*nav 끝*/
+
 }
   </style>
 
 </head>
 
 <body>
-  <header>
 
+  <header>
     <nav class="navbar navbar-icon-top navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Nail</a>
+          <a class="navbar-brand" href="#">로고~~</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+            <!--active사용시 home하얀색으로 변함-->
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Market</a></li>
+            <li><a href="#">Service center</a></li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">Link</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">One more separated link</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <form class="navbar-form navbar-left">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                    </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </form>
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#">
+            <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search w3-spin"></span></button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#">
                             <i class="fa fa-envelope-o">
                                 <span class="badge badge-danger">11</span>
                             </i>
                             Messages
                         </a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            <i class="fa fa-user-circle-o"></i>
-                            Account <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <!--<i class="fa fa-user-circle-o"></i>-->
+                <img class="img-circle" src="images/image-7.jpg" alt="" style="width:50px; height:50px;">
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" style="border-radius:10px;">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">마이페이지</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
     </nav>
-    <br><br><br>
-    <br>
+    <br><br><br><br>
     <!--
 
                 <li>
@@ -271,9 +299,9 @@
 
             <!--nail 선택-->
             <div class="w3-dropdown-hover">
-              <div>
-                <img src="images/all-color.jpg" class="w3-circle" alt="Cinque Terre" width="20" height="20"><button class="select-menu w3-button w3-round w3-hover-white">전체</button></div>
-              <div style="padding-right: 5px; padding-top: 5px;border-radius: 8px; height:5%;" class="w3-dropdown-content w3-card-12">
+              <div class="w3-border w3-hover-border-pale-red  w3-round" style="padding-left:10px;">
+                <img src="images/all-color.jpg" class="w3-circle" alt="Cinque Terre" width="20" height="20"><button class="select-menu w3-button w3-round w3-hover-white">전체&nbsp;</button></div>
+              <div style="padding-right: 5px; padding-top: 5px; height:5%;" class="w3-dropdown-content w3-card-12 w3-border w3-round">
                 <ul id="dropdown-menu">
                   <li class="nail-color">
                     <a>
@@ -322,9 +350,13 @@
 
             </div>
 
+
+
+
             <div class="w3-dropdown-hover">
-              <button class="select-menu w3-button w3-round w3-hover-white">네일/페디</button>
-              <div class="w3-dropdown-content w3-card-12">
+              <div class="w3-border w3-hover-border-pale-red  w3-round" style="padding-left:10px;">
+                <img src="images\meniq-logo.jpg" class="w3-circle" alt="Cinque Terre" width="20" height="20"><button class="select-menu w3-button w3-round w3-hover-white">네일/패디</button></div>
+              <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-border w3-round">
                 <a href="#" class="w3-bar-item w3-button">Link 1</a>
                 <a href="#" class="w3-bar-item w3-button">Link 2</a>
                 <a href="#" class="w3-bar-item w3-button">Link 3</a>
@@ -333,8 +365,9 @@
 
 
             <div class="w3-dropdown-hover">
-              <button class="select-menu w3-button w3-round w3-hover-white">전체옵션</button>
-              <div class="w3-dropdown-content w3-card-12">
+              <div class="w3-border w3-hover-border-pale-blue  w3-round" style="padding-left:10px;">
+                <button class="select-menu w3-button w3-round w3-hover-white"><i class="fa fa-plus-square-o"></i> 전체옵션</button></div>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-border w3-round">
                 <a href="#" class="w3-bar-item w3-button">Link 1</a>
                 <a href="#" class="w3-bar-item w3-button">Link 2</a>
                 <a href="#" class="w3-bar-item w3-button">Link 3</a>
