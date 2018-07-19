@@ -44,7 +44,7 @@
     }
 
     #wrapper {
-      width: 1100px;
+      width: 90%;
       height: 80%;
       position: absolute;
       top: 0;
@@ -115,7 +115,7 @@
     #border #line.one {
       width: 5px;
       height: 54px;
-      background-color: #E74C3C;
+      background-color: #feb0a7;
       margin-left: -2px;
       margin-top: 35px;
       -webkit-transition: all .4s ease-in-out;
@@ -124,7 +124,7 @@
     #border #line.two {
       width: 5px;
       height: 54px;
-      background-color: #E74C3C;
+      background-color: #feb0a7;
       margin-left: -2px;
       margin-top: 89px;
       -webkit-transition: all .4s ease-in-out;
@@ -133,7 +133,7 @@
     #border #line.three {
       width: 5px;
       height: 54px;
-      background-color: #E74C3C;
+      background-color: #feb0a7;
       margin-left: -2px;
       margin-top: 143px;
       -webkit-transition: all .4s ease-in-out;
@@ -142,7 +142,7 @@
     #border #line.four {
       width: 5px;
       height: 54px;
-      background-color: #E74C3C;
+      background-color: #feb0a7;
       margin-left: -2px;
       margin-top: 197px;
       -webkit-transition: all .4s ease-in-out;
@@ -194,7 +194,132 @@
       opacity: 1;
       -webkit-transition: all .6s ease-in-out;
       transition: all .6s ease-in-out;
+    }.NailStoreMap{
+			width: 500px;
+			margin-top: 5px;
+			margin-left: 5px;
+			height: 70%;
+			position: relative;
+			text-align: center;
+			box-shadow: 5px 5px 30px -10px #ff9494;
+			border-radius: 14px;
+			-webkit-transition: all .2s;
+  		transition: all .2s;
+			-webkit-animation: intro 1s 0.1s forwards;
+          animation: intro 1s 0.1s forwards;
+		}
+		@-webkit-keyframes intro {
+		  0% {
+		    -webkit-transform: scale(0);
+		            transform: scale(0);
+		  }
+		  25% {
+		    -webkit-transform: scale(1.06);
+		            transform: scale(1.06);
+		  }
+		  50% {
+		    -webkit-transform: scale(0.965);
+		            transform: scale(0.965);
+		  }
+		  75% {
+		    -webkit-transform: scale(1.02);
+		            transform: scale(1.02);
+		  }
+		  100% {
+		    -webkit-transform: scale(1);
+		            transform: scale(1);
+		  }
+		}
+		@keyframes intro {
+		  0% {
+		    -webkit-transform: scale(0);
+		            transform: scale(0);
+		  }
+		  25% {
+		    -webkit-transform: scale(1.06);
+		            transform: scale(1.06);
+		  }
+		  50% {
+		    -webkit-transform: scale(0.965);
+		            transform: scale(0.965);
+		  }
+		  75% {
+		    -webkit-transform: scale(1.02);
+		            transform: scale(1.02);
+		  }
+		  100% {
+		    -webkit-transform: scale(1);
+		            transform: scale(1);
+		  }
+		}
+.revealText{
+					width:500px;
+					height: auto;
+					margin-left: 5px;
+					position: relative;
+          text-align:center;
+          border-bottom: 3px solid #ffadad;
+          overflow: hidden;
+          box-shadow: 0px 1px 0px rgba(0, 0, 0, .5);
+          animation: reveal 2s linear forwards;
+        }
+@keyframes reveal {
+	0% {
+		-webkit-transform: scale(0);
+						transform: scale(0);
+	}
+	25% {
+		-webkit-transform: scale(1.06);
+						transform: scale(1.06);
+	}
+	50% {
+		-webkit-transform: scale(0.965);
+						transform: scale(0.965);
+	}
+	75% {
+		-webkit-transform: scale(1.02);
+						transform: scale(1.02);
+	}
+	100% {
+		-webkit-transform: scale(1);
+						transform: scale(1);
+	}
+}
+	.revealText p{
+    /* font-family: sans-serif; */
+    font-size: 1em;
+    color: #f96767;
+    /* text-shadow: 2px 2px 2px rgba(0,0,0,.5); */
+		}
+		@media (max-width: 860px) {
+    body {
+        background-color: lightblue;
     }
+		#right-side{
+			display:none;
+		}
+		#wrapper{
+			width:100%;
+
+		}#left-side{
+			/* 스크롤 바 숨기기 */
+			overflow: scroll;
+ 			overflow-x: hidden;
+		}
+		::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+		}
+		.NailStoreMap{
+				width: 80%;
+				margin-right: 50px;
+		}
+		.revealText{
+				width:80%;
+				margin-right: 50px;
+		}
+	}/* media end */
+
     </style>
   </head>
 
@@ -246,21 +371,26 @@
         </div>
         <div id="second">
 
-				<div>
+				<div class="NailStoreMap">
 						map 삽입
+
 				</div>
+				<div class="revealText">
+						<p>주소입력</P>
+				</div>
+
 			</div>
         <div id="third">
 
 
-          <h1>We will wrap it</h1>
+          <h1>We will reserve it</h1>
 
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at viverra est, eu finibus mauris. Quisque tempus vestibulum fringilla. Morbi tortor eros, sollicitudin eu arcu sit amet, aliquet sagittis dolor. </p>
 
         </div>
         <div id="fourth">
 
-          <h1>Ship it</h1>
+          <h1>qna it</h1>
 
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at viverra est, eu finibus mauris. Quisque tempus vestibulum fringilla. Morbi tortor eros, sollicitudin eu arcu sit amet, aliquet sagittis dolor. </p>
 
@@ -271,7 +401,7 @@
       </div>
       <div id="right-side">
         <ul>
-          <li class="choose active">
+          <li class="shop active">
             <div class="icon active">
               <svg viewBox="0 0 32 32">
                 <g filter="">
@@ -281,7 +411,7 @@
             </div>
             Shop
           </li>
-          <li class="pay">
+          <li class="map">
             <div class="icon">
               <svg viewBox="0 0 32 32">
                 <g filter="">
@@ -291,7 +421,7 @@
             </div>
             Map(지도)
           </li>
-          <li class="wrap">
+          <li class="reserve">
             <div class="icon">
               <svg viewBox="0 0 32 32">
                 <g filter="">
@@ -301,7 +431,7 @@
             </div>
             Reserve(예약)
           </li>
-          <li class="ship">
+          <li class="qna">
             <div class="icon">
               <svg viewBox="0 0 32 32">
                 <g filter="">
@@ -315,88 +445,88 @@
       </div>
     </div>
 <script>
-      $(".choose").click(function() {
-      $(".choose").addClass("active");
-      $(".choose > .icon").addClass("active");
-      $(".pay").removeClass("active");
-      $(".wrap").removeClass("active");
-      $(".ship").removeClass("active");
-      $(".pay > .icon").removeClass("active");
-      $(".wrap > .icon").removeClass("active");
-      $(".ship > .icon").removeClass("active");
+      $(".shop").click(function() {
+      $(".shop").addClass("active");
+      $(".shop > .icon").addClass("active");
+      $(".map").removeClass("active");
+      $(".reserve").removeClass("active");
+      $(".qna").removeClass("active");
+      $(".map > .icon").removeClass("active");
+      $(".reserve > .icon").removeClass("active");
+      $(".qna > .icon").removeClass("active");
       $("#line").addClass("one");
       $("#line").removeClass("two");
       $("#line").removeClass("three");
       $("#line").removeClass("four");
     })
 
-    $(".pay").click(function() {
-      $(".pay").addClass("active");
-      $(".pay > .icon").addClass("active");
-      $(".choose").removeClass("active");
-      $(".wrap").removeClass("active");
-      $(".ship").removeClass("active");
-      $(".choose > .icon").removeClass("active");
-      $(".wrap > .icon").removeClass("active");
-      $(".ship > .icon").removeClass("active");
+    $(".map").click(function() {
+      $(".map").addClass("active");
+      $(".map > .icon").addClass("active");
+      $(".shop").removeClass("active");
+      $(".reserve").removeClass("active");
+      $(".qna").removeClass("active");
+      $(".shop > .icon").removeClass("active");
+      $(".reserve > .icon").removeClass("active");
+      $(".qna > .icon").removeClass("active");
       $("#line").addClass("two");
       $("#line").removeClass("one");
       $("#line").removeClass("three");
       $("#line").removeClass("four");
     })
 
-    $(".wrap").click(function() {
-      $(".wrap").addClass("active");
-      $(".wrap > .icon").addClass("active");
-      $(".pay").removeClass("active");
-      $(".choose").removeClass("active");
-      $(".ship").removeClass("active");
-      $(".pay > .icon").removeClass("active");
-      $(".choose > .icon").removeClass("active");
-      $(".ship > .icon").removeClass("active");
+    $(".reserve").click(function() {
+      $(".reserve").addClass("active");
+      $(".reserve > .icon").addClass("active");
+      $(".map").removeClass("active");
+      $(".shop").removeClass("active");
+      $(".qna").removeClass("active");
+      $(".map > .icon").removeClass("active");
+      $(".shop > .icon").removeClass("active");
+      $(".qna > .icon").removeClass("active");
       $("#line").addClass("three");
       $("#line").removeClass("two");
       $("#line").removeClass("one");
       $("#line").removeClass("four");
     })
 
-    $(".ship").click(function() {
-      $(".ship").addClass("active");
-      $(".ship > .icon").addClass("active");
-      $(".pay").removeClass("active");
-      $(".wrap").removeClass("active");
-      $(".choose").removeClass("active");
-      $(".pay > .icon").removeClass("active");
-      $(".wrap > .icon").removeClass("active");
-      $(".choose > .icon").removeClass("active");
+    $(".qna").click(function() {
+      $(".qna").addClass("active");
+      $(".qna > .icon").addClass("active");
+      $(".map").removeClass("active");
+      $(".reserve").removeClass("active");
+      $(".shop").removeClass("active");
+      $(".map > .icon").removeClass("active");
+      $(".reserve > .icon").removeClass("active");
+      $(".shop > .icon").removeClass("active");
       $("#line").addClass("four");
       $("#line").removeClass("two");
       $("#line").removeClass("three");
       $("#line").removeClass("one");
     })
 
-    $(".choose").click(function() {
+    $(".shop").click(function() {
       $("#first").addClass("active");
       $("#second").removeClass("active");
       $("#third").removeClass("active");
       $("#fourth").removeClass("active");
     })
 
-    $(".pay").click(function() {
+    $(".map").click(function() {
       $("#first").removeClass("active");
       $("#second").addClass("active");
       $("#third").removeClass("active");
       $("#fourth").removeClass("active");
     })
 
-    $(".wrap").click(function() {
+    $(".reserve").click(function() {
       $("#first").removeClass("active");
       $("#second").removeClass("active");
       $("#third").addClass("active");
       $("#fourth").removeClass("active");
     })
 
-    $(".ship").click(function() {
+    $(".qna").click(function() {
       $("#first").removeClass("active");
       $("#second").removeClass("active");
       $("#third").removeClass("active");
