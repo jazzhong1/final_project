@@ -1,62 +1,159 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <title>W3.CSS</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-<style media="screen">
-  #first-dropdown{
-    display: none;
-  }
-</style>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link href="js/index.js">
+  <link href="css/index.css"  type="text/css" rel="stylesheet">
+  <!------ Include the above in your HEAD tag ---------->
+
+  <style media="screen">
+
+
+    .open>.dropdown-menu,
+    .nav>li:click .dropdown-menu {
+      display: inline-block;
+      text-align: center;
+      padding-right: 5px;
+    }
+
+    .dropdown-menu>li {
+      display: inline-block;
+    }
+
+
+    .dropdown-menu>li>a:click {
+      color: inherit;
+      text-decoration: none;
+      background-color: inherit;
+    }
+
+    .nail-color {
+      text-align: center;
+    }
+
+    .dropdown-menu {
+      padding-left: 10px;
+    }
+
+    #first-dropdown {
+      display: none;
+    }
+
+    .w3-dropdown-hover:hover>.w3-button:first-child,
+    .w3-dropdown-click:hover>.w3-button:first-child {
+      background-color: white;
+      color: #000;
+    }
+
+    .w3-button:hover {
+      color: #000 !important;
+      background-color: white;
+    }
+
+    .select-menu {
+      padding-left: 5px;
+    }
+
+
+  </style>
+</head>
+
 <body>
 
-<div class="w3-container">
-  <h2>Navigation Bar with Dropdown</h2>
-  <p>In this example, we remove the w3-bar-block class from w3-dropdown-content, to horizontally align the dropdown links (instead of vertically).</p>
+  <div class="w3-container">
 
-  <div class="w3-bar <w3-light-white></w3-light-white>">
+    <div class="w3-bar <w3-light-white></w3-light-white>">
 
-    <div id="first-dropdown" class="w3-dropdown-hover">
-      <button class="w3-button">Dropdown</button>
-      <div class="w3-dropdown-content w3-card-4">
-        <a href="#" class="w3-bar-item w3-button">Link 1</a>
-        <a href="#" class="w3-bar-item w3-button">Link 2</a>
-        <a href="#" class="w3-bar-item w3-button">Link 3</a>
-      </div>
-    </div>
-
-    <div class="w3-dropdown-hover">
-      <button class="w3-button">Dropdown</button>
-      <div class="w3-dropdown-content w3-card-4">
-        <a href="#" class="w3-bar-item w3-button">Link 1</a>
-        <a href="#" class="w3-bar-item w3-button">Link 2</a>
-        <a href="#" class="w3-bar-item w3-button">Link 3</a>
-      </div>
-    </div>
-
-    <div class="w3-dropdown-hover">
-      <button class="w3-button">Dropdown</button>
-      <div class="w3-dropdown-content w3-card-4">
-        <a href="#" class="w3-bar-item w3-button">Link 1</a>
-        <a href="#" class="w3-bar-item w3-button">Link 2</a>
-        <a href="#" class="w3-bar-item w3-button">Link 3</a>
-      </div>
-    </div>
-
-
-        <div class="w3-dropdown-hover">
-          <button class="w3-button">Dropdown</button>
-          <div class="w3-dropdown-content w3-card-4">
-            <a href="#" class="w3-bar-item w3-button">Link 1</a>
-            <a href="#" class="w3-bar-item w3-button">Link 2</a>
-            <a href="#" class="w3-bar-item w3-button">Link 3</a>
-          </div>
+      <div id="first-dropdown" class="w3-dropdown-hover">
+        <button class="w3-button">Dropdown</button>
+        <div class="w3-dropdown-content w3-card-4">
+          <a href="#" class="w3-bar-item w3-button">Link 1</a>
+          <a href="#" class="w3-bar-item w3-button">Link 2</a>
+          <a href="#" class="w3-bar-item w3-button">Link 3</a>
+          <a href="#" class="w3-bar-item w3-button">Link 3</a>
+          <a href="#" class="w3-bar-item w3-button">Link 3</a>
         </div>
+      </div>
+
+      <div class="w3-dropdown-hover">
+        <img src="images/all-color.jpg" class="w3-circle" alt="Cinque Terre" width="20" height="20"><button class="select-menu w3-button w3-round w3-hover-white">전체</button>
+        <div class="w3-dropdown-content w3-card-12 ">
+          <ul class="dropdown-menu">
+
+            <li class="nail-color">
+              <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
+            <li class="nail-color">
+              <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
+            <li class="nail-color">
+              <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
+            <li class="nail-color">
+              <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
+            <li class="nail-color">
+              <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
+            <li class="nail-color">
+              <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
+            <li class="nail-color">
+              <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
+            <li class="nail-color">
+              <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
+            <li class="nail-color">
+              <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
+            <li class="nail-color">
+              <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
+            <li class="nail-color">
+              <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
+
+            <li class="nail-color">
+              <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
+
+            <li class="nail-color">
+              <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
+
+            <li class="nail-color">
+              <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
+
+            <li class="nail-color">
+              <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
+            <li class="nail-color">
+              <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
+            <li class="nail-color">
+              <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
+            <li class="nail-color">
+              <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="w3-dropdown-hover">
+        <button class="select-menu w3-button w3-round w3-hover-white">네일/페디</button>
+        <div class="w3-dropdown-content w3-card-12">
+          <a href="#" class="w3-bar-item w3-button">Link 1</a>
+          <a href="#" class="w3-bar-item w3-button">Link 2</a>
+          <a href="#" class="w3-bar-item w3-button">Link 3</a>
+        </div>
+      </div>
 
 
+      <div class="w3-dropdown-hover">
+        <button class="select-menu w3-button w3-round w3-hover-white">전체옵션</button>
+        <div class="w3-dropdown-content w3-card-12">
+          <a href="#" class="w3-bar-item w3-button">Link 1</a>
+          <a href="#" class="w3-bar-item w3-button">Link 2</a>
+          <a href="#" class="w3-bar-item w3-button">Link 3</a>
+        </div>
+      </div>
+
+
+    </div>
   </div>
-</div>
 
 </body>
+
 </html>

@@ -1,10 +1,6 @@
 /*메인 carousel*/
 
-#main-carousel{
-  margin-left:60px;
-  margin-right:70px;
-  padding-right: 100px;
-}
+
 
 .carousel-inner img {
   width: 100%;
@@ -12,7 +8,6 @@
   /* Set width to 100% */
   min-height: 200px;
 }
-
 
 
 /* Hide the carousel text when the screen is less than 600 pixels wide */
@@ -25,13 +20,8 @@
 }
 
 @media (max-width: 600px) {
-  .carousel-caption, .icon-bar, #sidebar {
+  .carousel-caption, .icon-bar{
     display: none;
-  }
-  #main-carousel{
-    margin-left: 0px;
-    margin-right: 0px;
-    padding-right: 15px;
   }
   .carousel-inner img{
     height: 60px;
@@ -39,11 +29,6 @@
 }
 
 @media (max-width: 376px) {
-  #main-carousel{
-    margin-left: 0px;
-    margin-right: 0px;
-    padding-right: 15px;
-  }
   .carousel-inner img{
     height: 30px;
   }
@@ -164,4 +149,22 @@
   }
   .carousel-indicators .active {
     background: #428bca;
+  }
+
+
+  /**/
+  @media screen and (min-width:768px) {
+    .navbar-brand-centered {
+      position: absolute;
+      left: 50%;
+      display: block;
+      width: 160px;
+      text-align: center;
+      background-color: #eee;
+    }
+    .navbar>.container .navbar-brand-centered,
+    .navbar>.container-fluid .navbar-brand-centered {
+      margin-left: -80px;
+    }
+
   }
