@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+
+<head>
+    <meta charset="utf-8">
+    <title>NailStore</title>
+    <style class="cp-pen-styles">html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #eee;
+      font-family: 'Raleway';
+    }
+
+    ul, li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .icon {
+      position: relative;
+      width: 32px;
+      height: 32px;
+      display: block;
+      fill: rgba(51, 51, 51, 0.5);
+      margin-right: 20px;
+      -webkit-transition: all .2s ease-out;
+      transition: all .2s ease-out;
+    }
+
+    .icon.active {
+      fill: #E74C3C;
+    }
+
+    .icon.big {
+      width: 64px;
+      height: 64px;
+      fill: rgba(51, 51, 51, 0.5);
+    }
+
+    #wrapper {
+      width: 1100px;
+      height: 80%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      background-color: #fff;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: left;
+          -ms-flex-pack: left;
+              justify-content: left;
+      overflow: hidden;
+    }
+
+    #right-side {
+      height: 70%;
+      width: 25%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+    }
+    #right-side ul li {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      line-height: 34px;
+      color: rgba(51, 51, 51, 0.5);
+      font-weight: 500;
+      cursor: pointer;
+      -webkit-transition: all .2s ease-out;
+      transition: all .2s ease-out;
+    }
+    #right-side ul li:hover {
+      color: #333333;
+      -webkit-transition: all .2s ease-out;
+      transition: all .2s ease-out;
+    }
+    #right-side ul li:hover > .icon {
+      fill: #333;
+    }
+    #right-side ul li.active {
+      color: #333333;
+    }
+    #right-side ul li.active:hover > .icon {
+      fill: #E74C3C;
+    }
+
+    #border {
+      height: 288px;
+      width: 1px;
+      background-color: rgba(51, 51, 51, 0.2);
+    }
+    #border #line.one {
+      width: 5px;
+      height: 54px;
+      background-color: #E74C3C;
+      margin-left: -2px;
+      margin-top: 35px;
+      -webkit-transition: all .4s ease-in-out;
+      transition: all .4s ease-in-out;
+    }
+    #border #line.two {
+      width: 5px;
+      height: 54px;
+      background-color: #E74C3C;
+      margin-left: -2px;
+      margin-top: 89px;
+      -webkit-transition: all .4s ease-in-out;
+      transition: all .4s ease-in-out;
+    }
+    #border #line.three {
+      width: 5px;
+      height: 54px;
+      background-color: #E74C3C;
+      margin-left: -2px;
+      margin-top: 143px;
+      -webkit-transition: all .4s ease-in-out;
+      transition: all .4s ease-in-out;
+    }
+    #border #line.four {
+      width: 5px;
+      height: 54px;
+      background-color: #E74C3C;
+      margin-left: -2px;
+      margin-top: 197px;
+      -webkit-transition: all .4s ease-in-out;
+      transition: all .4s ease-in-out;
+    }
+
+    #left-side {
+			margin-top: 100px;
+			margin-left: 100px;
+      height: 100%;
+			width: 100%;
+      overflow: hidden;
+    }
+    #left-side #first, #left-side #second, #left-side #third, #left-side #fourth {
+
+      height: 100%;
+      width: 100%;
+      -webkit-transition: all .6s ease-in-out;
+      transition: all .6s ease-in-out;
+      margin-top: -350px;
+      opacity: 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: none;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+    }
+    #left-side #first h1, #left-side #second h1, #left-side #third h1, #left-side #fourth h1 {
+      font-weight: 800;
+      color: #333;
+    }
+    #left-side #first p, #left-side #second p, #left-side #third p, #left-side #fourth p {
+      color: #333;
+      font-weight: 500;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    #left-side #first.active, #left-side #second.active, #left-side #third.active, #left-side #fourth.active {
+      margin-top: 0px;
+			display: block;
+      opacity: 1;
+      -webkit-transition: all .6s ease-in-out;
+      transition: all .6s ease-in-out;
+    }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="container">
+
+    </div>
+    <div id="wrapper" class="container">
+
+      <div id="left-side">
+        <div id="first" class="active">
+								<div class="row">
+  							<div class="col-sm-3">
+
+									<div class="">
+										북마크 아이콘
+									</div>
+									<div style="height:200px;width:200px;">
+											이미지
+									</div>
+                </div>
+                <div class="col-sm-4">
+                  <h3>가게 이름</h3>
+                  <p>가게에 대한 설명 ex) 상세정보 시술가격표 등등...</p>
+                </div>
+              </div>
+							<div class="row">
+							<p>공지사항입니다~~~~~~~~~~~~</p></div>
+								<div class="row">
+  							<div class="col-sm-2">
+                  <h3>사진 1</h3>
+
+
+                </div>
+								<div class="col-sm-2">
+									<h3>사진 2</h3>
+
+								</div>
+                <div class="col-sm-2">
+                  <h3>사진 3</h3>
+
+                </div>
+								<div class="col-sm-4">
+									<h3>더보기</h3>
+
+								</div>
+              </div>
+        </div>
+        <div id="second">
+
+				<div>
+						map 삽입
+				</div>
+			</div>
+        <div id="third">
+
+
+          <h1>We will wrap it</h1>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at viverra est, eu finibus mauris. Quisque tempus vestibulum fringilla. Morbi tortor eros, sollicitudin eu arcu sit amet, aliquet sagittis dolor. </p>
+
+        </div>
+        <div id="fourth">
+
+          <h1>Ship it</h1>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at viverra est, eu finibus mauris. Quisque tempus vestibulum fringilla. Morbi tortor eros, sollicitudin eu arcu sit amet, aliquet sagittis dolor. </p>
+
+        </div>
+      </div>
+      <div id="border">
+        <div id="line" class="one"></div>
+      </div>
+      <div id="right-side">
+        <ul>
+          <li class="choose active">
+            <div class="icon active">
+              <svg viewBox="0 0 32 32">
+                <g filter="">
+                  <use xlink:href="#shopping-cart"></use>
+                </g>
+              </svg>
+            </div>
+            Shop
+          </li>
+          <li class="pay">
+            <div class="icon">
+              <svg viewBox="0 0 32 32">
+                <g filter="">
+                  <use xlink:href="#credit-card"></use>
+                </g>
+              </svg>
+            </div>
+            Map(지도)
+          </li>
+          <li class="wrap">
+            <div class="icon">
+              <svg viewBox="0 0 32 32">
+                <g filter="">
+                  <use xlink:href="#gift"></use>
+                </g>
+              </svg>
+            </div>
+            Reserve(예약)
+          </li>
+          <li class="ship">
+            <div class="icon">
+              <svg viewBox="0 0 32 32">
+                <g filter="">
+                  <use xlink:href="#package"></use>
+                </g>
+              </svg>
+            </div>
+            QnA(문의)
+          </li>
+        </ul>
+      </div>
+    </div>
+<script>
+      $(".choose").click(function() {
+      $(".choose").addClass("active");
+      $(".choose > .icon").addClass("active");
+      $(".pay").removeClass("active");
+      $(".wrap").removeClass("active");
+      $(".ship").removeClass("active");
+      $(".pay > .icon").removeClass("active");
+      $(".wrap > .icon").removeClass("active");
+      $(".ship > .icon").removeClass("active");
+      $("#line").addClass("one");
+      $("#line").removeClass("two");
+      $("#line").removeClass("three");
+      $("#line").removeClass("four");
+    })
+
+    $(".pay").click(function() {
+      $(".pay").addClass("active");
+      $(".pay > .icon").addClass("active");
+      $(".choose").removeClass("active");
+      $(".wrap").removeClass("active");
+      $(".ship").removeClass("active");
+      $(".choose > .icon").removeClass("active");
+      $(".wrap > .icon").removeClass("active");
+      $(".ship > .icon").removeClass("active");
+      $("#line").addClass("two");
+      $("#line").removeClass("one");
+      $("#line").removeClass("three");
+      $("#line").removeClass("four");
+    })
+
+    $(".wrap").click(function() {
+      $(".wrap").addClass("active");
+      $(".wrap > .icon").addClass("active");
+      $(".pay").removeClass("active");
+      $(".choose").removeClass("active");
+      $(".ship").removeClass("active");
+      $(".pay > .icon").removeClass("active");
+      $(".choose > .icon").removeClass("active");
+      $(".ship > .icon").removeClass("active");
+      $("#line").addClass("three");
+      $("#line").removeClass("two");
+      $("#line").removeClass("one");
+      $("#line").removeClass("four");
+    })
+
+    $(".ship").click(function() {
+      $(".ship").addClass("active");
+      $(".ship > .icon").addClass("active");
+      $(".pay").removeClass("active");
+      $(".wrap").removeClass("active");
+      $(".choose").removeClass("active");
+      $(".pay > .icon").removeClass("active");
+      $(".wrap > .icon").removeClass("active");
+      $(".choose > .icon").removeClass("active");
+      $("#line").addClass("four");
+      $("#line").removeClass("two");
+      $("#line").removeClass("three");
+      $("#line").removeClass("one");
+    })
+
+    $(".choose").click(function() {
+      $("#first").addClass("active");
+      $("#second").removeClass("active");
+      $("#third").removeClass("active");
+      $("#fourth").removeClass("active");
+    })
+
+    $(".pay").click(function() {
+      $("#first").removeClass("active");
+      $("#second").addClass("active");
+      $("#third").removeClass("active");
+      $("#fourth").removeClass("active");
+    })
+
+    $(".wrap").click(function() {
+      $("#first").removeClass("active");
+      $("#second").removeClass("active");
+      $("#third").addClass("active");
+      $("#fourth").removeClass("active");
+    })
+
+    $(".ship").click(function() {
+      $("#first").removeClass("active");
+      $("#second").removeClass("active");
+      $("#third").removeClass("active");
+      $("#fourth").addClass("active");
+    })
+    //# sourceURL=pen.j
+  </script>
+
+
+</body>
+</html>
