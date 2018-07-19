@@ -1,159 +1,847 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>W3.CSS</title>
 
 <head>
+  <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="js/index.js">
-  <link href="css/index.css"  type="text/css" rel="stylesheet">
-  <!------ Include the above in your HEAD tag ---------->
+  <link href="css/index1.css" rel="stylesheet">
+  <link href="css/index2.css" rel="stylesheet">
 
-  <style media="screen">
+  <style>
+    .badge-default {
+      background-color: rgb(255, 232, 232);
+    }
 
+    .badge-primary {
+      background-color: #337ab7;
+    }
 
-    .open>.dropdown-menu,
-    .nav>li:click .dropdown-menu {
+    .badge-success {
+      background-color: #5cb85c;
+    }
+
+    .badge-info {
+      background-color: #5bc0de;
+    }
+
+    .badge-warning {
+      background-color: #f0ad4e;
+    }
+
+    .badge-danger {
+      background-color: #d9534f;
+    }
+
+    .navbar-icon-top .navbar-nav>li>a>.fa,
+    .navbar-icon-top .navbar-nav>li>a>.glyphicon {
+      position: relative;
+      width: 36px;
+      font-size: 24px;
+    }
+
+    .navbar-icon-top .navbar-nav>li>a>.fa>.badge,
+    .navbar-icon-top .navbar-nav>li>a>.glyphicon>.badge {
+      position: absolute;
+      right: 0;
+      font-family: sans-serif;
+    }
+
+    .navbar-icon-top .navbar-nav>li>a>.fa {
+      top: 3px;
+      line-height: 12px;
+    }
+
+    .navbar-icon-top .navbar-nav>li>a>.fa>.badge {
+      top: -10px;
+    }
+
+    .navbar-icon-top .navbar-nav>li>a>.glyphicon {
+      top: 6px;
+      line-height: 6px;
+    }
+
+    .navbar-icon-top .navbar-nav>li>a>.glyphicon>.badge {
+      top: -16px;
+    }
+
+    @media (min-width: 768px) {
+      .navbar-icon-top .navbar-brand {
+        padding: 25px 15px;
+      }
+      .navbar-icon-top .navbar-text {
+        margin-top: 25px;
+        margin-bottom: 25px;
+      }
+      .navbar-icon-top .navbar-btn,
+      .navbar-icon-top .navbar-form {
+        margin-top: 18px;
+        margin-bottom: 18px;
+      }
+      .navbar-icon-top .navbar-nav>li>a {
+        text-align: center;
+        display: table-cell;
+        height: 70px;
+        vertical-align: middle;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+      .navbar-icon-top .navbar-nav>li>a>.fa,
+      .navbar-icon-top .navbar-nav>li>a>.glyphicon {
+        display: block;
+        width: 48px;
+        margin: 2px auto 4px auto;
+        top: 0;
+        line-height: 24px;
+      }
+      .navbar-icon-top .navbar-nav>li>a>.fa>.badge,
+      .navbar-icon-top .navbar-nav>li>a>.glyphicon>.badge {
+        top: -7px;
+      }
+    }
+
+    .navbar-default .navbar-nav>.open>a,
+    .navbar-default .navbar-nav>.open>a:focus,
+    .navbar-default .navbar-nav>.open>a:hover {
+      color: #555;
+      background-color: #fef2f2;
+    }
+
+    .navbar .pull-right>li>.dropdown-menu:before,
+    .navbar .nav>li>.dropdown-menu.pull-right:before {
+      left: auto;
+      right: 12px;
+    }
+
+    .navbar .nav>li>.dropdown-menu:before {
+      content: '';
       display: inline-block;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-bottom: 7px solid #b4b4b4;
+      border-bottom-color: rgb(255, 255, 255);
+      position: absolute;
+      top: -7px;
+      right: 9px;
+    }
+
+    /*nav 끝*/
+
+    @import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css);
+    .col-item {
+      border: 1px solid #E1E1E1;
+      border-radius: 5px;
+      background: #FFF;
+    }
+
+    .col-item .photo img {
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .col-item .info {
+      padding: 10px;
+      border-radius: 0 0 5px 5px;
+      margin-top: 1px;
+    }
+
+    .col-item:hover .info {
+      background-color: #F5F5DC;
+    }
+
+    .col-item .price {
+      /*width: 50%;*/
+      float: left;
+      margin-top: 5px;
+    }
+
+    .col-item .price h5 {
+      line-height: 20px;
+      margin: 0;
+    }
+
+    .price-text-color {
+      color: #219FD1;
+    }
+
+    .col-item .info .rating {
+      color: #777;
+    }
+
+    .col-item .rating {
+      /*width: 50%;*/
+      float: left;
+      font-size: 17px;
+      text-align: right;
+      line-height: 52px;
+      margin-bottom: 10px;
+      height: 52px;
+    }
+
+    .col-item .separator {
+      border-top: 1px solid #E1E1E1;
+    }
+
+    .clear-left {
+      clear: left;
+    }
+
+    .col-item .separator p {
+      line-height: 20px;
+      margin-bottom: 0;
+      margin-top: 10px;
       text-align: center;
-      padding-right: 5px;
     }
 
-    .dropdown-menu>li {
-      display: inline-block;
+    .col-item .separator p i {
+      margin-right: 5px;
     }
 
-
-    .dropdown-menu>li>a:click {
-      color: inherit;
-      text-decoration: none;
-      background-color: inherit;
+    .col-item .btn-add {
+      width: 50%;
+      float: left;
     }
 
-    .nail-color {
-      text-align: center;
+    .col-item .btn-add {
+      border-right: 1px solid #E1E1E1;
     }
 
-    .dropdown-menu {
+    .col-item .btn-details {
+      width: 50%;
+      float: left;
       padding-left: 10px;
     }
 
-    #first-dropdown {
-      display: none;
+    .controls {
+      margin-top: 20px;
     }
 
-    .w3-dropdown-hover:hover>.w3-button:first-child,
-    .w3-dropdown-click:hover>.w3-button:first-child {
-      background-color: white;
-      color: #000;
+    [data-slide="prev"] {
+      margin-right: 10px;
     }
 
-    .w3-button:hover {
-      color: #000 !important;
-      background-color: white;
+#custom-hr{
+
+    height:3px;
+    border: 0;
+    height: 3px;
+    background: rgb(61, 61, 61);
+    margin-top: 5px;
+    margin-bottom: 0px;
+
+}
+
     }
-
-    .select-menu {
-      padding-left: 5px;
-    }
-
-
   </style>
+
 </head>
 
 <body>
 
-  <div class="w3-container">
-
-    <div class="w3-bar <w3-light-white></w3-light-white>">
-
-      <div id="first-dropdown" class="w3-dropdown-hover">
-        <button class="w3-button">Dropdown</button>
-        <div class="w3-dropdown-content w3-card-4">
-          <a href="#" class="w3-bar-item w3-button">Link 1</a>
-          <a href="#" class="w3-bar-item w3-button">Link 2</a>
-          <a href="#" class="w3-bar-item w3-button">Link 3</a>
-          <a href="#" class="w3-bar-item w3-button">Link 3</a>
-          <a href="#" class="w3-bar-item w3-button">Link 3</a>
+  <header>
+    <nav class="navbar navbar-icon-top navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+          <a class="navbar-brand" href="#">로고~~</a>
         </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+            <!--active사용시 home하얀색으로 변함-->
+            <li><a href="#">Introduce</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Market</a></li>
+            <li><a href="#">Service center</a></li>
+
+          </ul>
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search w3-spin"></span></button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#">
+                            <i class="fa fa-envelope-o">
+                                <span class="badge badge-danger">11</span>
+                            </i>
+                            Messages
+                        </a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <!--<i class="fa fa-user-circle-o"></i>-->
+                <img class="img-circle" src="images/image-7.jpg" alt="" style="width:50px; height:50px;">
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" style="border-radius:10px; border-color:white">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">마이페이지</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
       </div>
+      <!-- /.container-fluid -->
+    </nav>
+    <br><br><br><br>
+    <!--
 
-      <div class="w3-dropdown-hover">
-        <img src="images/all-color.jpg" class="w3-circle" alt="Cinque Terre" width="20" height="20"><button class="select-menu w3-button w3-round w3-hover-white">전체</button>
-        <div class="w3-dropdown-content w3-card-12 ">
-          <ul class="dropdown-menu">
+                <li>
+                  <div class="w3-threequarter">
+                    <input type="text" class="w3-bar-item w3-input w3-border w3-round-xlarge" placeholder="검색" style="height:30px; margin-top:10px">
+                  </div>
+                </li>-->
 
-            <li class="nail-color">
-              <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
-            <li class="nail-color">
-              <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
-            <li class="nail-color">
-              <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
-            <li class="nail-color">
-              <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
-            <li class="nail-color">
-              <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
-            <li class="nail-color">
-              <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
-            <li class="nail-color">
-              <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
-            <li class="nail-color">
-              <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
-            <li class="nail-color">
-              <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
-            <li class="nail-color">
-              <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
-            <li class="nail-color">
-              <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
 
-            <li class="nail-color">
-              <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
+  </header>
+  <div class="container-fluid">
 
-            <li class="nail-color">
-              <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
+    <div class="row">
+      <div class="col-xs-12">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+          </ol>
 
-            <li class="nail-color">
-              <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <img src="images\slide-4-1-1920x780.jpg" alt="Image">
+              <div class="carousel-caption">
+                <h3>Sell $</h3>
+                <p>Money Money.</p>
+              </div>
+            </div>
 
-            <li class="nail-color">
-              <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
-            <li class="nail-color">
-              <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
-            <li class="nail-color">
-              <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
-            <li class="nail-color">
-              <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
+            <div class="item">
+              <img src="images\slide-4-1-1920x780.jpg" alt="Image">
+              <div class="carousel-caption">
+                <h3>More Sell $</h3>
+                <p>Lorem ipsum...</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+        </a>
+          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+        </a>
+        </div>
+
+        <br>
+
+        <!--작은 케러셀-->
+
+        <div class="row">
+          <div class="col-md-12">
+          <span><strong style="font-size:20pt">이달의 추천 네일</strong><span>
+            <hr id="custom-hr">
+          </div>
+          <div class="col-xs-12" style="10px;" >
+
+            <div class="controls pull-left">
+                <a class="left fa fa-chevron-left btn  btn-outline-light text-dark" href="#carousel-example-generic"
+                    data-slide="prev"></a>
+            </div>
+            <div class="controls pull-right">
+              <a class="right fa fa-chevron-right btn  btn-outline-light text-dark" href="#carousel-example-generic"
+                  data-slide="next"></a>
+            </div>
+
+      </div>
+        </div>
+        <div id="carousel-example-generic" class="carousel slide " data-ride="carousel">
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <div class="row">
+
+                <div class="col-xs-4">
+                  <div class="col-item">
+                    <div class="photo">
+                      <img src="http://placehold.it/350x260" class="img-responsive" alt="a" />
+                    </div>
+                    <div class="info">
+                      <div class="row">
+                        <div class="price col-md-6">
+                          <h5>
+                                                       Sample Product</h5>
+                          <h5 class="price-text-color">
+                                                       $199.99</h5>
+                        </div>
+                        <div class="rating hidden-sm col-md-6">
+                          <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                                                   </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                                                   </i><i class="fa fa-star"></i>
+                        </div>
+                      </div>
+                      <div class="separator clear-left">
+                        <p class="btn-add">
+                          <i class="fa fa-shopping-cart"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Add to cart</a></p>
+                        <p class="btn-details">
+                          <i class="fa fa-list"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">More details</a></p>
+                      </div>
+                      <div class="clearfix">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="col-xs-4">
+                  <div class="col-item">
+                    <div class="photo">
+                      <img src="http://placehold.it/350x260" class="img-responsive" alt="a" />
+                    </div>
+                    <div class="info">
+                      <div class="row">
+                        <div class="price col-md-6">
+                          <h5>
+                                                       Product Example</h5>
+                          <h5 class="price-text-color">
+                                                       $249.99</h5>
+                        </div>
+                        <div class="rating hidden-sm col-md-6">
+                        </div>
+                      </div>
+                      <div class="separator clear-left">
+                        <p class="btn-add">
+                          <i class="fa fa-shopping-cart"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Add to cart</a></p>
+                        <p class="btn-details">
+                          <i class="fa fa-list"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">More details</a></p>
+                      </div>
+                      <div class="clearfix">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="col-xs-4">
+                  <div class="col-item">
+                    <div class="photo">
+                      <img src="http://placehold.it/350x260" class="img-responsive" alt="a" />
+                    </div>
+                    <div class="info">
+                      <div class="row">
+                        <div class="price col-md-6">
+                          <h5>
+                                                       Next Sample Product</h5>
+                          <h5 class="price-text-color">
+                                                       $149.99</h5>
+                        </div>
+                        <div class="rating hidden-sm col-md-6">
+                          <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                                                   </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                                                   </i><i class="fa fa-star"></i>
+                        </div>
+                      </div>
+                      <div class="separator clear-left">
+                        <p class="btn-add">
+                          <i class="fa fa-shopping-cart"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Add to cart</a></p>
+                        <p class="btn-details">
+                          <i class="fa fa-list"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">More details</a></p>
+                      </div>
+                      <div class="clearfix">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="item">
+              <div class="row">
+
+
+                <div class="col-xs-4">
+                  <div class="col-item">
+                    <div class="photo">
+                      <img src="http://placehold.it/350x260" class="img-responsive" alt="a" />
+                    </div>
+                    <div class="info">
+                      <div class="row">
+                        <div class="price col-md-6">
+                          <h5>
+                                                       Product with Variants</h5>
+                          <h5 class="price-text-color">
+                                                       $199.99</h5>
+                        </div>
+                        <div class="rating hidden-sm col-md-6">
+                          <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                                                   </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                                                   </i><i class="fa fa-star"></i>
+                        </div>
+                      </div>
+                      <div class="separator clear-left">
+                        <p class="btn-add">
+                          <i class="fa fa-shopping-cart"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Add to cart</a></p>
+                        <p class="btn-details">
+                          <i class="fa fa-list"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">More details</a></p>
+                      </div>
+                      <div class="clearfix">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="col-xs-4">
+                  <div class="col-item">
+                    <div class="photo">
+                      <img src="http://placehold.it/350x260" class="img-responsive" alt="a" />
+                    </div>
+                    <div class="info">
+                      <div class="row">
+                        <div class="price col-md-6">
+                          <h5>
+                                                       Grouped Product</h5>
+                          <h5 class="price-text-color">
+                                                       $249.99</h5>
+                        </div>
+                        <div class="rating hidden-sm col-md-6">
+                        </div>
+                      </div>
+                      <div class="separator clear-left">
+                        <p class="btn-add">
+                          <i class="fa fa-shopping-cart"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Add to cart</a></p>
+                        <p class="btn-details">
+                          <i class="fa fa-list"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">More details</a></p>
+                      </div>
+                      <div class="clearfix">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="col-xs-4">
+                  <div class="col-item">
+                    <div class="photo">
+                      <img src="http://placehold.it/350x260" class="img-responsive" alt="a" />
+                    </div>
+                    <div class="info">
+                      <div class="row">
+                        <div class="price col-md-6">
+                          <h5>
+                                                       Product with Variants</h5>
+                          <h5 class="price-text-color">
+                                                       $149.99</h5>
+                        </div>
+                        <div class="rating hidden-sm col-md-6">
+                          <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                                                   </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                                                   </i><i class="fa fa-star"></i>
+                        </div>
+                      </div>
+                      <div class="separator clear-left">
+                        <p class="btn-add">
+                          <i class="fa fa-shopping-cart"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Add to cart</a></p>
+                        <p class="btn-details">
+                          <i class="fa fa-list"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">More details</a></p>
+                      </div>
+                      <div class="clearfix">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+
+
+
+        <div class="w3-bar <w3-light-white></w3-light-white>" style="text-align:center;">
+
+          <div id="first-dropdown" class="w3-dropdown-hover">
+            <button class="w3-button">Dropdown</button>
+            <div class="w3-dropdown-content w3-card-4">
+              <a href="#" class="w3-bar-item w3-button">Link 1</a>
+              <a href="#" class="w3-bar-item w3-button">Link 2</a>
+              <a href="#" class="w3-bar-item w3-button">Link 3</a>
+              <a href="#" class="w3-bar-item w3-button">Link 3</a>
+              <a href="#" class="w3-bar-item w3-button">Link 3</a>
+            </div>
+          </div>
+
+          <!--nail 선택-->
+          <div class="w3-dropdown-hover">
+            <div class="w3-border w3-hover-border-pale-red  w3-round" style="padding-left:10px;">
+              <img src="images/all-color.jpg" class="w3-circle" alt="Cinque Terre" width="20" height="20"><button class="select-menu w3-button w3-round w3-hover-white">전체&nbsp;</button></div>
+            <div style="padding-right: 5px; padding-top: 5px; height:3.5%;" class="w3-dropdown-content w3-card-12 w3-border w3-round">
+              <ul id="dropdown-menu">
+                <li class="nail-color">
+                  <a>
+                    <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</a>
+                </li>
+                <li class="nail-color">
+                  <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
+                <li class="nail-color">
+                  <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
+                <li class="nail-color">
+                  <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
+                <li class="nail-color">
+                  <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
+                <li class="nail-color">
+                  <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
+                <li class="nail-color">
+                  <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
+                <li class="nail-color">
+                  <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
+                <li class="nail-color">
+                  <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
+                <li class="nail-color">
+                  <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
+                <li class="nail-color">
+                  <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
+
+                <li class="nail-color">
+                  <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
+
+                <li class="nail-color">
+                  <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
+
+                <li class="nail-color">
+                  <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
+
+                <li class="nail-color">
+                  <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
+                <li class="nail-color">
+                  <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
+                <li class="nail-color">
+                  <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
+                <li class="nail-color">
+                  <div style="text-align:center"><img src="https://i.pinimg.com/736x/c5/b2/fe/c5b2fe60edbe07b56efdf1434502c7c1--solid-colors.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>빨강</li>
+              </ul>
+            </div>
+
+          </div>
+
+
+
+
+          <div class="w3-dropdown-hover">
+            <div class="w3-border w3-hover-border-pale-red  w3-round" style="padding-left:10px;">
+              <img src="images\meniq-logo.jpg" class="w3-circle" alt="Cinque Terre" width="20" height="20"><button class="select-menu w3-button w3-round w3-hover-white">네일/패디</button></div>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-border w3-round">
+              <a href="#" class="w3-bar-item w3-button">Link 1</a>
+              <a href="#" class="w3-bar-item w3-button">Link 2</a>
+              <a href="#" class="w3-bar-item w3-button">Link 3</a>
+            </div>
+          </div>
+
+
+          <div class="w3-dropdown-hover">
+            <div class="w3-border w3-hover-border-pale-blue  w3-round" style="padding-left:10px;">
+              <button class="select-menu w3-button w3-round w3-hover-white"><i class="fa fa-plus-square-o"></i> 전체옵션</button></div>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-border w3-round">
+              <a href="#" class="w3-bar-item w3-button">Link 1</a>
+              <a href="#" class="w3-bar-item w3-button">Link 2</a>
+              <a href="#" class="w3-bar-item w3-button">Link 3</a>
+            </div>
+          </div>
+
+
+
+        </div>
+
+        <!--네일 이미지시작-->
+
+        <div class="cover-card col-sm-4">
+          <div class="hovereffect">
+            <img class=" img-responsive nail-main-images" src="images/image-7.jpg">
+            <div class="overlay">
+              <h2>사진이름</h2>
+              <p>
+                <a href="#">점포명</a><br>
+                <a href="#">설명</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="cover-card col-sm-2">
+          <div class="hovereffect">
+            <img class=" img-responsive nail-main-images" src="images/image-6.jpg">
+            <div class="overlay">
+              <h2>Effect 13</h2>
+              <p>
+                <a href="#">LINK HERE</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="cover-card col-sm-6">
+          <div class="hovereffect">
+            <img class=" img-responsive nail-main-images" src="images/image-100.jpg">
+            <div class="overlay">
+              <h2>Effect 13</h2>
+              <p>
+                <a href="#">LINK HERE</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="cover-card col-sm-3">
+          <div class="hovereffect">
+            <img class=" img-responsive nail-main-images" src="images/image-8.jpg">
+            <div class="overlay">
+              <h2>Effect 13</h2>
+              <p>
+                <a href="#">LINK HERE</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="cover-card col-sm-4">
+          <div class="hovereffect">
+            <img class=" img-responsive nail-main-images" src="images/image-9.jpg">
+            <div class="overlay">
+              <h2>Effect 13</h2>
+              <p>
+                <a href="#">LINK HERE</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="cover-card col-sm-3">
+          <div class="hovereffect">
+            <img class=" img-responsive nail-main-images" src="images/image-10.jpg">
+            <div class="overlay">
+              <h2>Effect 13</h2>
+              <p>
+                <a href="#">LINK HERE</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="cover-card col-sm-2">
+          <div class="hovereffect">
+            <img class=" img-responsive nail-main-images" src="images/image-11.jpg">
+            <div class="overlay">
+              <h2>Effect 13</h2>
+              <p>
+                <a href="#">LINK HERE</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="cover-card col-sm-3">
+          <div class="hovereffect">
+            <img class=" img-responsive nail-main-images" src="images/image-11.jpg">
+            <div class="overlay">
+              <h2>Effect 13</h2>
+              <p>
+                <a href="#">LINK HERE</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="cover-card col-sm-5">
+          <div class="hovereffect">
+            <img class=" img-responsive nail-main-images" src="images/image-9.jpg">
+            <div class="overlay">
+              <h2>Effect 13</h2>
+              <p>
+                <a href="#">LINK HERE</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cover-card col-sm-4">
+          <div class="hovereffect">
+            <img class=" img-responsive nail-main-images" src="images/image-13.png">
+            <div class="overlay">
+              <h2>Effect 13</h2>
+              <p>
+                <a href="#">LINK HERE</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!--</div>-->
+  <!--footer -->
+  <footer id="contact" class="contact-us">
+    <div class="container">
+      <div class="row">
+        <div class="contact-area">
+          <h2>Contact Us</h2>
+          <ul class="contact-list">
+            <li>
+              <i class="fa fa-phone"></i> <a href="##">  +44 (0) 232 090 505</a>
+            </li>
+            <li>
+              <i class="fa fa-envelope"></i> <a href="#">  hi@dsfg.co.uk</a>
+            </li>
+            <li>
+              <i class="fa fa-map-marker"></i> <a href="#">  Rampura,Dhaka Bangladesh k</a>
+            </li>
           </ul>
         </div>
       </div>
-
-      <div class="w3-dropdown-hover">
-        <button class="select-menu w3-button w3-round w3-hover-white">네일/페디</button>
-        <div class="w3-dropdown-content w3-card-12">
-          <a href="#" class="w3-bar-item w3-button">Link 1</a>
-          <a href="#" class="w3-bar-item w3-button">Link 2</a>
-          <a href="#" class="w3-bar-item w3-button">Link 3</a>
-        </div>
-      </div>
-
-
-      <div class="w3-dropdown-hover">
-        <button class="select-menu w3-button w3-round w3-hover-white">전체옵션</button>
-        <div class="w3-dropdown-content w3-card-12">
-          <a href="#" class="w3-bar-item w3-button">Link 1</a>
-          <a href="#" class="w3-bar-item w3-button">Link 2</a>
-          <a href="#" class="w3-bar-item w3-button">Link 3</a>
-        </div>
-      </div>
-
-
     </div>
-  </div>
+  </footer>
 
 </body>
 
 </html>
+<script type="text/javascript">
+  //작은케러셀
+  // Instantiate the Bootstrap carousel
+  $('.multi-item-carousel').carousel({
+    interval: false
+  });
+
+  // for every slide in carousel, copy the next slide's item in the slide.
+  // Do the same for the next, next item.
+  $('.multi-item-carousel .item').each(function() {
+    var next = $(this).next();
+    if (!next.length) {
+      next = $(this).siblings(':first');
+    }
+    next.children(':first-child').clone().appendTo($(this));
+
+    if (next.next().length > 0) {
+      next.next().children(':first-child').clone().appendTo($(this));
+    } else {
+      $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+    }
+  });
+</script>
