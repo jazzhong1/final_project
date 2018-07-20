@@ -240,9 +240,16 @@
     }
 
     .selected {
-      color: white;
-      background: green
+      color: red !important;
+      background: white !important;
+      outline: none;
+
     }
+    button{
+   outline: none !important;
+  }
+
+
 
     }
   </style>
@@ -411,10 +418,10 @@
                         </div>
                         <div class="separator clear-left">
                           <p class="btn-add">
-                          <a href="#" class="btn btn-danger" style="width:90%"><span class="glyphicon glyphicon-heart"></span> 좋아요</a>
+                          <button href="#" class="btn btn-danger good-btn selected" style="width:90%"><span class="glyphicon glyphicon-heart"></span> 좋아요</button>
             </p>
             <p class="btn-details">
-              <a href="#" class="btn btn-info" style="width:90%"><span class="glyphicon glyphicon-comment"></span> 리뷰</a>
+              <button href="#" class="btn btn-info" style="width:90%"><span class="glyphicon glyphicon-comment"></span> 리뷰</button>
           </div>
           <div class="clearfix">
           </div>
@@ -446,10 +453,10 @@
           <div class="separator clear-left">
             <p class="btn-add">
 
-              <a href="#" class="btn btn-danger" style="width:90%"><span class="glyphicon glyphicon-heart"></span> 좋아요</a>
+              <button href="#" class="btn btn-danger good-btn selected " style="width:90%"><span class="glyphicon glyphicon-heart"></span> 좋아요</button>
             </p>
             <p class="btn-details">
-              <a href="#" class="btn btn-info" style="width:90%"><span class="glyphicon glyphicon-comment"></span> 리뷰</a>
+              <button href="#" class="btn btn-info" style="width:90%"><span class="glyphicon glyphicon-comment"></span> 리뷰</button>
           </div>
           <div class="clearfix">
           </div>
@@ -479,27 +486,17 @@
           </div>
           <div class="separator clear-left">
             <p class="btn-add">
-              <button id="good-btn" href="#" class="btn btn-danger good-btn" style="width:90%" onclick="myFunction()"><span class="glyphicon glyphicon-heart"></span> 좋아요</button>
+              <button href="#" class="btn btn-danger good-btn selected " style="width:90%" onclick="myFunction();"><span class="glyphicon glyphicon-heart"></span> 좋아요</button>
             </p>
             <p class="btn-details">
-              <a href="#" class="btn btn-info" style="width:90%"><span class="glyphicon glyphicon-comment"></span> 리뷰</a>
+              <button href="#" class="btn btn-info" style="width:90%"><span class="glyphicon glyphicon-comment"></span> 리뷰</button>
           </div>
           <div class="clearfix">
           </div>
         </div>
       </div>
     </div>
-    <script type="text/javascript">
 
-
-
-
-      function myFunction() {
-        document.getElementById("good-btn").addEventListener("toggle", myFunction);
-              $("#good-btn").css("background", "white");
-              $("#good-btn").css("color", "red");
-      }
-    </script>
 
 
   </div>
@@ -533,10 +530,10 @@
             </div>
             <div class="separator clear-left">
               <p class="btn-add">
-                <a href="#" class="btn btn-danger" style="width:90%"><span class="glyphicon glyphicon-heart"></span> 좋아요</a>
+                <a href="#" class="btn btn-danger good-btn selected " style="width:90%"><span class="glyphicon glyphicon-heart"></span> 좋아요</a>
               </p>
               <p class="btn-details">
-                <a href="#" class="btn btn-info" style="width:90%"><span class="glyphicon glyphicon-comment"></span> 리뷰</a>
+                <button href="#" class="btn btn-info" style="width:90%"><span class="glyphicon glyphicon-comment"></span> 리뷰</button>
             </div>
             <div class="clearfix">
             </div>
@@ -566,7 +563,7 @@
             </div>
             <div class="separator clear-left">
               <p class="btn-add">
-                <a href="#" class="btn btn-danger" style="width:90%"><span class="glyphicon glyphicon-heart"></span> 좋아요</a>
+                <button href="#" class="btn btn-danger good-btn selected" style="width:90%"><span class="glyphicon glyphicon-heart"></span> 좋아요</button>
               </p>
               <p class="btn-details">
                 <a href="#" class="btn btn-info" style="width:90%"><span class="glyphicon glyphicon-comment"></span> 리뷰</a>
@@ -600,7 +597,7 @@
             </div>
             <div class="separator clear-left">
               <p class="btn-add">
-                <a href="#" class="btn btn-danger" style="width:90%"><span class="glyphicon glyphicon-heart"></span> 좋아요</a>
+                <button href="#" class="btn btn-danger good-btn selected " style="width:90%"><span class="glyphicon glyphicon-heart"></span> 좋아요</button>
               </p>
               <p class="btn-details">
                 <a href="#" class="btn btn-info" style="width:90%"><span class="glyphicon glyphicon-comment"></span> 리뷰</a>
@@ -881,4 +878,11 @@
       $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
     }
   });
+
+  $(function() {
+    $('.good-btn').on("click", function() {
+      $(this).toggleClass("selected");
+
+    })
+  })
 </script>
