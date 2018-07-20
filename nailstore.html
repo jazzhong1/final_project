@@ -1,540 +1,662 @@
 <!DOCTYPE html>
 
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
 
 <head>
-    <meta charset="utf-8">
-    <title>NailStore</title>
-    <style class="cp-pen-styles">html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #eee;
-      font-family: 'Raleway';
-    }
-
-    ul, li {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .icon {
-      position: relative;
-      width: 32px;
-      height: 32px;
-      display: block;
-      fill: rgba(51, 51, 51, 0.5);
-      margin-right: 20px;
-      -webkit-transition: all .2s ease-out;
-      transition: all .2s ease-out;
-    }
-
-    .icon.active {
-      fill: #E74C3C;
-    }
-
-    .icon.big {
-      width: 64px;
-      height: 64px;
-      fill: rgba(51, 51, 51, 0.5);
-    }
-
-    #wrapper {
-      width: 90%;
-      height: 80%;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: auto;
-      background-color: #fff;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      -webkit-box-pack: left;
-          -ms-flex-pack: left;
-              justify-content: left;
-      overflow: hidden;
-    }
-
-    #right-side {
-      height: 70%;
-      width: 25%;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-    }
-    #right-side ul li {
-      padding-top: 10px;
-      padding-bottom: 10px;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      line-height: 34px;
-      color: rgba(51, 51, 51, 0.5);
-      font-weight: 500;
-      cursor: pointer;
-      -webkit-transition: all .2s ease-out;
-      transition: all .2s ease-out;
-    }
-    #right-side ul li:hover {
-      color: #333333;
-      -webkit-transition: all .2s ease-out;
-      transition: all .2s ease-out;
-    }
-    #right-side ul li:hover > .icon {
-      fill: #333;
-    }
-    #right-side ul li.active {
-      color: #333333;
-    }
-    #right-side ul li.active:hover > .icon {
-      fill: #E74C3C;
-    }
-
-    #border {
-      height: 288px;
-      width: 1px;
-      background-color: rgba(51, 51, 51, 0.2);
-    }
-    #border #line.one {
-      width: 5px;
-      height: 54px;
-      background-color: #feb0a7;
-      margin-left: -2px;
-      margin-top: 35px;
-      -webkit-transition: all .4s ease-in-out;
-      transition: all .4s ease-in-out;
-    }
-    #border #line.two {
-      width: 5px;
-      height: 54px;
-      background-color: #feb0a7;
-      margin-left: -2px;
-      margin-top: 89px;
-      -webkit-transition: all .4s ease-in-out;
-      transition: all .4s ease-in-out;
-    }
-    #border #line.three {
-      width: 5px;
-      height: 54px;
-      background-color: #feb0a7;
-      margin-left: -2px;
-      margin-top: 143px;
-      -webkit-transition: all .4s ease-in-out;
-      transition: all .4s ease-in-out;
-    }
-    #border #line.four {
-      width: 5px;
-      height: 54px;
-      background-color: #feb0a7;
-      margin-left: -2px;
-      margin-top: 197px;
-      -webkit-transition: all .4s ease-in-out;
-      transition: all .4s ease-in-out;
-    }
-
-    #left-side {
-			margin-top: 100px;
-			margin-left: 100px;
-      height: 100%;
+	<meta charset="utf-8">
+	<title>NailStore</title>
+	<style class="cp-pen-styles">
+		html,
+		body {
+			margin: 0;
+			padding: 0;
 			width: 100%;
-      overflow: hidden;
-    }
-    #left-side #first, #left-side #second, #left-side #third, #left-side #fourth {
+			height: 100%;
+			background-color: #eee;
+			font-family: 'Raleway';
+		}
 
-      height: 100%;
-      width: 100%;
-      -webkit-transition: all .6s ease-in-out;
-      transition: all .6s ease-in-out;
-      margin-top: -350px;
-      opacity: 0;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: none;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-    }
-    #left-side #first h1, #left-side #second h1, #left-side #third h1, #left-side #fourth h1 {
-      font-weight: 800;
-      color: #333;
-    }
-    #left-side #first p, #left-side #second p, #left-side #third p, #left-side #fourth p {
-      color: #333;
-      font-weight: 500;
-      padding-left: 30px;
-      padding-right: 30px;
-    }
-    #left-side #first.active, #left-side #second.active, #left-side #third.active, #left-side #fourth.active {
-      margin-top: 0px;
+		ul,
+		li {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		.icon {
+			position: relative;
+			width: 32px;
+			height: 32px;
 			display: block;
-      opacity: 1;
-      -webkit-transition: all .6s ease-in-out;
-      transition: all .6s ease-in-out;
-    }.NailStoreMap{
-			width: 500px;
+			fill: rgba(51, 51, 51, 0.5);
+			margin-right: 20px;
+			-webkit-transition: all .2s ease-out;
+			transition: all .2s ease-out;
+		}
+
+		.icon.active {
+			fill: #E74C3C;
+		}
+
+		.icon.big {
+			width: 64px;
+			height: 64px;
+			fill: rgba(51, 51, 51, 0.5);
+		}
+
+		#wrapper {
+			width: 90%;
+			height: 90%;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+			background-color: #fff;
+			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			-webkit-box-pack: left;
+			-ms-flex-pack: left;
+			justify-content: left;
+			overflow: hidden;
+		}
+
+		#right-side {
+			height: 70%;
+			width: 25%;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+		}
+
+		#right-side ul li {
+			padding-top: 10px;
+			padding-bottom: 10px;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			line-height: 34px;
+			color: rgba(51, 51, 51, 0.5);
+			font-weight: 500;
+			cursor: pointer;
+			-webkit-transition: all .2s ease-out;
+			transition: all .2s ease-out;
+		}
+
+		#right-side ul li:hover {
+			color: #333333;
+			-webkit-transition: all .2s ease-out;
+			transition: all .2s ease-out;
+		}
+
+		#right-side ul li:hover>.icon {
+			fill: #333;
+		}
+
+		#right-side ul li.active {
+			color: #333333;
+		}
+
+		#right-side ul li.active:hover>.icon {
+			fill: #E74C3C;
+		}
+
+		#border {
+			height: 288px;
+			width: 1px;
+			background-color: rgba(51, 51, 51, 0.2);
+		}
+
+		#border #line.one {
+			width: 5px;
+			height: 54px;
+			background-color: #feb0a7;
+			margin-left: -2px;
+			margin-top: 35px;
+			-webkit-transition: all .4s ease-in-out;
+			transition: all .4s ease-in-out;
+		}
+
+		#border #line.two {
+			width: 5px;
+			height: 54px;
+			background-color: #feb0a7;
+			margin-left: -2px;
+			margin-top: 89px;
+			-webkit-transition: all .4s ease-in-out;
+			transition: all .4s ease-in-out;
+		}
+
+		#border #line.three {
+			width: 5px;
+			height: 54px;
+			background-color: #feb0a7;
+			margin-left: -2px;
+			margin-top: 143px;
+			-webkit-transition: all .4s ease-in-out;
+			transition: all .4s ease-in-out;
+		}
+
+		#border #line.four {
+			width: 5px;
+			height: 54px;
+			background-color: #feb0a7;
+			margin-left: -2px;
+			margin-top: 197px;
+			-webkit-transition: all .4s ease-in-out;
+			transition: all .4s ease-in-out;
+		}
+
+		#left-side {
+			padding: 100px;
+			padding-right: 10px;
+			height: 100%;
+			width: 100%;
+			overflow: hidden;
+			position: relative;
+		}
+
+		#left-side #first,
+		#left-side #second,
+		#left-side #third,
+		#left-side #fourth {
+			position: relative;
+			height: 100%;
+			width: 100%;
+			-webkit-transition: all .6s ease-in-out;
+			transition: all .6s ease-in-out;
+			margin-top: -350px;
+			opacity: 0;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: none;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: column;
+			flex-direction: column;
+		}
+
+		#left-side #first h1,
+		#left-side #second h1,
+		#left-side #third h1,
+		#left-side #fourth h1 {
+			font-weight: 800;
+			color: #333;
+		}
+
+		#left-side #first p,
+		#left-side #second p,
+		#left-side #third p,
+		#left-side #fourth p {
+			color: #333;
+			font-weight: 500;
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+
+		#left-side #first.active,
+		#left-side #second.active,
+		#left-side #third.active,
+		#left-side #fourth.active {
+			margin-top: 0px;
+			display: block;
+			opacity: 1;
+			-webkit-transition: all .6s ease-in-out;
+			transition: all .6s ease-in-out;
+		}
+
+		.NailStoreMap {
+			width: 90%;
 			margin-top: 5px;
 			margin-left: 5px;
-			height: 70%;
+			height: 80%;
 			position: relative;
 			text-align: center;
 			box-shadow: 5px 5px 30px -10px #ff9494;
 			border-radius: 14px;
+		}.animatepop{
 			-webkit-transition: all .2s;
-  		transition: all .2s;
+			transition: all .2s;
 			-webkit-animation: intro 1s 0.1s forwards;
-          animation: intro 1s 0.1s forwards;
-		}
-		@-webkit-keyframes intro {
-		  0% {
-		    -webkit-transform: scale(0);
-		            transform: scale(0);
-		  }
-		  25% {
-		    -webkit-transform: scale(1.06);
-		            transform: scale(1.06);
-		  }
-		  50% {
-		    -webkit-transform: scale(0.965);
-		            transform: scale(0.965);
-		  }
-		  75% {
-		    -webkit-transform: scale(1.02);
-		            transform: scale(1.02);
-		  }
-		  100% {
-		    -webkit-transform: scale(1);
-		            transform: scale(1);
-		  }
-		}
-		@keyframes intro {
-		  0% {
-		    -webkit-transform: scale(0);
-		            transform: scale(0);
-		  }
-		  25% {
-		    -webkit-transform: scale(1.06);
-		            transform: scale(1.06);
-		  }
-		  50% {
-		    -webkit-transform: scale(0.965);
-		            transform: scale(0.965);
-		  }
-		  75% {
-		    -webkit-transform: scale(1.02);
-		            transform: scale(1.02);
-		  }
-		  100% {
-		    -webkit-transform: scale(1);
-		            transform: scale(1);
-		  }
-		}
-.revealText{
-					width:500px;
-					height: auto;
-					margin-left: 5px;
-					position: relative;
-          text-align:center;
-          border-bottom: 3px solid #ffadad;
-          overflow: hidden;
-          box-shadow: 0px 1px 0px rgba(0, 0, 0, .5);
-          animation: reveal 2s linear forwards;
-        }
-@keyframes reveal {
-	0% {
-		-webkit-transform: scale(0);
-						transform: scale(0);
-	}
-	25% {
-		-webkit-transform: scale(1.06);
-						transform: scale(1.06);
-	}
-	50% {
-		-webkit-transform: scale(0.965);
-						transform: scale(0.965);
-	}
-	75% {
-		-webkit-transform: scale(1.02);
-						transform: scale(1.02);
-	}
-	100% {
-		-webkit-transform: scale(1);
-						transform: scale(1);
-	}
-}
-	.revealText p{
-    /* font-family: sans-serif; */
-    font-size: 1em;
-    color: #f96767;
-    /* text-shadow: 2px 2px 2px rgba(0,0,0,.5); */
-		}
-		@media (max-width: 860px) {
-    body {
-        background-color: lightblue;
-    }
-		#right-side{
-			display:none;
-		}
-		#wrapper{
-			width:100%;
+			animation: intro 1s 0.1s forwards;
+		}.pinkshadow{
+				box-shadow: 5px 5px 30px -10px #ff9494;
 
-		}#left-side{
-			/* 스크롤 바 숨기기 */
-			overflow: scroll;
- 			overflow-x: hidden;
+		}.radius14{
+				border-radius: 14px;
 		}
-		::-webkit-scrollbar {
-    width: 0px;  /* remove scrollbar space */
-    background: transparent;  /* optional: just make scrollbar invisible */
+
+		@-webkit-keyframes intro {
+			0% {
+				-webkit-transform: scale(0);
+				transform: scale(0);
+			}
+			25% {
+				-webkit-transform: scale(1.06);
+				transform: scale(1.06);
+			}
+			50% {
+				-webkit-transform: scale(0.965);
+				transform: scale(0.965);
+			}
+			75% {
+				-webkit-transform: scale(1.02);
+				transform: scale(1.02);
+			}
+			100% {
+				-webkit-transform: scale(1);
+				transform: scale(1);
+			}
 		}
-		.NailStoreMap{
+
+		@keyframes intro {
+			0% {
+				-webkit-transform: scale(0);
+				transform: scale(0);
+			}
+			25% {
+				-webkit-transform: scale(1.06);
+				transform: scale(1.06);
+			}
+			50% {
+				-webkit-transform: scale(0.965);
+				transform: scale(0.965);
+			}
+			75% {
+				-webkit-transform: scale(1.02);
+				transform: scale(1.02);
+			}
+			100% {
+				-webkit-transform: scale(1);
+				transform: scale(1);
+			}
+		}
+
+		.addrText {
+			width: 90%;
+			height: auto;
+			margin-left: 5px;
+			position: relative;
+			text-align: center;
+			border-bottom: 3px solid #ffadad;
+			overflow: hidden;
+			box-shadow: 0px 1px 0px rgba(0, 0, 0, .5);
+			animation: intro 2s linear forwards;
+		}
+		.addrText p {
+			/* font-family: sans-serif; */
+			font-size: 1em;
+			color: #f96767;
+			/* text-shadow: 2px 2px 2px rgba(0,0,0,.5); */
+		}
+
+		@media (max-width: 860px) {
+			body {
+				background-color: lightblue;
+			}
+			#right-side {
+				display: none;
+			}
+			#wrapper {
+				width: 100%;
+
+			}
+			#left-side {
+				/* 스크롤 바 숨기기 */
+				overflow: scroll;
+				overflow-x: hidden;
+			}
+			::-webkit-scrollbar {
+				width: 0px;
+				/* remove scrollbar space */
+				background: transparent;
+				/* optional: just make scrollbar invisible */
+			}
+			.NailStoreMap {
 				width: 80%;
 				margin-right: 50px;
-		}
-		.revealText{
-				width:80%;
+			}
+			.addrText {
+				width: 80%;
 				margin-right: 50px;
+			}
 		}
-	}/* media end */
 
-    </style>
-  </head>
+		/* media end */
+	</style>
+</head>
 
-  <body>
+<body>
 
-    <div class="container">
+	<div class="container">
 
-    </div>
-    <div id="wrapper" class="container">
+	</div>
+	<div id="wrapper" class="container">
 
-      <div id="left-side">
-        <div id="first" class="active">
-								<div class="row">
-  							<div class="col-sm-3">
+		<div id="left-side">
+			<div id="first" class="active">
+				<div class="row">
 
-									<div class="">
-										북마크 아이콘
-									</div>
-									<div style="height:200px;width:200px;">
-											이미지
-									</div>
-                </div>
-                <div class="col-sm-4">
-                  <h3>가게 이름</h3>
-                  <p>가게에 대한 설명 ex) 상세정보 시술가격표 등등...</p>
-                </div>
-              </div>
-							<div class="row">
-							<p>공지사항입니다~~~~~~~~~~~~</p></div>
-								<div class="row">
-  							<div class="col-sm-2">
-                  <h3>사진 1</h3>
-
-
-                </div>
-								<div class="col-sm-2">
-									<h3>사진 2</h3>
-
+						<!-- 가게 이미지 시작 -->
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-8 animatepop">
+							<div class="hovereffect">
+								<img class="img-responsive radius14" src="http://placehold.it/350x250" alt="">
+								<div class="overlay">
+									<h2>가게 이름</h2>
+									<p>
+										<a href="#">가게 이미지</a>
+									</p>
 								</div>
-                <div class="col-sm-2">
-                  <h3>사진 3</h3>
+							</div>
+						</div><!--가게 이미지 끝-->
 
-                </div>
-								<div class="col-sm-4">
-									<h3>더보기</h3>
-
-								</div>
-              </div>
-        </div>
-        <div id="second">
-
-				<div class="NailStoreMap">
-						map 삽입
-
+					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						<h3>가게 이름</h3>
+						<p>가게에 대한 설명 ex) 상세정보 시술가격표 등등...</p>
+					</div>
 				</div>
-				<div class="revealText">
-						<p>주소입력</P>
+				<div class="row" style="margin-top:20px;">
+					<marquee>공지사항입니다~~~~~~~~~~~~</marquee>
+				</div>
+				<div class="row">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-8 animatepop" style="margin-top:10px;">
+						<div class="hovereffect">
+							<img class="img-responsive radius14" src="http://placehold.it/350x250" alt="">
+							<div class="overlay">
+								<h2>네일 디자인 이름</h2>
+								<p>
+									<a href="#">더보기</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-8 animatepop" style="margin-top:10px;">
+						<div class="hovereffect">
+							<img class="img-responsive radius14" src="http://placehold.it/350x250" alt="">
+							<div class="overlay">
+								<h2>네일 디자인 이름</h2>
+								<p>
+									<a href="#">더보기</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-8 animatepop" style="margin-top:10px;">
+						<div class="hovereffect">
+							<img class="img-responsive radius14" src="http://placehold.it/350x250" alt="">
+							<div class="overlay">
+								<h2>네일 디자인 이름</h2>
+								<p>
+									<a href="#">더보기</a>
+								</p>
+							</div>
+						</div>
+					</div>
+
+
+<style>
+						.hovereffect {
+							width: 100%;
+							height: 100%;
+							float: left;
+							overflow: hidden;
+							position: relative;
+							text-align: center;
+							cursor: default;
+						}
+
+						.hovereffect .overlay {
+							position: absolute;
+							overflow: hidden;
+							width: 80%;
+							height: 80%;
+							left: 10%;
+							top: 10%;
+							border-bottom: 1px solid #FFF;
+							border-top: 1px solid #FFF;
+							-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+							transition: opacity 0.35s, transform 0.35s;
+							-webkit-transform: scale(0, 1);
+							-ms-transform: scale(0, 1);
+							transform: scale(0, 1);
+						}
+
+						.hovereffect:hover .overlay {
+							opacity: 1;
+							filter: alpha(opacity=100);
+							-webkit-transform: scale(1);
+							-ms-transform: scale(1);
+							transform: scale(1);
+						}
+
+						.hovereffect img {
+							display: block;
+							position: relative;
+							-webkit-transition: all 0.35s;
+							transition: all 0.35s;
+						}
+
+						.hovereffect:hover img {
+							filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.6" /><feFuncG type="linear" slope="0.6" /><feFuncB type="linear" slope="0.6" /></feComponentTransfer></filter></svg>#filter');
+							filter: brightness(0.6);
+							-webkit-filter: brightness(0.6);
+						}
+
+						.hovereffect h2 {
+							text-transform: uppercase;
+							text-align: center;
+							position: relative;
+							font-size: 17px;
+							background-color: transparent;
+							color: #FFF;
+							padding: 1em 0;
+							opacity: 0;
+							filter: alpha(opacity=0);
+							-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+							transition: opacity 0.35s, transform 0.35s;
+							-webkit-transform: translate3d(0, -100%, 0);
+							transform: translate3d(0, -100%, 0);
+						}
+
+						.hovereffect a,
+						.hovereffect p {
+							color: #FFF;
+							padding: 1em 0;
+							opacity: 0;
+							filter: alpha(opacity=0);
+							-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+							transition: opacity 0.35s, transform 0.35s;
+							-webkit-transform: translate3d(0, 100%, 0);
+							transform: translate3d(0, 100%, 0);
+						}
+
+						.hovereffect:hover a,
+						.hovereffect:hover p,
+						.hovereffect:hover h2 {
+							opacity: 1;
+							filter: alpha(opacity=100);
+							-webkit-transform: translate3d(0, 0, 0);
+							transform: translate3d(0, 0, 0);
+						}
+</style>
+				</div>
+			</div>
+			<div id="second">
+
+				<div class="NailStoreMap animatepop" id="map">
+					map 삽입
+				</div>
+				<div class="addrText animatepop">
+					<p>London, England</P>
 				</div>
 
 			</div>
-        <div id="third">
+			<div id="third">
 
 
-          <h1>We will reserve it</h1>
+				<h1>We will reserve it</h1>
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at viverra est, eu finibus mauris. Quisque tempus vestibulum fringilla. Morbi tortor eros, sollicitudin eu arcu sit amet, aliquet sagittis dolor. </p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at viverra est, eu finibus mauris. Quisque tempus vestibulum fringilla. Morbi tortor eros, sollicitudin eu arcu sit amet, aliquet sagittis dolor. </p>
 
-        </div>
-        <div id="fourth">
+			</div>
+			<div id="fourth">
 
-          <h1>qna it</h1>
+				<h1>qna it</h1>
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at viverra est, eu finibus mauris. Quisque tempus vestibulum fringilla. Morbi tortor eros, sollicitudin eu arcu sit amet, aliquet sagittis dolor. </p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at viverra est, eu finibus mauris. Quisque tempus vestibulum fringilla. Morbi tortor eros, sollicitudin eu arcu sit amet, aliquet sagittis dolor. </p>
 
-        </div>
-      </div>
-      <div id="border">
-        <div id="line" class="one"></div>
-      </div>
-      <div id="right-side">
-        <ul>
-          <li class="shop active">
-            <div class="icon active">
-              <svg viewBox="0 0 32 32">
-                <g filter="">
-                  <use xlink:href="#shopping-cart"></use>
-                </g>
-              </svg>
-            </div>
-            Shop
-          </li>
-          <li class="map">
-            <div class="icon">
-              <svg viewBox="0 0 32 32">
-                <g filter="">
-                  <use xlink:href="#credit-card"></use>
-                </g>
-              </svg>
-            </div>
-            Map(지도)
-          </li>
-          <li class="reserve">
-            <div class="icon">
-              <svg viewBox="0 0 32 32">
-                <g filter="">
-                  <use xlink:href="#gift"></use>
-                </g>
-              </svg>
-            </div>
-            Reserve(예약)
-          </li>
-          <li class="qna">
-            <div class="icon">
-              <svg viewBox="0 0 32 32">
-                <g filter="">
-                  <use xlink:href="#package"></use>
-                </g>
-              </svg>
-            </div>
-            QnA(문의)
-          </li>
-        </ul>
-      </div>
-    </div>
-<script>
-      $(".shop").click(function() {
-      $(".shop").addClass("active");
-      $(".shop > .icon").addClass("active");
-      $(".map").removeClass("active");
-      $(".reserve").removeClass("active");
-      $(".qna").removeClass("active");
-      $(".map > .icon").removeClass("active");
-      $(".reserve > .icon").removeClass("active");
-      $(".qna > .icon").removeClass("active");
-      $("#line").addClass("one");
-      $("#line").removeClass("two");
-      $("#line").removeClass("three");
-      $("#line").removeClass("four");
-    })
+			</div>
+		</div>
+		<div id="border">
+			<div id="line" class="one"></div>
+		</div>
+		<div id="right-side">
+			<ul>
+				<li class="shop active">
+					<div class="icon active">
+                <img src="icons/shop.svg" alt="">
+					</div>
+					Shop
+				</li>
+				<li class="map">
+					<div class="icon">
+					  <img src="icons/map.svg" alt="">
+					</div>
+					Map(지도)
+				</li>
+				<li class="reserve">
+					<div class="icon">
+						 <img src="icons/calander.svg" alt="">
+					</div>
+					Reserve(예약)
+				</li>
+				<li class="qna">
+					<div class="icon">
+						  <img src="icons/customer.svg" alt="">
+					</div>
+					QnA(문의)
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
+	<script>
+		$(".shop").click(function() {
+			$(".shop").addClass("active");
+			$(".shop > .icon").addClass("active");
+			$(".map").removeClass("active");
+			$(".reserve").removeClass("active");
+			$(".qna").removeClass("active");
+			$(".map > .icon").removeClass("active");
+			$(".reserve > .icon").removeClass("active");
+			$(".qna > .icon").removeClass("active");
+			$("#line").addClass("one");
+			$("#line").removeClass("two");
+			$("#line").removeClass("three");
+			$("#line").removeClass("four");
+		})
+		$(".map").click(function() {
+			var mapCanvas = document.getElementById("map");
+	 		var mapOptions = {
+			 center: new google.maps.LatLng(51.5, -0.2),
+			 zoom: 10
+	 		};
+	 		var map = new google.maps.Map(mapCanvas, mapOptions);
+			$(".map").addClass("active");
+			$(".map > .icon").addClass("active");
+			$(".shop").removeClass("active");
+			$(".reserve").removeClass("active");
+			$(".qna").removeClass("active");
+			$(".shop > .icon").removeClass("active");
+			$(".reserve > .icon").removeClass("active");
+			$(".qna > .icon").removeClass("active");
+			$("#line").addClass("two");
+			$("#line").removeClass("one");
+			$("#line").removeClass("three");
+			$("#line").removeClass("four");
+		})
 
-    $(".map").click(function() {
-      $(".map").addClass("active");
-      $(".map > .icon").addClass("active");
-      $(".shop").removeClass("active");
-      $(".reserve").removeClass("active");
-      $(".qna").removeClass("active");
-      $(".shop > .icon").removeClass("active");
-      $(".reserve > .icon").removeClass("active");
-      $(".qna > .icon").removeClass("active");
-      $("#line").addClass("two");
-      $("#line").removeClass("one");
-      $("#line").removeClass("three");
-      $("#line").removeClass("four");
-    })
+		$(".reserve").click(function() {
+			$(".reserve").addClass("active");
+			$(".reserve > .icon").addClass("active");
+			$(".map").removeClass("active");
+			$(".shop").removeClass("active");
+			$(".qna").removeClass("active");
+			$(".map > .icon").removeClass("active");
+			$(".shop > .icon").removeClass("active");
+			$(".qna > .icon").removeClass("active");
+			$("#line").addClass("three");
+			$("#line").removeClass("two");
+			$("#line").removeClass("one");
+			$("#line").removeClass("four");
+		})
 
-    $(".reserve").click(function() {
-      $(".reserve").addClass("active");
-      $(".reserve > .icon").addClass("active");
-      $(".map").removeClass("active");
-      $(".shop").removeClass("active");
-      $(".qna").removeClass("active");
-      $(".map > .icon").removeClass("active");
-      $(".shop > .icon").removeClass("active");
-      $(".qna > .icon").removeClass("active");
-      $("#line").addClass("three");
-      $("#line").removeClass("two");
-      $("#line").removeClass("one");
-      $("#line").removeClass("four");
-    })
+		$(".qna").click(function() {
+			$(".qna").addClass("active");
+			$(".qna > .icon").addClass("active");
+			$(".map").removeClass("active");
+			$(".reserve").removeClass("active");
+			$(".shop").removeClass("active");
+			$(".map > .icon").removeClass("active");
+			$(".reserve > .icon").removeClass("active");
+			$(".shop > .icon").removeClass("active");
+			$("#line").addClass("four");
+			$("#line").removeClass("two");
+			$("#line").removeClass("three");
+			$("#line").removeClass("one");
+		})
 
-    $(".qna").click(function() {
-      $(".qna").addClass("active");
-      $(".qna > .icon").addClass("active");
-      $(".map").removeClass("active");
-      $(".reserve").removeClass("active");
-      $(".shop").removeClass("active");
-      $(".map > .icon").removeClass("active");
-      $(".reserve > .icon").removeClass("active");
-      $(".shop > .icon").removeClass("active");
-      $("#line").addClass("four");
-      $("#line").removeClass("two");
-      $("#line").removeClass("three");
-      $("#line").removeClass("one");
-    })
+		$(".shop").click(function() {
+			$("#first").addClass("active");
+			$("#second").removeClass("active");
+			$("#third").removeClass("active");
+			$("#fourth").removeClass("active");
+		})
 
-    $(".shop").click(function() {
-      $("#first").addClass("active");
-      $("#second").removeClass("active");
-      $("#third").removeClass("active");
-      $("#fourth").removeClass("active");
-    })
+		$(".map").click(function() {
+			$("#first").removeClass("active");
+			$("#second").addClass("active");
+			$("#third").removeClass("active");
+			$("#fourth").removeClass("active");
+		})
 
-    $(".map").click(function() {
-      $("#first").removeClass("active");
-      $("#second").addClass("active");
-      $("#third").removeClass("active");
-      $("#fourth").removeClass("active");
-    })
+		$(".reserve").click(function() {
+			$("#first").removeClass("active");
+			$("#second").removeClass("active");
+			$("#third").addClass("active");
+			$("#fourth").removeClass("active");
+		})
 
-    $(".reserve").click(function() {
-      $("#first").removeClass("active");
-      $("#second").removeClass("active");
-      $("#third").addClass("active");
-      $("#fourth").removeClass("active");
-    })
-
-    $(".qna").click(function() {
-      $("#first").removeClass("active");
-      $("#second").removeClass("active");
-      $("#third").removeClass("active");
-      $("#fourth").addClass("active");
-    })
-    //# sourceURL=pen.j
-  </script>
+		$(".qna").click(function() {
+			$("#first").removeClass("active");
+			$("#second").removeClass("active");
+			$("#third").removeClass("active");
+			$("#fourth").addClass("active");
+		})
+		//# sourceURL=pen.j
+	</script>
 
 
 </body>
+
 </html>
