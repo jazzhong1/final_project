@@ -135,6 +135,8 @@
 
     /*nav 끝*/
 
+    /*작은 케러셀*/
+
     @import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css);
     .col-item {
       border: 1px solid #E1E1E1;
@@ -228,6 +230,8 @@
       margin-right: 10px;
     }
 
+    /*추천 hr */
+
     #custom-hr {
 
       height: 3px;
@@ -239,31 +243,40 @@
 
     }
 
+    /*좋아요*/
+
     .selected {
       color: red !important;
       background: white !important;
       outline: none;
 
     }
-    .good-btn{
-        outline: none !important;
+
+    /*버튼 테두리 제거 */
+
+    .good-btn {
+      outline: none !important;
     }
 
-    @media (max-width: 375px)
-     {
-       #nailing-color
-       {
-         height: 4.5%;
-       }
-     }
 
-     #nailing-color
-     {
-       padding-top: 10px;
-     }
+    /*네일 */
+
+    @media (max-width: 375px) {
+      #nailing-color {
+        height: 4.5%;
+      }
+    }
+
+    #nailing-color {
+      padding-top: 10px;
+    }
 
 
-
+  .images-recommend{
+    top:0px;
+    left:80%;
+    position: inherit;
+  }
     }
   </style>
 
@@ -410,7 +423,7 @@
               <div class="row">
 
 
-                  <div class="col-xs-4">
+                  <div class="col-sm-4">
                     <div class="col-item">
                       <div class="photo">
                         <img src="http://placehold.it/350x260" class="img-responsive" alt="a" />
@@ -428,87 +441,92 @@
                                                      </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
                                                      </i><i class="fa fa-star"></i>
                           </div>
-                        </div>
+
                         <div class="separator clear-left">
+
                           <p class="btn-add">
                           <button href="#" class="btn btn-danger good-btn selected" style="width:90%"><span class="glyphicon glyphicon-heart"></span> 좋아요</button>
             </p>
+
+
             <p class="btn-details">
               <button href="#" class="btn btn-info" style="width:90%"><span class="glyphicon glyphicon-comment"></span> 리뷰</button>
+
           </div>
-          <div class="clearfix">
-          </div>
+        </div>
+        <div class="clearfix">
         </div>
       </div>
     </div>
+  </div>
 
 
 
-    <div class="col-xs-4">
-      <div class="col-item">
-        <div class="photo">
-          <img src="http://placehold.it/350x260" class="img-responsive" alt="a" />
-        </div>
-        <div class="info">
-          <div class="row">
-            <div class="price col-md-6">
-              <h5 style="margin-bottom:7px;">
+  <div class="col-sm-4">
+    <div class="col-item">
+      <div class="photo">
+        <img src="http://placehold.it/350x260" class="img-responsive" alt="a" />
+      </div>
+      <div class="info">
+        <div class="row">
+          <div class="price col-md-6">
+            <h5 style="margin-bottom:7px;">
                                                         1위 ****샵</h5>
-              <h5 class="price-text-color">
+            <h5 class="price-text-color">
                                                         경기도 구리시</h5>
-            </div>
-            <div class="rating hidden-sm col-md-6">
-              <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+          </div>
+          <div class="rating hidden-sm col-md-6">
+            <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
                                                      </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
                                                      </i><i class="fa fa-star"></i>
-            </div>
           </div>
-          <div class="separator clear-left">
-            <p class="btn-add">
+        </div>
+        <div class="separator clear-left">
+          <p class="btn-add">
 
-              <button href="#" class="btn btn-danger good-btn selected " style="width:90%"><span class="glyphicon glyphicon-heart"></span> 좋아요</button>
-            </p>
-            <p class="btn-details">
-              <button href="#" class="btn btn-info" style="width:90%"><span class="glyphicon glyphicon-comment"></span> 리뷰</button>
-          </div>
-          <div class="clearfix">
-          </div>
+            <button href="#" class="btn btn-danger good-btn selected " style="width:90%"><span class="glyphicon glyphicon-heart"></span> 좋아요</button>
+          </p>
+          <p class="btn-details">
+            <button href="#" class="btn btn-info" style="width:90%"><span class="glyphicon glyphicon-comment"></span> 리뷰</button>
+        </div>
+        <div class="clearfix">
         </div>
       </div>
     </div>
+  </div>
 
 
-    <div class="col-xs-4">
-      <div class="col-item">
-        <div class="photo">
-          <img src="http://placehold.it/350x260" class="img-responsive" alt="a" />
-        </div>
-        <div class="info">
-          <div class="row">
-            <div class="price col-md-6">
-              <h5 style="margin-bottom:7px;">
+  <div class="col-sm-4">
+    <div class="col-item">
+      <div class="photo">
+        <img src="http://placehold.it/350x260" class="img-responsive" alt="a" />
+      </div>
+      <div class="info">
+        <div class="row">
+          <div class="price col-md-6">
+            <h5 style="margin-bottom:7px;">
                                                         1위 ****샵</h5>
-              <h5 class="price-text-color">
+            <h5 class="price-text-color">
                                                         경기도 구리시</h5>
-            </div>
-            <div class="rating hidden-sm col-md-6">
-              <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+          </div>
+          <div class="rating hidden-sm col-md-6">
+            <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
                                                      </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
                                                      </i><i class="fa fa-star"></i>
-            </div>
           </div>
-          <div class="separator clear-left">
-            <p class="btn-add">
-              <button href="#" class="btn btn-danger good-btn selected " style="width:90%" onclick="myFunction();"><span class="glyphicon glyphicon-heart"></span> 좋아요</button>
-            </p>
-            <p class="btn-details">
-              <button href="#" class="btn btn-info" style="width:90%"><span class="glyphicon glyphicon-comment"></span> 리뷰</button>
-          </div>
-          <div class="clearfix">
-          </div>
+        </div>
+        <div class="separator clear-left">
+          <p class="btn-add">
+            <button href="#" class="btn btn-danger good-btn selected " style="width:90%" onclick="myFunction();"><span class="glyphicon glyphicon-heart"></span> 좋아요</button>
+          </p>
+          <p class="btn-details">
+            <button href="#" class="btn btn-info" style="width:90%"><span class="glyphicon glyphicon-comment"></span> 리뷰</button>
+        </div>
+        <div class="clearfix">
         </div>
       </div>
     </div>
+  </div>
 
 
 
@@ -522,7 +540,7 @@
 
 
 
-      <div class="col-xs-4">
+      <div class="col-sm-4">
         <div class="col-item">
           <div class="photo">
             <img src="http://placehold.it/350x260" class="img-responsive" alt="a" />
@@ -555,7 +573,7 @@
       </div>
 
 
-      <div class="col-xs-4">
+      <div class="col-sm-4">
         <div class="col-item">
           <div class="photo">
             <img src="http://placehold.it/350x260" class="img-responsive" alt="a" />
@@ -589,7 +607,7 @@
 
 
 
-      <div class="col-xs-4">
+      <div class="col-sm-4">
         <div class="col-item">
           <div class="photo">
             <img src="http://placehold.it/350x260" class="img-responsive" alt="a" />
@@ -650,94 +668,96 @@
         <ul id="dropdown-menu">
           <li class="nail-color">
             <a>
-              <div style="text-align:center"><img src="https://www.colorcombos.com/images/colors/FF0000.png" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
-                레드
-              </a>
-            </li>
-            <li class="nail-color">
-              <a>
-                <div style="text-align:center"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOAAAADhCAMAAADmr0l2AAAAA1BMVEX/tN+PJ63OAAAASElEQVR4nO3BMQEAAADCoPVPbQdvoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABOA8XBAAGwGMP0AAAAAElFTkSuQmCC" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
-                핑크
-              </a>
-            </li>
-            <li class="nail-color">
-              <a>
-                <div style="text-align:center"><img src="https://vignette.wikia.nocookie.net/symbolism/images/4/43/Orange.png/revision/latest?cb=20140818120046" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
-                오렌지
-              </a>
-            </li>
-            <li class="nail-color">
-              <a>
-                <div style="text-align:center"><img src="http://bdfjade.com/data/out/119/6226995-yellow-images.gif" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
-                옐로우
-              </a>
-            </li>
-            <li class="nail-color">
-              <a>
-                <div style="text-align:center"><img src="https://i.ytimg.com/vi/pNWz84Sn1oo/maxresdefault.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
-                그린
-              </a>
-            </li>
-            <li class="nail-color">
-              <a>
-                <div style="text-align:center"><img src="https://wallpapertag.com/wallpaper/middle/7/5/8/143301-full-size-mint-green-background-1920x1419-for-iphone-6.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
-                민트
-              </a>
-            </li>
-            <li class="nail-color">
-              <a>
-                <div style="text-align:center"><img src="https://vignette.wikia.nocookie.net/p__/images/4/4b/Solid_blue.svg.png/revision/latest?cb=20160330012046&path-prefix=protagonist" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
-                블루
-              </a>
-            </li>
-            <li class="nail-color">
-              <a>
-                <div style="text-align:center"><img src="https://img.etsystatic.com/il/c7a8e4/1513338021/il_340x270.1513338021_9myj.jpg?version=0" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
-                라벤더
-              </a>
-            </li>
-            <li class="nail-color">
-              <a>
-                <div style="text-align:center; "><img src="http://www.ignytebrands.com/wp-content/uploads/white.png" style="border:1px solid black;" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
-                화이트
-              </a>
-            </li>
-            <li class="nail-color">
-              <a>
-                <div style="text-align:center"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAA1BMVEWAgICQdD0xAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO8GxYgAAb0jQ/cAAAAASUVORK5CYII=" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
-                그레이
-              </a>
-            </li>
-            <li class="nail-color">
-              <a>
-                <div style="text-align:center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Solid_black.svg/2000px-Solid_black.svg.png" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
-                블랙
-              </a>
-            </li>
-            <li class="nail-color">
+              <div style="text-align:center"><img src="https://www.colorcombos.com/images/colors/FF0000.png" class="w3-circle" alt="Cinque Terre" width="30" height="30"> </div>
+              레드
+            </a>
+          </li>
+          <li class="nail-color">
             <a>
-                <div style="text-align:center"><img src="https://thumbs.dreamstime.com/b/natural-light-beige-recycled-paper-texture-seamless-square-back-natural-light-beige-recycled-paper-texture-seamless-square-104529523.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
-                베이지
-              </a>
-            </li>
-            <li class="nail-color">
-              <a>
-                <div style="text-align:center"><img src="https://i.ytimg.com/vi/U5ILpOCoStI/maxresdefault.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
-                믹스
-              </a>
-            </li>
-            <li class="nail-color">
-              <a>
-                <div style="text-align:center"><img src="https://www.colorcombos.com/images/colors/D7B740.png" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
-                골드
-              </a>
-            </li>
-            <li class="nail-color">
-              <a>
-                <div style="text-align:center"><img src="https://vignette.wikia.nocookie.net/p__/images/7/74/Hd7S83Q.png/revision/latest?cb=20160331044639&path-prefix=protagonist" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
-                실버
-              </a>
-            </li>
+              <div style="text-align:center"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOAAAADhCAMAAADmr0l2AAAAA1BMVEX/tN+PJ63OAAAASElEQVR4nO3BMQEAAADCoPVPbQdvoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABOA8XBAAGwGMP0AAAAAElFTkSuQmCC" class="w3-circle"
+                  alt="Cinque Terre" width="30" height="30"></div>
+              핑크
+            </a>
+          </li>
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center"><img src="https://vignette.wikia.nocookie.net/symbolism/images/4/43/Orange.png/revision/latest?cb=20140818120046" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
+              오렌지
+            </a>
+          </li>
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center"><img src="http://bdfjade.com/data/out/119/6226995-yellow-images.gif" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
+              옐로우
+            </a>
+          </li>
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center"><img src="https://i.ytimg.com/vi/pNWz84Sn1oo/maxresdefault.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
+              그린
+            </a>
+          </li>
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center"><img src="https://wallpapertag.com/wallpaper/middle/7/5/8/143301-full-size-mint-green-background-1920x1419-for-iphone-6.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
+              민트
+            </a>
+          </li>
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center"><img src="https://vignette.wikia.nocookie.net/p__/images/4/4b/Solid_blue.svg.png/revision/latest?cb=20160330012046&path-prefix=protagonist" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
+              블루
+            </a>
+          </li>
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center"><img src="https://img.etsystatic.com/il/c7a8e4/1513338021/il_340x270.1513338021_9myj.jpg?version=0" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
+              라벤더
+            </a>
+          </li>
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center; "><img src="http://www.ignytebrands.com/wp-content/uploads/white.png" style="border:1px solid black;" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
+              화이트
+            </a>
+          </li>
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAA1BMVEWAgICQdD0xAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO8GxYgAAb0jQ/cAAAAASUVORK5CYII=" class="w3-circle"
+                  alt="Cinque Terre" width="30" height="30"></div>
+              그레이
+            </a>
+          </li>
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Solid_black.svg/2000px-Solid_black.svg.png" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
+              블랙
+            </a>
+          </li>
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center"><img src="https://thumbs.dreamstime.com/b/natural-light-beige-recycled-paper-texture-seamless-square-back-natural-light-beige-recycled-paper-texture-seamless-square-104529523.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
+              베이지
+            </a>
+          </li>
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center"><img src="https://i.ytimg.com/vi/U5ILpOCoStI/maxresdefault.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
+              믹스
+            </a>
+          </li>
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center"><img src="https://www.colorcombos.com/images/colors/D7B740.png" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
+              골드
+            </a>
+          </li>
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center"><img src="https://vignette.wikia.nocookie.net/p__/images/7/74/Hd7S83Q.png/revision/latest?cb=20160331044639&path-prefix=protagonist" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
+              실버
+            </a>
+          </li>
 
         </ul>
       </div>
@@ -755,7 +775,7 @@
           <div style="text-align:left"><img src="images\beauty.png" class="w3-circle" alt="Cinque Terre" width="20" height="20"><button class="select-menu w3-button w3-round">네일</button></div>
         </a>
         <a href="#" class="w3-bar-item w3-button">
-        <div style="text-align:left"><img src="images\footprint.png" class="w3-circle" alt="Cinque Terre" width="20" height="20"><button class="select-menu w3-button w3-round">페디</button></div>
+          <div style="text-align:left"><img src="images\footprint.png" class="w3-circle" alt="Cinque Terre" width="20" height="20"><button class="select-menu w3-button w3-round">페디</button></div>
         </a>
       </div>
 
@@ -764,55 +784,55 @@
 
     <div class="w3-dropdown-hover">
       <div class="w3-border w3-hover-border-pale-red  w3-round" style="padding-left:10px;">
-         <button class="select-menu w3-button w3-round w3-hover-white"><i class="fa fa-plus-square-o"></i> 전체옵션</button></div>
-           <div id="nailing-color"  class="w3-dropdown-content w3-card-12 w3-border w3-round">
+        <button class="select-menu w3-button w3-round w3-hover-white"><i class="fa fa-plus-square-o"></i> 전체옵션</button></div>
+      <div id="nailing-color" class="w3-dropdown-content w3-card-12 w3-border w3-round">
 
-         <!--media로 조정해주기 default는 height 3.5%-->
-         <ul id="dropdown-menu">
-           <li class="nail-color">
-             <a>
-               <div style="text-align:center"><img src="http://www.cuded.com/wp-content/uploads/2015/04/21-French-Manicure.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
-               프렌치
-             </a>
-           </li>
-           <li class="nail-color">
-             <a>
-               <div style="text-align:center"><img src="https://1.bp.blogspot.com/-6rVc4GNTKVU/Vtfa_wIBA5I/AAAAAAAAWnQ/tll1NnimnII/s1600/constellation-nail-art-3.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
-               아트
-             </a>
-           </li>
-           <li class="nail-color">
-             <a>
-               <div style="text-align:center"><img src="https://s-media-cache-ak0.pinimg.com/originals/cf/28/fa/cf28fa8f1d236e4479e2eb3e3e3165fd.png" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
-               파츠
-             </a>
-           </li>
-           <li class="nail-color">
-             <a>
-               <div style="text-align:center"><img src="https://i.ytimg.com/vi/IHjdyDyd7hk/hqdefault.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
-               글리터
-             </a>
-           </li>
-           <li class="nail-color">
-             <a>
-               <div style="text-align:center"><img src="https://assets.teenvogue.com/photos/55829f6ca28d9d4e0540e581/master/pass/beauty-nails-2012-04-05-gradient-nail-tutorial.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
-               그라데이션
-             </a>
-           </li>
-           <li class="nail-color">
-             <a>
-               <div style="text-align:center"><img src="http://katheryne.info/images5/0917L/full-color-acrylic-nail-designs/full-color-acrylic-nail-designs-44_13.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
-               풀컬러
-             </a>
-           </li>
-           <li class="nail-color">
-             <a>
-               <div style="text-align:center"><img src="http://bebelushbeauty.com/uploads/best-marvel-nail-art-request-pict-for-cute-character-inspiration-and-names-trends_FILES_28561.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
-               캐릭터
-             </a>
-           </li>
-         </ul>
-       </div>
+        <!--media로 조정해주기 default는 height 3.5%-->
+        <ul id="dropdown-menu">
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center"><img src="http://www.cuded.com/wp-content/uploads/2015/04/21-French-Manicure.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
+              프렌치
+            </a>
+          </li>
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center"><img src="https://1.bp.blogspot.com/-6rVc4GNTKVU/Vtfa_wIBA5I/AAAAAAAAWnQ/tll1NnimnII/s1600/constellation-nail-art-3.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
+              아트
+            </a>
+          </li>
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center"><img src="https://s-media-cache-ak0.pinimg.com/originals/cf/28/fa/cf28fa8f1d236e4479e2eb3e3e3165fd.png" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
+              파츠
+            </a>
+          </li>
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center"><img src="https://i.ytimg.com/vi/IHjdyDyd7hk/hqdefault.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
+              글리터
+            </a>
+          </li>
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center"><img src="https://assets.teenvogue.com/photos/55829f6ca28d9d4e0540e581/master/pass/beauty-nails-2012-04-05-gradient-nail-tutorial.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
+              그라데이션
+            </a>
+          </li>
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center"><img src="http://katheryne.info/images5/0917L/full-color-acrylic-nail-designs/full-color-acrylic-nail-designs-44_13.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
+              풀컬러
+            </a>
+          </li>
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center"><img src="http://bebelushbeauty.com/uploads/best-marvel-nail-art-request-pict-for-cute-character-inspiration-and-names-trends_FILES_28561.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
+              캐릭터
+            </a>
+          </li>
+        </ul>
+      </div>
 
     </div>
 
@@ -822,18 +842,23 @@
 
   <!--네일 이미지시작-->
 
+  <a href="#" data-toggle="modal" data-target=".pop-up-2">
   <div class="cover-card col-sm-4">
+
+
     <div class="hovereffect">
       <img class=" img-responsive nail-main-images " src="images/image-7.jpg">
-      <div class="overlay">
+      <div class="overlay" data-toggle="modal"  data-target=".pop-up-2" onclick="fu-nail-modal()">
         <h2>사진이름</h2>
         <p>
           <a href="#">점포명</a><br>
           <a href="#">설명</a>
+        </a>
         </p>
       </div>
     </div>
   </div>
+
   <div class="cover-card col-sm-2">
     <div class="hovereffect">
       <img class=" img-responsive nail-main-images" src="images/image-6.jpg">
@@ -934,6 +959,24 @@
       </div>
     </div>
   </div>
+
+  <!--모달 틀-->
+  <div class="modal fade pop-up-2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h4 class="modal-title" id="myLargeModalLabel-1">확대 이미지</h4>
+        </div>
+        <div class="modal-body">
+          <img src="images\food.png" class="img-responsive img-rounded center-block" alt="" width="300" height="300">
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal mixer image -->
 
   </div>
   </div>
