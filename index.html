@@ -5,133 +5,98 @@
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="js/index.js">
+  <link href="css/index1.css" rel="stylesheet">
+  <link href="css/index2.css" rel="stylesheet">
+
+  <style>
 
 
-  <link href="css/index.css" rel="stylesheet">
+  </style>
 
-
-
-
-  <script type="text/javascript">
-    $(document).ready(function() {
-      var trigger = $('.hamburger'),
-        overlay = $('.overlay'),
-        isClosed = false;
-
-      trigger.click(function() {
-        hamburger_cross();
-      });
-
-      function hamburger_cross() {
-
-        if (isClosed == true) {
-          overlay.hide();
-          trigger.removeClass('is-open');
-          trigger.addClass('is-closed');
-          isClosed = false;
-        } else {
-          overlay.show();
-          trigger.removeClass('is-closed');
-          trigger.addClass('is-open');
-          isClosed = true;
-        }
-      }
-
-      $('[data-toggle="offcanvas"]').click(function() {
-        $('#wrapper').toggleClass('toggled');
-      });
-    });
-  </script>
 </head>
 
 <body>
+
   <header>
-    <br>
-    <div class="row" style="text-align: center;">
-      <img src="images\logo-dark.png" alt="">
-    </div>
-    <br>
+    <nav class="navbar navbar-icon-top navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+          <a class="navbar-brand" href="#">로고~~</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+            <!--active사용시 home하얀색으로 변함-->
+            <li><a href="#">Introduce</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Market</a></li>
+            <li><a href="#">Service center</a></li>
+
+          </ul>
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search w3-spin"></span></button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#">
+                            <i class="fa fa-envelope-o">
+                                <span class="badge badge-danger">11</span>
+                            </i>
+                            Messages
+                        </a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <!--<i class="fa fa-user-circle-o"></i>-->
+                <img class="img-circle" src="images/image-7.jpg" alt="" style="width:50px; height:50px;">
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" style="border-radius:10px; border-color:white">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">마이페이지</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+    <br><br><br><br>
+    <!--
+
+                <li>
+                  <div class="w3-threequarter">
+                    <input type="text" class="w3-bar-item w3-input w3-border w3-round-xlarge" placeholder="검색" style="height:30px; margin-top:10px">
+                  </div>
+                </li>-->
+
 
   </header>
-
-  <!--
-  <div id="wrapper">
-    <div class="icon-bar">
-      <a class="active" href="#"><i class="fa fa-home"></i></a>
-      <a href="#"><i class="fa fa-search"></i></a>
-      <a href="#"><i class="fa fa-envelope"></i></a>
-      <a href="#"><i class="fa fa-globe"></i></a>
-      <a href="#"><i class="fa fa-trash"></i></a>
-    </div>
-    <div class="overlay"></div>
-
-    <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
-      <ul class="nav sidebar-nav">
-        <li class="sidebar-brand">
-          <a href="#">
-                      Brand
-                   </a>
-        </li>
-        <li>
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <a href="#">About</a>
-        </li>
-        <li>
-          <a href="#">Events</a>
-        </li>
-        <li>
-          <a href="#">Team</a>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Works <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li class="dropdown-header">Dropdown heading</li>
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li><a href="#">Separated link</a></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">Services</a>
-        </li>
-        <li>
-          <a href="#">Contact</a>
-        </li>
-        <li>
-          <a href="https://twitter.com/maridlcrmn">Follow me</a>
-        </li>
-      </ul>
-    </nav>
-    <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
-      <span class="hamb-top"></span>
-<span class="hamb-middle"></span>
-<span class="hamb-bottom"></span>
-  </button>
-  -->
-
   <div class="container-fluid">
 
     <div class="row">
-      <div class="col-xs-1">
-        <div class="icon-bar" data-spy="affix">
-          <a class="active" href="#"><i class="fa fa-home"></i></a>
-          <a href="#"><i class="fa fa-search"></i></a>
-          <a href="#"><i class="fa fa-envelope"></i></a>
-          <a href="#"><i class="fa fa-globe"></i></a>
-          <a href="#"><i class="fa fa-trash"></i></a>
-        </div>
-      </div>
-      <div class="col-xs-10" style="margin-left:70px">
-
+      <div class="col-xs-12">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
           <!-- Indicators -->
           <ol class="carousel-indicators">
@@ -142,7 +107,7 @@
           <!-- Wrapper for slides -->
           <div class="carousel-inner" role="listbox">
             <div class="item active">
-              <img src="https://placehold.it/800x400?text=IMAGE" alt="Image">
+              <img src="images\slide-4-1-1920x780.jpg" alt="Image">
               <div class="carousel-caption">
                 <h3>Sell $</h3>
                 <p>Money Money.</p>
@@ -150,7 +115,7 @@
             </div>
 
             <div class="item">
-              <img src="https://placehold.it/800x400?text=Another Image Maybe" alt="Image">
+              <img src="images\slide-4-1-1920x780.jpg" alt="Image">
               <div class="carousel-caption">
                 <h3>More Sell $</h3>
                 <p>Lorem ipsum...</p>
@@ -171,125 +136,671 @@
 
         <br>
 
-          <!--작은 케러셀-->
+        <!--작은 케러셀-->
 
-        <div class="col-md-12">
-          <div class="carousel slide multi-item-carousel" id="theCarousel">
-            <div class="carousel-inner">
-              <div class="item active">
-                <div class="col-sm-4"><a href="#1"><img src="http://placehold.it/300x300"
-        class="img-responsive"></a></div>
-              </div>
-              <div class="item">
-                <div class="col-sm-4"><a href="#1"><img src="http://placehold.it/300x300" class="img-responsive"></a></div>
-              </div>
-              <div class="item">
-                <div class="col-sm-4"><a href="#1"><img src="http://placehold.it/300x300" class="img-responsive"></a></div>
-              </div>
-              <div class="item">
-                <div class="col-sm-4"><a href="#1"><img src="http://placehold.it/300x300" class="img-responsive"></a></div>
-              </div>
-              <div class="item">
-                <div class="col-sm-4"><a href="#1"><img src="http://placehold.it/300x300" class="img-responsive"></a></div>
-              </div>
-              <div class="item">
-                <div class="col-sm-4"><a href="#1"><img src="http://placehold.it/300x300" class="img-responsive"></a></div>
-              </div>
-              <!-- add  more items here -->
-              <!-- Example item start:  -->
+        <div class="row">
+          <div class="col-md-12">
+            <span>
+              <strong style="font-size:20pt; color:rgb(71, 51, 51)"><i class="fa fa-angellist" style="font-size:36px"></i>이달의 추천 네일</strong><span>
+            <hr id="custom-hr">
+          </div>
+          <div class="col-xs-12" style="10px;" >
 
-              <div class="item">
-                <div class="col-sm-4"><a href="#1"><img src="http://placehold.it/300x300" class="img-responsive"></a></div>
-              </div>
-
-              <!--  Example item end -->
+            <div class="controls pull-left">
+                <a class="left fa fa-chevron-left btn  btn-outline-light text-dark" href="#carousel-example-generic"
+                    data-slide="prev"></a>
             </div>
-            <a class="left carousel-control" href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
-            <a class="right carousel-control" href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
-          </div>
-          <br>
+            <div class="controls pull-right">
+              <a class="right fa fa-chevron-right btn  btn-outline-light text-dark" href="#carousel-example-generic"
+                  data-slide="next"></a>
+            </div>
 
-          <!--네일 이미지시작-->
+      </div>
+        </div>
+        <div id="carousel-example-generic" class="carousel slide " data-ride="carousel">
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <div class="row">
 
-          <div class="cover-card col-sm-4" style="background-size:cover;">
-            <p>
-              Text Caption
-            </p>
-          </div>
-          <div class="cover-card col-sm-8" style="background-size:cover;">
-            <p>
-              Text Caption
-            </p>
-          </div>
-          <div class="cover-card col-sm-3" style=";background-size:cover;">
-            <p>
-              Text Caption
-            </p>
-          </div>
-          <div class="cover-card col-sm-3" style="background-size:cover;">
-            <p>
-              Text Caption
-            </p>
-          </div>
-          <div class="cover-card col-sm-3" style="background-size:cover;">
-            <p>
-              Text Caption
-            </p>
-          </div>
-          <div class="cover-card col-sm-3" style="background-size:cover;">
-            <p>
-              Text Caption
-            </p>
-          </div>
 
-          <div class="cover-card col-sm-4" style="background-size:cover;">
-            <p>
-              Text Caption
-            </p>
-          </div>
-          <div class="cover-card col-sm-4" style="background-size:cover;">
-            <p>
-              Text Caption
-            </p>
-          </div>
-          <div class="cover-card col-sm-4" style="background-size:cover;">
-            <p>
-              Text Caption
-            </p>
-          </div>
-          <div class="cover-card col-sm-6" style="background-size:cover;">
-            <p>
-              Text Caption
-            </p>
-          </div>
-          <div class="cover-card col-sm-6" style="background-size:cover;">
-            <p>
-              Text Caption
-            </p>
-          </div>
+                  <div class="col-sm-4">
+                    <div class="col-item">
+                      <div class="photo">
+                        <img src="http://placehold.it/350x260" class="img-responsive" alt="a" />
+                      </div>
+                      <div class="info">
+                        <div class="row">
+                          <div class="price col-md-6">
+                            <h5 style="margin-bottom:7px;">
+                                                        1위 ****샵</h5>
+                            <h5 class="price-text-color">
+                                                        경기도 구리시</h5>
+                          </div>
+                          <div class="rating hidden-sm col-md-6">
+                            <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                                                     </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                                                     </i><i class="fa fa-star"></i>
+                          </div>
 
+                        <div class="separator clear-left">
+
+                          <p class="btn-add">
+                          <button href="#" class="btn btn-danger good-btn selected" style="width:90%"><span class="glyphicon glyphicon-heart"></span> 좋아요</button>
+            </p>
+
+
+            <p class="btn-details">
+              <button href="#" class="btn btn-info" style="width:90%"><span class="glyphicon glyphicon-comment"></span> 리뷰</button>
+
+          </div>
+        </div>
+        <div class="clearfix">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="col-sm-4">
+    <div class="col-item">
+      <div class="photo">
+        <img src="http://placehold.it/350x260" class="img-responsive" alt="a" />
+      </div>
+      <div class="info">
+        <div class="row">
+          <div class="price col-md-6">
+            <h5 style="margin-bottom:7px;">
+                                                        1위 ****샵</h5>
+            <h5 class="price-text-color">
+                                                        경기도 구리시</h5>
+          </div>
+          <div class="rating hidden-sm col-md-6">
+            <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                                                     </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                                                     </i><i class="fa fa-star"></i>
+          </div>
+        </div>
+        <div class="separator clear-left">
+          <p class="btn-add">
+
+            <button href="#" class="btn btn-danger good-btn selected " style="width:90%"><span class="glyphicon glyphicon-heart"></span> 좋아요</button>
+          </p>
+          <p class="btn-details">
+            <button href="#" class="btn btn-info" style="width:90%"><span class="glyphicon glyphicon-comment"></span> 리뷰</button>
+        </div>
+        <div class="clearfix">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col-sm-4">
+    <div class="col-item">
+      <div class="photo">
+        <img src="http://placehold.it/350x260" class="img-responsive" alt="a" />
+      </div>
+      <div class="info">
+        <div class="row">
+          <div class="price col-md-6">
+            <h5 style="margin-bottom:7px;">
+                                                        1위 ****샵</h5>
+            <h5 class="price-text-color">
+                                                        경기도 구리시</h5>
+          </div>
+          <div class="rating hidden-sm col-md-6">
+            <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                                                     </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                                                     </i><i class="fa fa-star"></i>
+          </div>
+        </div>
+        <div class="separator clear-left">
+          <p class="btn-add">
+            <button href="#" class="btn btn-danger good-btn selected " style="width:90%" onclick="myFunction();"><span class="glyphicon glyphicon-heart"></span> 좋아요</button>
+          </p>
+          <p class="btn-details">
+            <button href="#" class="btn btn-info" style="width:90%"><span class="glyphicon glyphicon-comment"></span> 리뷰</button>
+        </div>
+        <div class="clearfix">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  </div>
+  </div>
+
+
+
+  <div class="item">
+    <div class="row">
+
+
+
+      <div class="col-sm-4">
+        <div class="col-item">
+          <div class="photo">
+            <img src="http://placehold.it/350x260" class="img-responsive" alt="a" />
+          </div>
+          <div class="info">
+            <div class="row">
+              <div class="price col-md-6">
+                <h5 style="margin-bottom:7px;">
+                                                        1위 ****샵</h5>
+                <h5 class="price-text-color">
+                                                        경기도 구리시</h5>
+              </div>
+              <div class="rating hidden-sm col-md-6">
+                <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                                                     </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                                                     </i><i class="fa fa-star"></i>
+              </div>
+            </div>
+            <div class="separator clear-left">
+              <p class="btn-add">
+                <a href="#" class="btn btn-danger good-btn selected " style="width:90%"><span class="glyphicon glyphicon-heart"></span> 좋아요</a>
+              </p>
+              <p class="btn-details">
+                <button href="#" class="btn btn-info" style="width:90%"><span class="glyphicon glyphicon-comment"></span> 리뷰</button>
+            </div>
+            <div class="clearfix">
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-sm-4">
+        <div class="col-item">
+          <div class="photo">
+            <img src="http://placehold.it/350x260" class="img-responsive" alt="a" />
+          </div>
+          <div class="info">
+            <div class="row">
+              <div class="price col-md-6">
+                <h5 style="margin-bottom:7px;">
+                                        1위 ****샵</h5>
+                <h5 class="price-text-color">
+                                        경기도 구리시</h5>
+              </div>
+              <div class="rating hidden-sm col-md-6">
+                <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                                     </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                                     </i><i class="fa fa-star"></i>
+              </div>
+            </div>
+            <div class="separator clear-left">
+              <p class="btn-add">
+                <button href="#" class="btn btn-danger good-btn selected" style="width:90%"><span class="glyphicon glyphicon-heart"></span> 좋아요</button>
+              </p>
+              <p class="btn-details">
+                <a href="#" class="btn btn-info" style="width:90%"><span class="glyphicon glyphicon-comment"></span> 리뷰</a>
+            </div>
+            <div class="clearfix">
+            </div>
+          </div>
         </div>
       </div>
 
 
 
-    <div class="col-xs-1">
-          검색 아이콘
+      <div class="col-sm-4">
+        <div class="col-item">
+          <div class="photo">
+            <img src="http://placehold.it/350x260" class="img-responsive" alt="a" />
+          </div>
+          <div class="info">
+            <div class="row">
+              <div class="price col-md-6">
+                <h5 style="margin-bottom:7px;">
+                                          1위 ****샵</h5>
+                <h5 class="price-text-color">
+                                          경기도 구리시</h5>
+              </div>
+              <div class="rating hidden-sm col-md-6">
+                <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                                       </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                                       </i><i class="fa fa-star"></i>
+              </div>
+            </div>
+            <div class="separator clear-left">
+              <p class="btn-add">
+                <button href="#" class="btn btn-danger good-btn selected " style="width:90%"><span class="glyphicon glyphicon-heart"></span> 좋아요</button>
+              </p>
+              <p class="btn-details">
+                <a href="#" class="btn btn-info" style="width:90%"><span class="glyphicon glyphicon-comment"></span> 리뷰</a>
+            </div>
+            <div class="clearfix">
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+  </div>
+  </div>
+  <br>
+
+
+
+  <div class="w3-bar <w3-light-white></w3-light-white>" style="text-align:center;">
+
+    <div id="first-dropdown" class="w3-dropdown-hover">
+      <button class="w3-button">Dropdown</button>
+      <div class="w3-dropdown-content w3-card-4">
+        <a href="#" class="w3-bar-item w3-button">Link 1</a>
+        <a href="#" class="w3-bar-item w3-button">Link 2</a>
+        <a href="#" class="w3-bar-item w3-button">Link 3</a>
+        <a href="#" class="w3-bar-item w3-button">Link 3</a>
+        <a href="#" class="w3-bar-item w3-button">Link 3</a>
+      </div>
+    </div>
+
+    <!--nail 선택-->
+    <div class="w3-dropdown-hover">
+      <div class="w3-border w3-hover-border-pale-red  w3-round" style="padding-left:10px;">
+        <img src="images/all-color.jpg" class="w3-circle" alt="Cinque Terre" width="20" height="20"><button class="select-menu w3-button w3-round w3-hover-white">전체&nbsp;</button></div>
+      <div id="nailing-color" class="w3-dropdown-content w3-card-12 w3-border w3-round">
+        <!--media로 조정해주기 default는 height 3.5%-->
+        <ul id="dropdown-menu">
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center"><img src="https://www.colorcombos.com/images/colors/FF0000.png" class="w3-circle" alt="Cinque Terre" width="30" height="30"> </div>
+              레드
+            </a>
+          </li>
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOAAAADhCAMAAADmr0l2AAAAA1BMVEX/tN+PJ63OAAAASElEQVR4nO3BMQEAAADCoPVPbQdvoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABOA8XBAAGwGMP0AAAAAElFTkSuQmCC" class="w3-circle"
+                  alt="Cinque Terre" width="30" height="30"></div>
+              핑크
+            </a>
+          </li>
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center"><img src="https://vignette.wikia.nocookie.net/symbolism/images/4/43/Orange.png/revision/latest?cb=20140818120046" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
+              오렌지
+            </a>
+          </li>
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center"><img src="http://bdfjade.com/data/out/119/6226995-yellow-images.gif" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
+              옐로우
+            </a>
+          </li>
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center"><img src="https://i.ytimg.com/vi/pNWz84Sn1oo/maxresdefault.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
+              그린
+            </a>
+          </li>
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center"><img src="https://wallpapertag.com/wallpaper/middle/7/5/8/143301-full-size-mint-green-background-1920x1419-for-iphone-6.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
+              민트
+            </a>
+          </li>
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center"><img src="https://vignette.wikia.nocookie.net/p__/images/4/4b/Solid_blue.svg.png/revision/latest?cb=20160330012046&path-prefix=protagonist" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
+              블루
+            </a>
+          </li>
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center"><img src="https://img.etsystatic.com/il/c7a8e4/1513338021/il_340x270.1513338021_9myj.jpg?version=0" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
+              라벤더
+            </a>
+          </li>
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center; "><img src="http://www.ignytebrands.com/wp-content/uploads/white.png" style="border:1px solid black;" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
+              화이트
+            </a>
+          </li>
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAA1BMVEWAgICQdD0xAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO8GxYgAAb0jQ/cAAAAASUVORK5CYII=" class="w3-circle"
+                  alt="Cinque Terre" width="30" height="30"></div>
+              그레이
+            </a>
+          </li>
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Solid_black.svg/2000px-Solid_black.svg.png" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
+              블랙
+            </a>
+          </li>
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center"><img src="https://thumbs.dreamstime.com/b/natural-light-beige-recycled-paper-texture-seamless-square-back-natural-light-beige-recycled-paper-texture-seamless-square-104529523.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
+              베이지
+            </a>
+          </li>
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center"><img src="https://i.ytimg.com/vi/U5ILpOCoStI/maxresdefault.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
+              믹스
+            </a>
+          </li>
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center"><img src="https://www.colorcombos.com/images/colors/D7B740.png" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
+              골드
+            </a>
+          </li>
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center"><img src="https://vignette.wikia.nocookie.net/p__/images/7/74/Hd7S83Q.png/revision/latest?cb=20160331044639&path-prefix=protagonist" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
+              실버
+            </a>
+          </li>
+
+        </ul>
       </div>
 
-  <!--</div>-->
+    </div>
 
-  <footer class="container-fluid text-center">
-    <p>Footer Text</p>
+
+
+
+    <div class="w3-dropdown-hover">
+      <div class="w3-border w3-hover-border-pale-red  w3-round" style="padding-left:10px;">
+        <img src="images\nail-polish.png" class="w3-circle" alt="Cinque Terre" width="20" height="20"><button class="select-menu w3-button w3-round w3-hover-white">네일/패디</button></div>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-border w3-round">
+        <a href="#" class="w3-bar-item w3-button">
+          <div style="text-align:left"><img src="images\beauty.png" class="w3-circle" alt="Cinque Terre" width="20" height="20"><button class="select-menu w3-button w3-round">네일</button></div>
+        </a>
+        <a href="#" class="w3-bar-item w3-button">
+          <div style="text-align:left"><img src="images\footprint.png" class="w3-circle" alt="Cinque Terre" width="20" height="20"><button class="select-menu w3-button w3-round">페디</button></div>
+        </a>
+      </div>
+
+    </div>
+
+
+    <div class="w3-dropdown-hover">
+      <div class="w3-border w3-hover-border-pale-red  w3-round" style="padding-left:10px;">
+        <button class="select-menu w3-button w3-round w3-hover-white"><i class="fa fa-plus-square-o"></i> 전체옵션</button></div>
+      <div id="nailing-color" class="w3-dropdown-content w3-card-12 w3-border w3-round">
+
+        <!--media로 조정해주기 default는 height 3.5%-->
+        <ul id="dropdown-menu">
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center"><img src="http://www.cuded.com/wp-content/uploads/2015/04/21-French-Manicure.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
+              프렌치
+            </a>
+          </li>
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center"><img src="https://1.bp.blogspot.com/-6rVc4GNTKVU/Vtfa_wIBA5I/AAAAAAAAWnQ/tll1NnimnII/s1600/constellation-nail-art-3.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
+              아트
+            </a>
+          </li>
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center"><img src="https://s-media-cache-ak0.pinimg.com/originals/cf/28/fa/cf28fa8f1d236e4479e2eb3e3e3165fd.png" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
+              파츠
+            </a>
+          </li>
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center"><img src="https://i.ytimg.com/vi/IHjdyDyd7hk/hqdefault.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
+              글리터
+            </a>
+          </li>
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center"><img src="https://assets.teenvogue.com/photos/55829f6ca28d9d4e0540e581/master/pass/beauty-nails-2012-04-05-gradient-nail-tutorial.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
+              그라데이션
+            </a>
+          </li>
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center"><img src="http://katheryne.info/images5/0917L/full-color-acrylic-nail-designs/full-color-acrylic-nail-designs-44_13.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
+              풀컬러
+            </a>
+          </li>
+          <li class="nail-color">
+            <a>
+              <div style="text-align:center"><img src="http://bebelushbeauty.com/uploads/best-marvel-nail-art-request-pict-for-cute-character-inspiration-and-names-trends_FILES_28561.jpg" class="w3-circle" alt="Cinque Terre" width="30" height="30"></div>
+              캐릭터
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+  <!--네일 이미지시작-->
+
+  <a href="#" data-toggle="modal" data-target=".pop-up-2">
+  <div class="cover-card col-sm-4">
+
+
+    <div class="hovereffect">
+      <img id='nail-img1' class=" img-responsive nail-main-images" src="images/image-7.jpg" >
+      <div class="overlay" data-toggle="modal"  data-target=".pop-up-2" onclick="fn_nail_img(1)">
+        <h2>사진이름</h2>
+        <p>
+          <a href="#">점포명</a><br>
+          <a href="#">설명</a>
+        </a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!--모달 틀-->
+  <div class="modal fade pop-up-2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h4 class="modal-title" id="myLargeModalLabel-1">확대 이미지</h4>
+        </div>
+        <div class="modal-body">
+
+            <div class="col-item">
+              <div class="photo">
+                <img id="modal-nail-img"  src="http://placehold.it/350x260" class="img-responsive img-rounded center-block" alt="" width="300" height="300">
+
+              </div>
+              <div class="info">
+                <div class="row">
+                  <div class="price col-md-6">
+                    <h5 style="margin-bottom:7px;">
+                                                                1위 ****샵</h5>
+                    <h5 class="price-text-color">
+                                                                경기도 구리시</h5>
+                  </div>
+                  <div class="rating hidden-sm col-md-6">
+                    <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                                                             </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                                                             </i><i class="fa fa-star"></i>
+                  </div>
+                </div>
+                <div class="separator clear-left">
+                  <p class="btn-add">
+                    <button href="#" class="btn btn-danger good-btn selected " style="width:90%" onclick="myFunction();"><span class="glyphicon glyphicon-heart"></span> 좋아요</button>
+                  </p>
+                  <p class="btn-details">
+                    <button href="#" class="btn btn-info" style="width:90%"><span class="glyphicon glyphicon-comment"></span> 리뷰</button>
+                </div>
+                <div class="clearfix">
+                </div>
+              </div>
+            </div>
+
+
+
+
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal mixer image -->
+
+
+  <script type="text/javascript">
+  function fn_nail_img(index) {
+
+
+      var rimage=$('#nail-img'+index).attr('src');
+
+       $("#modal-nail-img").attr("src",rimage);
+     }
+  </script>
+
+
+  <div class="cover-card col-sm-2">
+    <div class="hovereffect">
+      <img class=" img-responsive nail-main-images" src="images/image-6.jpg">
+      <div class="overlay">
+        <h2>Effect 13</h2>
+        <p>
+          <a href="#">LINK HERE</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="cover-card col-sm-6">
+    <div class="hovereffect">
+      <img class=" img-responsive nail-main-images" src="images/image-100.jpg">
+      <div class="overlay">
+        <h2>Effect 13</h2>
+        <p>
+          <a href="#">LINK HERE</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="cover-card col-sm-3">
+    <div class="hovereffect">
+      <img class=" img-responsive nail-main-images" src="images/image-8.jpg">
+      <div class="overlay">
+        <h2>Effect 13</h2>
+        <p>
+          <a href="#">LINK HERE</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="cover-card col-sm-4">
+    <div class="hovereffect">
+      <img class=" img-responsive nail-main-images" src="images/image-9.jpg">
+      <div class="overlay">
+        <h2>Effect 13</h2>
+        <p>
+          <a href="#">LINK HERE</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="cover-card col-sm-3">
+    <div class="hovereffect">
+      <img class=" img-responsive nail-main-images" src="images/image-10.jpg">
+      <div class="overlay">
+        <h2>Effect 13</h2>
+        <p>
+          <a href="#">LINK HERE</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="cover-card col-sm-2">
+    <div class="hovereffect">
+      <img class=" img-responsive nail-main-images" src="images/image-11.jpg">
+      <div class="overlay">
+        <h2>Effect 13</h2>
+        <p>
+          <a href="#">LINK HERE</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="cover-card col-sm-3">
+    <div class="hovereffect">
+      <img class=" img-responsive nail-main-images" src="images/image-11.jpg">
+      <div class="overlay">
+        <h2>Effect 13</h2>
+        <p>
+          <a href="#">LINK HERE</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="cover-card col-sm-5">
+    <div class="hovereffect">
+      <img class=" img-responsive nail-main-images" src="images/image-9.jpg">
+      <div class="overlay">
+        <h2>Effect 13</h2>
+        <p>
+          <a href="#">LINK HERE</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cover-card col-sm-4">
+    <div class="hovereffect">
+      <img class=" img-responsive nail-main-images" src="images/image-13.png">
+      <div class="overlay">
+        <h2>Effect 13</h2>
+        <p>
+          <a href="#">LINK HERE</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  </div>
+  </div>
+  </div>
+  </div>
+
+  <!--</div>-->
+  <!--footer -->
+  <footer id="contact" class="contact-us">
+    <div class="container">
+      <div class="row">
+        <div class="contact-area">
+          <h2>Contact Us</h2>
+          <ul class="contact-list">
+            <li>
+              <i class="fa fa-phone"></i> <a href="##">  +44 (0) 232 090 505</a>
+            </li>
+            <li>
+              <i class="fa fa-envelope"></i> <a href="#">  hi@dsfg.co.uk</a>
+            </li>
+            <li>
+              <i class="fa fa-map-marker"></i> <a href="#">  Rampura,Dhaka Bangladesh k</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </footer>
 
 </body>
 
 </html>
 <script type="text/javascript">
-  <!--작은 케러셀-->
+  //작은케러셀
   // Instantiate the Bootstrap carousel
   $('.multi-item-carousel').carousel({
     interval: false
@@ -311,5 +822,10 @@
     }
   });
 
+  $(function() {
+    $('.good-btn').on("click", function() {
+      $(this).toggleClass("selected");
 
+    })
+  })
 </script>
