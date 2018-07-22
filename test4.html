@@ -847,8 +847,8 @@
 
 
     <div class="hovereffect">
-      <img class=" img-responsive nail-main-images " src="images/image-7.jpg">
-      <div class="overlay" data-toggle="modal"  data-target=".pop-up-2" onclick="fu-nail-modal()">
+      <img id='nail-img1' class=" img-responsive nail-main-images" src="images/image-7.jpg" >
+      <div class="overlay" data-toggle="modal"  data-target=".pop-up-2" onclick="fn_nail_img(1)">
         <h2>사진이름</h2>
         <p>
           <a href="#">점포명</a><br>
@@ -858,6 +858,70 @@
       </div>
     </div>
   </div>
+
+  <!--모달 틀-->
+  <div class="modal fade pop-up-2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h4 class="modal-title" id="myLargeModalLabel-1">확대 이미지</h4>
+        </div>
+        <div class="modal-body">
+
+            <div class="col-item">
+              <div class="photo">
+                <img id="modal-nail-img"  src="http://placehold.it/350x260" class="img-responsive img-rounded center-block" alt="" width="300" height="300">
+
+              </div>
+              <div class="info">
+                <div class="row">
+                  <div class="price col-md-6">
+                    <h5 style="margin-bottom:7px;">
+                                                                1위 ****샵</h5>
+                    <h5 class="price-text-color">
+                                                                경기도 구리시</h5>
+                  </div>
+                  <div class="rating hidden-sm col-md-6">
+                    <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                                                             </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                                                             </i><i class="fa fa-star"></i>
+                  </div>
+                </div>
+                <div class="separator clear-left">
+                  <p class="btn-add">
+                    <button href="#" class="btn btn-danger good-btn selected " style="width:90%" onclick="myFunction();"><span class="glyphicon glyphicon-heart"></span> 좋아요</button>
+                  </p>
+                  <p class="btn-details">
+                    <button href="#" class="btn btn-info" style="width:90%"><span class="glyphicon glyphicon-comment"></span> 리뷰</button>
+                </div>
+                <div class="clearfix">
+                </div>
+              </div>
+            </div>
+
+
+
+
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal mixer image -->
+
+
+  <script type="text/javascript">
+  function fn_nail_img(index) {
+
+
+      var rimage=$('#nail-img'+index).attr('src');
+
+       $("#modal-nail-img").attr("src",rimage);
+     }
+  </script>
+
 
   <div class="cover-card col-sm-2">
     <div class="hovereffect">
@@ -960,23 +1024,8 @@
     </div>
   </div>
 
-  <!--모달 틀-->
-  <div class="modal fade pop-up-2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-          <h4 class="modal-title" id="myLargeModalLabel-1">확대 이미지</h4>
-        </div>
-        <div class="modal-body">
-          <img src="images\food.png" class="img-responsive img-rounded center-block" alt="" width="300" height="300">
-        </div>
-      </div>
-      <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-  </div>
-  <!-- /.modal mixer image -->
+
+
 
   </div>
   </div>
