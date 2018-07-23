@@ -17,9 +17,49 @@
   <link href="css/index2.css" rel="stylesheet">
 
   <style>
-  .nail-shop-list{
-    margin-bottom: 10px;
-  }
+  /*shop search*/
+    #custom-search-form {
+      margin: 0;
+      margin-top: 5px;
+      padding: 0;
+    }
+
+    #custom-search-form .search-query {
+      padding-right: 3px;
+      padding-right: 4px \9;
+      padding-left: 3px;
+      padding-left: 4px \9;
+      /* IE7-8 doesn't have border-radius, so don't indent the padding */
+      margin-bottom: 0;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+    }
+
+    #custom-search-form button {
+      border: 0;
+      background: none;
+      /** belows styles are working good */
+      padding: 2px 5px;
+      margin-top: 2px;
+      position: relative;
+      left: -28px;
+      /* IE7-8 doesn't have border-radius, so don't indent the padding */
+      margin-bottom: 0;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+    }
+
+    .search-query:focus+button {
+      z-index: 3;
+    }
+
+    #select-menu,
+    .shop-search-header,
+    .nail-shop-list {
+      padding-bottom: 10px;
+    }
   </style>
 
 </head>
@@ -96,7 +136,46 @@
   </header>
   <div class="container-fluid">
     <!--작은 케러셀-->
+    <div id="select-menu" class="row">
+      <div class="col-xs-12 shop-search-header">
+        <strong style="font-size:20pt; color:rgb(71, 51, 51)">점포 상세검색</strong>
+        <hr id="custom-hr">
+
+        <!--padding bottom주기~-->
+      </div>
+      <br>
+      <div class="col-xs-8">
+
+      </div>
+      <div class="col-xs-2">
+
+        <select class="form-control">
+          <option>전체</option>
+          <option>리뷰순(갯수)</option>
+          <option>좋아요</option>
+          <option>이달의 샵</option>
+          </select>
+
+
+      </div>
+      <div class="col-xs-2">
+        <div id="custom-search-input">
+          <div class="input-group col-md-12">
+            <input type="text" class="  search-query form-control" placeholder="Search" />
+            <span class="input-group-btn">
+                                        <button class="btn btn-info" type="button">
+                                            <span class=" glyphicon glyphicon-search"></span>
+            </button>
+            </span>
+          </div>
+        </div>
+      </div>
+
+    </div>
     <div class="row">
+
+
+
       <div class="col-sm-4 nail-shop-list">
         <div class="col-item">
           <div class="photo">
