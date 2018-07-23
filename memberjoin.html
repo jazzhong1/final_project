@@ -24,6 +24,9 @@
 
   <header>
     <nav class="navbar navbar-icon-top navbar-default navbar-fixed-top">
+
+
+
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -38,14 +41,31 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+            <li class="active"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
             <!--active사용시 home하얀색으로 변함-->
             <li><a href="#">Introduce</a></li>
-            <li><a href="#">Shop</a></li>
+            <li><a href="shop.html">Shop</a></li>
             <li><a href="#">Market</a></li>
-            <li><a href="#">Service center</a></li>
+
 
           </ul>
+
+                 <ul class="nav navbar-nav">
+                   <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                       <!--<i class="fa fa-user-circle-o"></i>-->
+                    ServiceCenter
+                     </a>
+                     <ul class="dropdown-menu" style="border-radius:3px; border-color:white">
+                       <li><a href="notice.html">공지사항</a></li>
+                       <li><a href="FAQ.html">자주묻는질문</a></li>
+                       <li><a href="#">1대1문의</a></li>
+                     </ul>
+                   </li>
+                 </ul>
+
+
+
           <form class="navbar-form navbar-left">
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Search">
@@ -67,10 +87,10 @@
                 <img class="img-circle" src="images/image-7.jpg" alt="" style="width:50px; height:50px;">
                 <span class="caret"></span>
               </a>
-              <ul class="dropdown-menu" style="border-radius:10px; border-color:white">
+              <ul class="dropdown-menu" style="border-radius:3px; border-color:white">
                 <li><a href="#">로그인</a></li>
                 <li><a href="#">회원가입</a></li>
-                <li><a href="#">마이페이지</a></li>
+                <li><a href="mypage.html">마이페이지</a></li>
               </ul>
             </li>
           </ul>
