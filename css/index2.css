@@ -105,7 +105,7 @@
       right: 12px;
     }
 
-    .navbar .nav>li>.dropdown-menu:before {
+    /*.navbar .nav>li>.dropdown-menu:before {
       content: '';
       display: inline-block;
       border-left: 7px solid transparent;
@@ -115,7 +115,7 @@
       position: absolute;
       top: -7px;
       right: 9px;
-    }
+    }*/
 
     /*nav 끝*/
 
