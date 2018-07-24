@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="js/index.js">
+  <link href="css/index1.css" rel="stylesheet">
+  <link href="css/index2.css" rel="stylesheet">
+
+  
+ 
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+ 
+  <style>
+    .badge-default {
+      background-color: rgb(255, 232, 232);
+    }
+
+    .badge-primary {
+      background-color: #337ab7;
+    }
+
+    .badge-success {
+      background-color: #5cb85c;
+    }
+
+    .badge-info {
+      background-color: #5bc0de;
+    }
+
+    .badge-warning {
+      background-color: #f0ad4e;
+    }
+
+    .badge-danger {
+      background-color: #d9534f;
+    }
+
+    .navbar-icon-top .navbar-nav>li>a>.fa,
+    .navbar-icon-top .navbar-nav>li>a>.glyphicon {
+      position: relative;
+      width: 36px;
+      font-size: 24px;
+    }
+
+    .navbar-icon-top .navbar-nav>li>a>.fa>.badge,
+    .navbar-icon-top .navbar-nav>li>a>.glyphicon>.badge {
+      position: absolute;
+      right: 0;
+      font-family: sans-serif;
+    }
+
+    .navbar-icon-top .navbar-nav>li>a>.fa {
+      top: 3px;
+      line-height: 12px;
+    }
+
+    .navbar-icon-top .navbar-nav>li>a>.fa>.badge {
+      top: -10px;
+    }
+
+    .navbar-icon-top .navbar-nav>li>a>.glyphicon {
+      top: 6px;
+      line-height: 6px;
+    }
+
+    .navbar-icon-top .navbar-nav>li>a>.glyphicon>.badge {
+      top: -16px;
+    }
+
+    @media (min-width: 768px) {
+      .navbar-icon-top .navbar-brand {
+        padding: 25px 15px;
+      }
+      .navbar-icon-top .navbar-text {
+        margin-top: 25px;
+        margin-bottom: 25px;
+      }
+      .navbar-icon-top .navbar-btn,
+      .navbar-icon-top .navbar-form {
+        margin-top: 18px;
+        margin-bottom: 18px;
+      }
+      .navbar-icon-top .navbar-nav>li>a {
+        text-align: center;
+        display: table-cell;
+        height: 70px;
+        vertical-align: middle;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+      .navbar-icon-top .navbar-nav>li>a>.fa,
+      .navbar-icon-top .navbar-nav>li>a>.glyphicon {
+        display: block;
+        width: 48px;
+        margin: 2px auto 4px auto;
+        top: 0;
+        line-height: 24px;
+      }
+      .navbar-icon-top .navbar-nav>li>a>.fa>.badge,
+      .navbar-icon-top .navbar-nav>li>a>.glyphicon>.badge {
+        top: -7px;
+      }
+    }
+
+    .navbar-default .navbar-nav>.open>a,
+    .navbar-default .navbar-nav>.open>a:focus,
+    .navbar-default .navbar-nav>.open>a:hover {
+      color: #555;
+      background-color: #fef2f2;
+    }
+
+    .navbar .pull-right>li>.dropdown-menu:before,
+    .navbar .nav>li>.dropdown-menu.pull-right:before {
+      left: auto;
+      right: 12px;
+    }
+
+    .navbar .nav>li>.dropdown-menu:before {
+      content: '';
+      display: inline-block;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-bottom: 7px solid #b4b4b4;
+      border-bottom-color: rgb(255, 255, 255);
+      position: absolute;
+      top: -7px;
+      right: 9px;
+    }
+
+    /*nav 끝*/
+
+    /*로그인 선택*/
+    body {
+   
+    font-family:sans-serif;
+}
+.container {
+    position:relative;
+    width:800px;
+    height:300px;
+    margin:100px auto;
+ 
+}
+.container .box {
+    position:relative;
+    width:calc(400px - 60px);
+    height:calc(300px - 60px);
+    background:#000;
+    float:left;
+    margin:15px;
+    box-sizing:border-box;
+    overflow:hidden;
+    border-radius:10px;
+}
+.container .box .icon {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#f00;
+    transition:0.5s;
+    z-index:1;
+}
+.container .box:hover .icon {
+    top:20px;
+    left:calc(50% - 40px);
+    width:80px;
+    height:80px;
+    border-radius:50%;
+}
+.container .box .icon .fa {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size:80px;
+    transition:0.5s;
+    color:#fff;
+}
+.container .box:hover .icon .fa {
+    font-size:40px;
+}
+.container .box .content {
+    position:absolute;
+    top:100%;
+    height:calc(100% - 100px);
+    text-align:center;
+    padding:20px;
+    box-sizing:border-box;
+    transition:.5s;
+}
+.container .box:hover .content {
+    top:100px;
+}
+.container .box .content h3 {
+    margin:0 0 10px;
+    padding:0;
+    color:#fff;
+    font-size:24px;
+}
+.container .box .content p {
+    margin:0;
+    padding:0;
+    color:#fff;
+}
+
+.container .box:nth-child(2) .icon {
+    background:#319635;
+}
+.container .box:nth-child(2) {
+    background:#4caf50;
+}
+.container .box:nth-child(3) .icon {
+    background:#d03852;
+}
+.container .box:nth-child(3) {
+    background:#f54967;
+}
+
+
+
+
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-icon-top navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+          <a class="navbar-brand" href="#">로고~~</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+            <!--active사용시 home하얀색으로 변함-->
+            <li><a href="#">Introduce</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Market</a></li>
+            <li><a href="#">Service center</a></li>
+
+          </ul>
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search w3-spin"></span></button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#">
+                            <i class="fa fa-envelope-o">
+                                <span class="badge badge-danger">11</span>
+                            </i>
+                            Messages
+                        </a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <!--<i class="fa fa-user-circle-o"></i>-->
+                <img class="img-circle" src="images/image-7.jpg" alt="" style="width:50px; height:50px;">
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" style="border-radius:10px; border-color:white">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">마이페이지</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+    <br><br><br><br>
+    <!--
+
+                <li>
+                  <div class="w3-threequarter">
+                    <input type="text" class="w3-bar-item w3-input w3-border w3-round-xlarge" placeholder="검색" style="height:30px; margin-top:10px">
+                  </div>
+                </li>-->
+
+
+  </header>
+  <section>
+
+
+        <div class="container center-block">
+                <div class="row" style="padding-left:50px;">
+                        <h3>회원 가입</h3>
+                        <hr>
+                </div>
+                <div class="box">
+                    <a href="registration_user.html">
+                    <div class="icon">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </div>
+                    </a>    
+                    <div class="content">
+                        <h3>사용자</h3>
+                        <p>사용자 회원가입 페이지로 이동합니다.각종 네일 정보 및 이벤트에 참여하실 수 있습니다.</p>
+                    </div>
+             
+                </div>
+                
+                <div class="box">
+                  <a href="registration_shop.html">
+                    <div class="icon">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                    </div>
+                </a>
+                    <div class="content">
+                        <h3>점주</h3>
+                        <p> 점주 회원가입 페이지로 이동합니다. 오늘 네일의 점주로 활동하고자 하는 분은 이곳을 통해 가입해주세요.</p>
+                    </div></div>
+             
+            </div>
+
+
+  </section>
+
+ 
+
+  <!--</div>-->
+  <!--footer -->
+  <footer id="contact" class="contact-us">
+    <div class="container">
+      <div class="row">
+        <div class="contact-area">
+          <h2>Contact Us</h2>
+          <ul class="contact-list">
+            <li>
+              <i class="fa fa-phone"></i> <a href="##">  +44 (0) 232 090 505</a>
+            </li>
+            <li>
+              <i class="fa fa-envelope"></i> <a href="#">  hi@dsfg.co.uk</a>
+            </li>
+            <li>
+              <i class="fa fa-map-marker"></i> <a href="#">  Rampura,Dhaka Bangladesh k</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

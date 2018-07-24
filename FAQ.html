@@ -6,6 +6,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <script src="js/modernizr.js"></script>
+  <script src="js/jquery-2.1.1.js"></script>
+  <script src="js/jquery.mobile.custom.min.js"></script>
+  <script src="js/main.js"></script>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -221,216 +225,25 @@
     }
 
     .controls {
-      margin-top: 20px;
+      margin-top: 10px;
     }
 
     [data-slide="prev"] {
       margin-right: 10px;
     }
 
-#custom-hr{
+    #custom-hr {
 
-    height:3px;
-    border: 0;
-    height: 3px;
-    background: rgb(61, 61, 61);
-    margin-top: 5px;
-    margin-bottom: 0px;
+      height: 3px;
+      border: 0;
+      height: 3px;
+      background: rgb(61, 61, 61);
+      margin-top: 5px;
+      margin-bottom: 0px;
 
-}
-/*//////////////////////////////////////////////////////////////////
-[ Table ]*/
+    }
 
-.limiter {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.container-table100 {
-  width: 100%;
-  min-height: 70vh;
-  background: #ffffff;
-
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 33px 30px;
-}
-
-.wrap-table100 {
-  border:0.5px solid rgb(209, 208, 208);
-
-  box-shadow: 10px 10px 5px rgb(175, 175, 175);
-  width: 960px;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.table {
- 
-  width: 100%;
-  display: table;
-  margin: 0;
-  box-shadow: 10px 10px 5px black;
-}
-
-@media screen and (max-width: 768px) {
-  .table {
-    display: block;
-   
-  }
-}
-
-.row1 {
-  display: table-row;
-  background: #fff;
-}
-
-.row1.header {
-  color: #ffffff;
-  background:rgb(243, 127, 127);
-}
-
-@media screen and (max-width: 768px) {
-  .row1 {
-    display: block;
-  }
-
-  .row1.header {
-    padding: 0;
-    height: 0px;
-  }
-
-  .row1.header .cell {
-    display: none;
-  }
-
-  .row1 .cell:before {
-    font-family: Poppins-Bold;
-    font-size: 12px;
-    color: #808080;
-    line-height: 1.2;
-    text-transform: uppercase;
-    font-weight: unset !important;
-
-    margin-bottom: 13px;
-    content: attr(data-title);
-    min-width: 98px;
-    display: block;
-  }
-}
-
-.cell {
-  display: table-cell;
-}
-
-@media screen and (max-width: 768px) {
-  .cell {
-    display: block;
-  }
-}
-
-.row1 .cell {
-  font-family: Poppins-Regular;
-  font-size: 15px;
-  color: #666666;
-  line-height: 1.2;
-  font-weight: unset !important;
-
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #f2f2f2;
-}
-
-.row1.header .cell {
-  font-family: Poppins-Regular;
-  font-size: 18px;
-  color: #fff;
-  line-height: 1.2;
-  font-weight: unset !important;
-
-  padding-top: 19px;
-  padding-bottom: 19px;
-}
-
-.row1 .cell:nth-child(1) {
-  width: 360px;
-  padding-left: 40px;
-}
-
-.row1 .cell:nth-child(2) {
-  width: 160px;
-}
-
-.row1 .cell:nth-child(3) {
-  width: 250px;
-}
-
-.row1 .cell:nth-child(4) {
-  width: 190px;
-}
-
-
-.table, .row1 {
-  width: 100% !important;
-}
-.table .row{
-  width: 100% !important;
-  display: table-row;
-}
-
-.row1:hover {
-  background-color: #f18f8f;
-  
-}
-
-
-@media (max-width: 768px) {
-  .row1 {
-    border-bottom: 1px solid #f2f2f2;
-    padding-bottom: 18px;
-    padding-top: 30px;
-    padding-right: 15px;
-    margin: 0;
-  }
-  
-  .row1 .cell {
-    border: none;
-    padding-left: 30px;
-    padding-top: 16px;
-    padding-bottom: 16px;
-  }
-  .row1 .cell:nth-child(1) {
-    padding-left: 30px;
-  }
-  
-  .row1 .cell {
-    font-family: Poppins-Regular;
-    font-size: 18px;
-    color: #555555;
-    line-height: 1.2;
-    font-weight: unset !important;
-  }
-
-  .table, .row1, .cell {
-    width: 100% !important;
-  }
-}
-#btn-enroll:hover{
-  background-color: white;
-}
-#paging:hover{
-  background-color: white;
-}
-
-
-
-    
+    }
   </style>
 
 </head>
@@ -439,6 +252,9 @@
 
   <header>
     <nav class="navbar navbar-icon-top navbar-default navbar-fixed-top">
+
+
+
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -453,14 +269,31 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+            <li class="active"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
             <!--active사용시 home하얀색으로 변함-->
             <li><a href="#">Introduce</a></li>
-            <li><a href="#">Shop</a></li>
+            <li><a href="shop.html">Shop</a></li>
             <li><a href="#">Market</a></li>
-            <li><a href="#">Service center</a></li>
+
 
           </ul>
+
+                 <ul class="nav navbar-nav">
+                   <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                       <!--<i class="fa fa-user-circle-o"></i>-->
+                    ServiceCenter
+                     </a>
+                     <ul class="dropdown-menu" style="border-radius:3px; border-color:white">
+                       <li><a href="notice.html">공지사항</a></li>
+                       <li><a href="FAQ.html">자주묻는질문</a></li>
+
+                     </ul>
+                   </li>
+                 </ul>
+
+
+
           <form class="navbar-form navbar-left">
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Search">
@@ -482,10 +315,10 @@
                 <img class="img-circle" src="images/image-7.jpg" alt="" style="width:50px; height:50px;">
                 <span class="caret"></span>
               </a>
-              <ul class="dropdown-menu" style="border-radius:10px; border-color:white">
+              <ul class="dropdown-menu" style="border-radius:3px; border-color:white">
                 <li><a href="#">로그인</a></li>
                 <li><a href="#">회원가입</a></li>
-                <li><a href="#">마이페이지</a></li>
+                <li><a href="mypageReserve.html">마이페이지</a></li>
               </ul>
             </li>
           </ul>
@@ -503,150 +336,149 @@
                   </div>
                 </li>-->
 
+
   </header>
- 
 
-<section>
-  <div class="container">
-    <div class="panel" style="padding-top:30px;">
-      <div class="panel-heading">
-        <h2>Market</h2>
-
+  <section>
+    <div class="row">
+				<div class="col-12">
+					<h1 class="text-green mb-4 text-center">자주묻는질문</h1>
+				</div>
       </div>
 
-   <div class="panel-body">
-    
-      <div class="col-xs-7"></div>
-     
-   
-    <div class="col-xs-5">
-      <form>
-          <div class="col-xs-12">
-          <div class="input-group">
-                  <div class="input-group-btn search-panel">
-                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                        <span id="search_concept">선택</span> <span class="caret"></span>
-                      </button>
-                      <ul class="dropdown-menu" role="menu">
-                        <li><a href="#contains">제목</a></li>
-                        <li><a href="#its_equal">내용</a></li>
-                        <li><a href="#greather_than">제목+내용</a></li>
-                       
-                        
-                      </ul>
-                  </div>
-                  <input type="hidden" name="search_param" value="all" id="search_param">         
-                  <input type="text" class="form-control" name="x" placeholder="Search term...">
-                  <span class="input-group-btn">
-                      <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
-                  </span>
-              </div>
-         
+
+    <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a class="" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <i class="fa fa-bars"></i>Section 1
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dui ligula, blandit non maximus id, tempus vitae nulla. Cras nec turpis vitae libero eleifend consequat. Phasellus eu rutrum erat. Etiam id urna sed odio placerat gravida. Integer molestie lectus eu.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <i class="fa fa-link"></i>Section 2
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dui ligula, blandit non maximus id, tempus vitae nulla. Cras nec turpis vitae libero eleifend consequat. Phasellus eu rutrum erat. Etiam id urna sed odio placerat gravida. Integer molestie lectus eu.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <i class="fa fa-comment"></i>Section 3
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="panel-body">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dui ligula, blandit non maximus id, tempus vitae nulla. Cras nec turpis vitae libero eleifend consequat. Phasellus eu rutrum erat. Etiam id urna sed odio placerat gravida. Integer molestie lectus eu.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-        </form>
-      
-      </div>
-
-	<div class="limiter">
-		<div class="container-table100">
-			<div class="wrap-table100">
-					<div class="table">
-
-						<div class="row1 header">
-              
-							<div class="cell">
-                  Full Name
-							</div>
-							<div class="cell">
-								Age 
-							</div>
-							<div class="cell">
-								Job Title
-							</div>
-							<div class="cell">
-								Location
-              </div>
-           
-						</div>
-
-						<div class="row1">
-							<div class="cell" data-title="Full Name">
-                  <a href="dealForm.html">Vincent Williamson</a>
-							</div>
-							<div class="cell" data-title="Age">
-								31
-							</div>
-							<div class="cell" data-title="Job Title">
-								iOS Developer
-							</div>
-							<div class="cell" data-title="Location">
-								Washington
-              </div>
-            
-						</div>
-
-						<div class="row1">
-							<div class="cell" data-title="Full Name">
-								Joseph Smith
-							</div>
-							<div class="cell" data-title="Age">
-								27
-							</div>
-							<div class="cell" data-title="Job Title">
-								Project Manager
-							</div>
-							<div class="cell" data-title="Location">
-								Somerville, MA
-							</div>
-						</div>
-
-						<div class="row1">
-							<div class="cell" data-title="Full Name">
-								Justin Black
-							</div>
-							<div class="cell" data-title="Age">
-								26
-							</div>
-							<div class="cell" data-title="Job Title">
-								Front-End Developer
-							</div>
-							<div class="cell" data-title="Location">
-								Los Angeles
-							</div>
-						</div>
-		
-					</div>
-				
-      </div>
-      <div class="row1 text-right" id="btn-enroll">
-          <button type="button" class="btn btn-default" ><a href="dealForm.html">글 등록</a></button>
-      </div>
-    
-      <div class="row1 text-center" id="paging">
-        <ul class="pagination ">
-          <li><a href="#"><span aria-hidden="true">«</span><span class="sr-only">Previous</span></a></li>
-          <li><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-          <li><a href="#"><span aria-hidden="true">»</span><span class="sr-only">Next</span></a></li>
-        </ul>
-      </div>
-     
-		
-	
-	
-  </div>
-  </div>
-  </div>
 </div>
 
-</div>
-</section>
 
 
 
+
+  </section>
+
+
+  <style>
+  a:hover, a:focus{
+  outline: none;
+  text-decoration: none;
+}
+#accordion .panel{
+  border:0px none;
+  box-shadow:none;
+}
+#accordion .panel-heading{
+  padding:0;
+  background: #fff;
+}
+#accordion .panel-title a{
+  display: block;
+  position: relative;
+  background:transparent;
+  color:#de4d4e;
+  font-size:14px;
+  font-weight: bolder;
+  text-transform:uppercase;
+  margin-bottom:15px;
+  padding:15px 50px;
+  border-bottom:1px solid #de4d4e;
+  border-radius: 0 15px 0 15px;
+  transition:all 0.10s linear 0s;
+}
+#accordion .panel-title a.collapsed{
+  color:#808080;
+  border-bottom:1px solid #d3d3d3;
+  margin: 0;
+}
+#accordion .panel-title a i{
+  color:#de4d4e;
+  position: absolute;
+  top: 14px;
+  left:25px;
+}
+#accordion .panel-title a:before,
+#accordion .panel-title a.collapsed:before{
+  content:"";
+  position: absolute;
+  bottom:-15px;
+  left:36px;
+  border:7px solid transparent;
+  border-top:7px solid #de4d4e;
+}
+#accordion .panel-title a.collapsed:before{
+  content:"";
+  border: 0px none;
+}
+#accordion .panel-title a.collapsed:hover{
+  color: #6a6060;
+}
+#accordion .panel-title a:after,
+#accordion .panel-title a.collapsed:after{
+  content: "\f106";
+  font-family: FontAwesome;
+  color: #de4d4e;
+  font-size: 20px;
+  line-height: 20px;
+  position: absolute;
+  top: 14px;
+  right:25px;
+}
+#accordion .panel-title a.collapsed:after{
+  content: "\f107";
+  color:#808080;
+}
+#accordion .panel-body{
+  border-top:0 none;
+  color:#808080;
+}
+  </style>
 
   <!--</div>-->
   <!--footer -->
@@ -674,4 +506,3 @@
 </body>
 
 </html>
-
