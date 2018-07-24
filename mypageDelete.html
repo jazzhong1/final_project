@@ -271,7 +271,7 @@
           <ul class="nav navbar-nav">
             <li class="active"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
             <!--active사용시 home하얀색으로 변함-->
-            <li><a href="#">Introduce</a></li>
+            <li><a href="intro.html">Introduce</a></li>
             <li><a href="shop.html">Shop</a></li>
             <li><a href="#">Market</a></li>
 
@@ -287,7 +287,7 @@
                      <ul class="dropdown-menu" style="border-radius:3px; border-color:white">
                        <li><a href="notice.html">공지사항</a></li>
                        <li><a href="FAQ.html">자주묻는질문</a></li>
-                       <li><a href="customerOne.html">1대1문의</a></li>
+
                      </ul>
                    </li>
                  </ul>
@@ -318,7 +318,7 @@
               <ul class="dropdown-menu" style="border-radius:3px; border-color:white">
                 <li><a href="#">로그인</a></li>
                 <li><a href="#">회원가입</a></li>
-                <li><a href="mypage.html">마이페이지</a></li>
+                <li><a href="mypageReserve.html">마이페이지</a></li>
               </ul>
             </li>
           </ul>
@@ -339,137 +339,45 @@
 
   </header>
 
-  <section class="home-content-top">
-    <div class="container">
+  <section>
+    <div class='container'>
+      <div class="panel">
 
-      <!--our-quality-shadow-->
-      <div class="clearfix"></div>
-      <h1 class="heading1">마이페이지<small>Mypage</small></h1>
-      <div class="tabbable-panel margin-tops4 ">
-        <div class="tabbable-line">
-          <ul class="nav nav-tabs tabtop  tabsetting">
-            <li class="active"> <a href="#tab_default_1" data-toggle="tab">에약현황 <small>reservation status</small></a> </li>
-            <li> <a href="#tab_default_2" data-toggle="tab">즐겨찾기<small>bookmark</small></a> </li>
-            <li> <a href="#tab_default_3" data-toggle="tab">회원정보수정<small>infomation change</small></a> </li>
-            <li> <a href="#tab_default_5" data-toggle="tab" class="thbada">탈퇴<small>withdrawal</small></a> </li>
-          </ul>
+        <ul class="nav nav-tabs">
+          <li role="presentation"><a href="mypageReserve.html">예약현황</a></li>
+          <li role="presentation"><a href="mypageBookmark.html">즐겨찾기</a></li>
+          <li role="presentation"><a href="mypageQna.html">1대1문의</a></li>
+          <li role="presentation"><a href="mypageQnaList.html">문의내역</a></li>
+          <li role="presentation"><a href="mypageMessage.html">쪽지내역</a></li>
+          <li role="presentation"><a href="mypageUpdate.html">회원정보수정</a></li>
+          <li class="active" role="presentation"><a href="mypageDelete.html">탈퇴</a></li>
+        </ul>
 
-          <div class="tab-content margin-tops">
-            <div class="tab-pane active fade in" id="tab_default_1">
-              <div class="col-md-4">
-                <div class="row"> <img src="http://placemi.com/petnp/500x300" class="img-responsive"> </div>
-              </div>
-              <div class="col-md-8">
-                <h4 class="heading4">Magento Product Upload Services</h4>
-                <p>Are you looking for someone who could upload products on your Magento based website? At webenlance India, we can effectively help you with our top quality Magento product upload services. With the pool of well experienced and talented experts, we ensure that your customers have an enriching experience every time they visit your website. Our comprehensive range of services is available all over the globe at extremely low cost. </p>
-                <h4 class="heading4">Magento Product Upload Services</h4>
-                <p>Also a data entry company from India, we provide time-bound and high-quality data entry services and encourage our clients to outsource end-to-end data entry projects to us. </p>
-                <a href="#">
-                <div class="btns">View More <i class="fa fa-angle-right"></i></div>
-                </a> </div>
-            </div>
-            <div class="tab-pane fade" id="tab_default_2">
-              <div class="col-md-4">
-               <div class="row"> <img src="http://placemi.com/petnp/500x300" class="img-responsive"> </div>
-              </div>
-              <div class="col-md-8">
-                <h4 class="heading4">Yahoo Store Data Entry</h4>
-                <p>Are you looking for someone who could upload products on your Magento based website? At webenlance India, we can effectively help you with our top quality Magento product upload services. With the pool of well experienced and talented experts, we ensure that your customers have an enriching experience every time they visit your website. Our comprehensive range of services is available all over the globe at extremely low cost. </p>
-                <h4 class="heading4">Yahoo Store Data Entry</h4>
-                <p>Also a data entry company from India, we provide time-bound and high-quality data entry services and encourage our clients to outsource end-to-end data entry projects to us. </p>
-                <a href="#">
-                <div class="btns">View More <i class="fa fa-angle-right"></i></div>
-                </a> </div>
-            </div>
-            <div class="tab-pane fade" id="tab_default_3">
-              <br/>
-              <br/>
-              <div class="col-md-12">
-                <form class="form-horizontal">
-
-                        <div class="form-group">
-                          <label class="col-sm-3 control-label" for="">아이디 </label>
-                        <div class="col-sm-6">
-                          <input class="form-control" type="text" placeholder="아이디">
-                        </div>
-                        </div>
-
-
-                      <div class="form-group">
-                            <label class="col-sm-3 control-label" for="">비밀번호 </label>
-                          <div class="col-sm-6">
-                            <input class="form-control" type="text" placeholder="제목을 입력하세요.">
-                          </div>
-                        </div>
-
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-default center-block">제출하기</button>
-                        </div>
-
-                </form>
-
-              </div>
-            </div>
-
-    
-
-            <div class="tab-pane fade" id="tab_default_5">
-              <br/>
-
-              <div class="col-md-12">
-              <form action="" method="post" class="form-horizontal">
-                <div class="form-group">
-                  <label class="col-sm-3 control-label" for="memberPw"><span class="text-danger">*</span>비밀번호</label>
-                <div class="col-sm-6">
-              <input class="form-control" id="memberPw" name="memberPw" type="password" placeholder="비밀번호" required>
-                </div>
-
-            <div class="col-sm-3">
-              <input class="btn btn-primary" type="submit" value="회원탈퇴">
-            </div>
+        <div class="panel-body">
+          <div class="page-header">
+            <h2>탈퇴</h2>
           </div>
-            </form>
-              </div>
-              </p>
-            </div>
-          </div>
+          <form action="#" method="post" class="form-horizontal">
+				<div class="form-group">
+					<label class="col-sm-3 control-label" for="memberPw"><span class="text-danger">*</span>비밀번호</label>
+					<div class="col-sm-6">
+						<input class="form-control" id="memberPw" name="memberPw" type="password" placeholder="비밀번호" required>
+					</div>
+
+						<div class="col-sm-3">
+							<input class="btn btn-warning" type="submit" value="회원탈퇴">
+						</div>
+
+					</div>
+
+			</form>
+
         </div>
       </div>
     </div>
   </section>
 
-
   <style>
-  @import url(https://fonts.googleapis.com/css?family=Lato:400,900,700,300);
-.heading4{font-size:18px;font-weight:400;font-family:'Lato', sans-serif;color:#111111;margin:0px 0px 5px 0px;}
-.heading1{font-size:30px;line-height:20px;font-family:'Lato', sans-serif;text-transform:uppercase;color:#1b2834;font-weight:900;}
-.content-quality{float:left;width:193px;}
-.content-quality p{margin-left:10px;font-family:'Open Sans', sans-serif;font-size:14px;font-weight:600;line-height:17px;}
-.content-quality p span{display:block;}
-.tabtop li a{font-family:'Lato', sans-serif;font-weight:700;color:#1b2834;border-radius:0px;margin-right:22.008px;border:1px solid #ebebeb !important;}
-.tabtop .active a:before{content:"♦";position:absolute;top:15px;left:82px;color:#e31837;font-size:30px;}
-.tabtop li a:hover{color:#e31837 !important;text-decoration:none;}
-.tabtop .active a:hover{color:#fff !important;}
-.tabtop .active a{background-color:#e31837 !important;color:#FFF !important;}
-.margin-tops{margin-top:30px;}
-.tabtop li a:last-child{padding:10px 22px;}
-.thbada{padding:10px 28px !important;}
-section p{font-family:'Lato', sans-serif;}
-.margin-tops4{margin-top:20px;}
-.tabsetting{border-top:5px solid #ebebeb;padding-top:6px;}
-.services{background-color:#d4d4d4;min-height:710px;padding:65px 0 27px 0;}
-.services a:hover{color:#000;}
-.services h1{margin-top:0px !important;}
-.heading-container p{font-family:'Lato', sans-serif;text-align:center;font-size:16px !important;text-transform:uppercase;}
-
-
-
-.page-header{
-    border-bottom: 0px;
-}
-.form-control{
-    border-radius:30px;
-}
 
   </style>
 

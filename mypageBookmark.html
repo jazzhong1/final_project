@@ -271,7 +271,7 @@
           <ul class="nav navbar-nav">
             <li class="active"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
             <!--active사용시 home하얀색으로 변함-->
-            <li><a href="#">Introduce</a></li>
+            <li><a href="intro.html">Introduce</a></li>
             <li><a href="shop.html">Shop</a></li>
             <li><a href="#">Market</a></li>
 
@@ -287,7 +287,7 @@
                      <ul class="dropdown-menu" style="border-radius:3px; border-color:white">
                        <li><a href="notice.html">공지사항</a></li>
                        <li><a href="FAQ.html">자주묻는질문</a></li>
-                       <li><a href="customerOne.html">1대1문의</a></li>
+
                      </ul>
                    </li>
                  </ul>
@@ -318,7 +318,7 @@
               <ul class="dropdown-menu" style="border-radius:3px; border-color:white">
                 <li><a href="#">로그인</a></li>
                 <li><a href="#">회원가입</a></li>
-                <li><a href="mypage.html">마이페이지</a></li>
+                <li><a href="mypageReserve.html">마이페이지</a></li>
               </ul>
             </li>
           </ul>
@@ -340,66 +340,88 @@
   </header>
 
   <section>
-      <div class="container">
-              <div class="panel">
+    <div class='container'>
+      <div class="panel">
 
+        <ul class="nav nav-tabs">
+          <li role="presentation"><a href="mypageReserve.html">예약현황</a></li>
+          <li class="active" role="presentation"><a href="mypageBookmark.html">즐겨찾기</a></li>
+          <li role="presentation"><a href="mypageQna.html">1대1문의</a></li>
+          <li role="presentation"><a href="mypageQnaList.html">문의내역</a></li>
+          <li role="presentation"><a href="mypageMessage.html">쪽지내역</a></li>
+          <li role="presentation"><a href="mypageUpdate.html">회원정보수정</a></li>
+          <li role="presentation"><a href="mypageDelete.html">탈퇴</a></li>
+        </ul>
 
+        <div class="panel-body">
+          <div class="page-header">
+            <h2>즐겨찾기</h2>
+          </div>
+          <div class="container">
+	<div class="row">
+		<div class='list-group gallery'>
+            <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+                <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png">
+                    <img class="img-responsive" alt="" src="http://placehold.it/320x320" />
+                    <div class='text-right'>
+                        <small class='text-muted'>Image Title</small>
+                    </div> <!-- text-right / end -->
+                </a>
+            </div> <!-- col-6 / end -->
+            <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+                <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png">
+                    <img class="img-responsive" alt="" src="http://placehold.it/320x320" />
+                    <div class='text-right'>
+                        <small class='text-muted'>Image Title</small>
+                    </div> <!-- text-right / end -->
+                </a>
+            </div> <!-- col-6 / end -->
+            <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+                <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png">
+                    <img class="img-responsive" alt="" src="http://placehold.it/320x320" />
+                    <div class='text-right'>
+                        <small class='text-muted'>Image Title</small>
+                    </div> <!-- text-right / end -->
+                </a>
+            </div> <!-- col-6 / end -->
+            <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+                <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png">
+                    <img class="img-responsive" alt="" src="http://placehold.it/320x320" />
+                    <div class='text-right'>
+                        <small class='text-muted'>Image Title</small>
+                    </div> <!-- text-right / end -->
+                </a>
+            </div> <!-- col-6 / end -->
+            <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+                <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png">
+                    <img class="img-responsive" alt="" src="http://placehold.it/320x320" />
+                    <div class='text-right'>
+                        <small class='text-muted'>Image Title</small>
+                    </div> <!-- text-right / end -->
+                </a>
+            </div> <!-- col-6 / end -->
+            <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+                <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png">
+                    <img class="img-responsive" alt="" src="http://placehold.it/320x320" />
+                    <div class='text-right'>
+                        <small class='text-muted'>Image Title</small>
+                    </div> <!-- text-right / end -->
+                </a>
+            </div> <!-- col-6 / end -->
+        </div> <!-- list-group / end -->
+	</div> <!-- row / end -->
+</div> <!-- container / end -->
 
-                      <div class="panel-body">
-                              <div class="page-header">
-                                      <h2>1대1문의</h2>
-                              </div>
-                              <form class="form-horizontal">
-
-                                      <div class="form-group">
-                                        <label class="col-sm-3 control-label" for="">아이디 </label>
-                                      <div class="col-sm-6">
-                                        <input class="form-control" type="text" placeholder="아이디">
-                                      </div>
-                                      </div>
-
-
-                                    <div class="form-group">
-                                          <label class="col-sm-3 control-label" for="">제목 </label>
-                                        <div class="col-sm-6">
-                                          <input class="form-control" type="text" placeholder="제목을 입력하세요.">
-                                        </div>
-                                      </div>
-
-                                      <div class="form-group">
-                                          <label for="" class="col-sm-3 control-label">내 용 </label>
-                                          <div class="col-sm-6">
-                                                  <textarea class="form-control" rows="13" style="resize: none;"></textarea>
-                                          </div>
-
-                                      </div>
-                                      <div class="form-group">
-
-                            </div>
-
-                                      <div class="form-group">
-                                          <button type="submit" class="btn btn-default center-block">제출하기</button>
-                                      </div>
-
-                              </form>
-
-                          </div>
-                  </div>
-
-
-
+        </div>
       </div>
+    </div>
   </section>
 
-
   <style>
-  .page-header{
-      border-bottom: 0px;
-  }
-  .form-control{
-      border-radius:30px;
-  }
+
   </style>
+
+
 
   <!--</div>-->
   <!--footer -->

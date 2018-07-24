@@ -271,7 +271,7 @@
           <ul class="nav navbar-nav">
             <li class="active"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
             <!--active사용시 home하얀색으로 변함-->
-            <li><a href="#">Introduce</a></li>
+            <li><a href="intro.html">Introduce</a></li>
             <li><a href="shop.html">Shop</a></li>
             <li><a href="#">Market</a></li>
 
@@ -287,7 +287,7 @@
                      <ul class="dropdown-menu" style="border-radius:3px; border-color:white">
                        <li><a href="notice.html">공지사항</a></li>
                        <li><a href="FAQ.html">자주묻는질문</a></li>
-                       <li><a href="customerOne.html">1대1문의</a></li>
+
                      </ul>
                    </li>
                  </ul>
@@ -318,7 +318,7 @@
               <ul class="dropdown-menu" style="border-radius:3px; border-color:white">
                 <li><a href="#">로그인</a></li>
                 <li><a href="#">회원가입</a></li>
-                <li><a href="mypage.html">마이페이지</a></li>
+                <li><a href="mypageReserve.html">마이페이지</a></li>
               </ul>
             </li>
           </ul>
@@ -340,163 +340,70 @@
   </header>
 
   <section>
-    <div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="tab" role="tabpanel">
-                <!-- Nav tabs -->
-                <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab">예약현황</a></li>
-                    <li role="presentation"><a href="#Section2" aria-controls="profile" role="tab" data-toggle="tab">즐겨찾기</a></li>
-                    <li role="presentation"><a href="#Section3" aria-controls="messages" role="tab" data-toggle="tab">1대1문의</a></li>
-                    <li role="presentation"><a href="#Section3" aria-controls="messages" role="tab" data-toggle="tab">문의내역</a></li>
-                    <li role="presentation"><a href="#Section3" aria-controls="messages" role="tab" data-toggle="tab">회원정보수정</a></li>
-                    <li role="presentation"><a href="#Section3" aria-controls="messages" role="tab" data-toggle="tab">쪽지내역</a></li>
-                </ul>
-                <!-- Tab panes -->
-                <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane fade in active" id="Section1">
-                        <p>1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a blandit enim. Aliquam gravida orci id fringilla feugiat. Integer convallis ut ex quis semper. Suspendisse ut lobortis urna. Proin viverra, eros iaculis iaculis posuere, risus justo tincidunt ex, eget tempor lectus erat vel massa. Cum sociis natoque penatibus et magnis.</p>
-                    </div>
-                    <div role="tabpanel" class="tab-pane fade" id="Section2">
-                        <p>2 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a blandit enim. Aliquam gravida orci id fringilla feugiat. Integer convallis ut ex quis semper. Suspendisse ut lobortis urna. Proin viverra, eros iaculis iaculis posuere, risus justo tincidunt ex, eget tempor lectus erat vel massa. Cum sociis natoque penatibus et magnis.</p>
-                    </div>
-                    <div role="tabpanel" class="tab-pane fade" id="Section3">
-                        <p>3 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a blandit enim. Aliquam gravida orci id fringilla feugiat. Integer convallis ut ex quis semper. Suspendisse ut lobortis urna. Proin viverra, eros iaculis iaculis posuere, risus justo tincidunt ex, eget tempor lectus erat vel massa. Cum sociis natoque penatibus et magnis. </p>
-                    </div>
-                    <div role="tabpanel" class="tab-pane fade" id="Section4">
-                        <p>3 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a blandit enim. Aliquam gravida orci id fringilla feugiat. Integer convallis ut ex quis semper. Suspendisse ut lobortis urna. Proin viverra, eros iaculis iaculis posuere, risus justo tincidunt ex, eget tempor lectus erat vel massa. Cum sociis natoque penatibus et magnis. </p>
-                    </div>
-                    <div role="tabpanel" class="tab-pane fade" id="Section5">
-                      <form class="form-horizontal">
+    <div class='container'>
+      <div class="panel">
 
-                        <div class="form-group">
-                          <label class="col-sm-3 control-label" for="inputId">아이디</label>
-                          <div class="col-sm-6">
-                            <input class="form-control" id="userId" type="text" placeholder="아이디">
-                          </div>
-                        </div>
+        <ul class="nav nav-tabs">
+          <li class="active" role="presentation"><a href="mypageReserve.html">예약현황</a></li>
+          <li role="presentation"><a href="mypageBookmark.html">즐겨찾기</a></li>
+          <li role="presentation"><a href="mypageQna.html">1대1문의</a></li>
+          <li role="presentation"><a href="mypageQnaList.html">문의내역</a></li>
+          <li role="presentation"><a href="mypageMessage.html">쪽지내역</a></li>
+          <li class="presentation"><a href="mypageUpdate.html">회원정보수정</a></li>
+          <li role="presentation"><a href="mypageDelete.html">탈퇴</a></li>
+        </ul>
 
+        <div class="panel-body">
+          <div class="page-header">
+            <h2>예약현황</h2>
+          </div>
+          <div class="container">
+      <div class="row">
+          <div class="col-sm-12 col-md-10 col-md-offset-1">
+              <table class="table table-hover">
+                  <thead>
+                      <tr>
+                          <th>네일샵</th>
+                          <th>예약날짜</th>
+                          <th class="text-center">예약상태</th>
+                          <th class="text-center">전화번호</th>
+                          <th> </th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td class="col-sm-8 col-md-6">
+                          <div class="media">
+                              <a class="thumbnail pull-left" href="#"> <img class="media-object" src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/72/product-icon.png" style="width: 72px; height: 72px;"> </a>
+                              <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">nailshop name</a></h4>
+                              </div>
+                          </div></td>
+                          <td class="col-sm-1 col-md-1" style="text-align: center">
+                          <strong>날짜</strong>
+                          </td>
+                          <td class="col-sm-1 col-md-1 text-center"><strong>완료</strong></td>
+                          <td class="col-sm-1 col-md-1 text-center"><strong>02586945987</strong></td>
+                          <td class="col-sm-1 col-md-1">
+                          <button type="button" class="btn btn-danger">
+                              <span class="glyphicon glyphicon-remove"></span> 예약취소
+                          </button></td>
+                      </tr>
 
-                        <div class="form-group">
-                          <label class="col-sm-3 control-label" for="inputPassword"> 현재 비밀번호</label>
-                          <div class="col-sm-6">
-                            <input class="form-control" id="inputPassword" type="password" placeholder="비밀번호">
+                  </tbody>
 
-                          </div>
-                        </div>
+              </table>
+          </div>
+      </div>
+  </div>
 
-                        <div class="form-group">
-                          <label class="col-sm-3 control-label" for="inputPassword"> 새로운 비밀번호</label>
-                          <div class="col-sm-6">
-                            <input class="form-control" id="inputPassword" type="password" placeholder="비밀번호">
-                            <p class="help-block">숫자, 특수문자 포함 8자 이상</p>
-                          </div>
-                        </div>
-                        <div class="form-group">
-                          <label class="col-sm-3 control-label" for="inputPasswordCheck">비밀번호 확인</label>
-                          <div class="col-sm-6">
-                            <input class="form-control" id="inputPasswordCheck" type="password" placeholder="비밀번호 확인">
-                            <p class="help-block"> 새로운 비밀번호를 한번 더 입력해주세요.</p>
-                          </div>
-                        </div>
-
-                        <div class="form-group">
-                          <label class="col-sm-3 control-label" for="inputName">이름</label>
-                          <div class="col-sm-6">
-                            <input class="form-control" id="inputName" type="text" placeholder="이름">
-                          </div>
-                        </div>
-
-
-                        <div class="form-group">
-                          <label class="col-sm-3 control-label" for="">이메일</label>
-                          <div class="col-sm-6">
-
-                            <input type="email" class="form-control" placeholder="이메일을 입력해 주세요" />
-
-                          </div>
-                        </div>
-
-                        <div class="form-group">
-                          <label class="col-sm-3 control-label" for="inputNumber">휴대폰번호</label>
-                          <div class="col-sm-6">
-                            <input class="form-control" id="inputNumber" type="text" placeholder="- 없이 입력해 주세요">
-                          </div>
-                        </div>
-
-                        <div class="form-group">
-                          <div class="col-sm-12 text-center">
-                            <button class="btn btn-primary" type="submit">수정 완료<i class="fa fa-check spaceLeft"></i></button>
-                            <button class="btn btn-danger" type="reset">취소<i class="fa fa-times spaceLeft"></i></button>
-                          </div>
-                        </div>
-
-
-                      </form>
-                    </div>
-                    <div role="tabpanel" class="tab-pane fade" id="Section6">
-                        <p>eugiat. Integer convallis ut ex quis semper. Suspendisse ut lobortis urna. Proin viverra, eros iaculis iaculis posuere, risus justo tincidunt ex, eget tempor lectus erat vel massa. Cum sociis natoque penatibus et magnis. </p>
-                    </div>
-                </div>
-            </div>
         </div>
+      </div>
     </div>
-</div>
   </section>
 
   <style>
-  a:hover,a:focus{
-    text-decoration: none;
-    outline: none;
-}
-.tab .nav-tabs{
-    border-bottom: 0 none;
-    background: transparent;
-}
-.tab .nav-tabs li a{
-    font-size: 16px;
-    color: #333;
-    background: transparent;
-    border: none;
-    padding: 12px 22px;
-    border-radius: 30px;
-    position: relative;
-}
-.tab .nav-tabs li.active a{
-    border: 0 none;
-    background: #fa6e6f;
-    color: #fff;
-}
-.tab .nav-tabs li.active a:after{
-    content: "";
-    position: absolute;
-    left: 45%;
-    bottom: -14px;
-    border: 7px solid transparent;
-    border-top: 7px solid #fa6e6f;
-}
-.tab .tab-content{
-    padding: 12px;
-    font-size: 14px;
-    color: #5a5c5d;
-    line-height: 24px;
-    margin-top: 20px;
-    background: #fff;
-    border-bottom: 3px solid #fa6e6f;
-}
-@media only screen and (max-width: 480px) {
-    .tab .nav-tabs li{
-        width: 100%;
-        margin-bottom: 10px;
-    }
-    .tab .nav-tabs li a{
-        border: 1px solid #d3d3d3;
-    }
-    .tab .nav-tabs li.active a:after{
-        border:none;
-    }
-}
+
   </style>
 
 

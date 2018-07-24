@@ -271,7 +271,7 @@
           <ul class="nav navbar-nav">
             <li class="active"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
             <!--active사용시 home하얀색으로 변함-->
-            <li><a href="#">Introduce</a></li>
+            <li><a href="intro.html">Introduce</a></li>
             <li><a href="shop.html">Shop</a></li>
             <li><a href="#">Market</a></li>
 
@@ -340,145 +340,75 @@
   </header>
 
   <section>
-    <div class="row">
-				<div class="col-12">
-					<h1 class="text-green mb-4 text-center">자주묻는질문</h1>
-				</div>
-      </div>
+    <div class='container'>
+      <div class="panel">
 
+        <ul class="nav nav-tabs">
+          <li role="presentation"><a href="mypageReserve.html">예약현황</a></li>
+          <li role="presentation"><a href="mypageBookmark.html">즐겨찾기</a></li>
+          <li role="presentation"><a href="mypageQna.html">1대1문의</a></li>
+          <li role="presentation"><a href="mypageQnaList.html">문의내역</a></li>
+          <li class="active" role="presentation"><a href="mypageMessage.html">쪽지내역</a></li>
+          <li role="presentation"><a href="mypageUpdate.html">회원정보수정</a></li>
+          <li role="presentation"><a href="mypageDelete.html">탈퇴</a></li>
+        </ul>
 
-    <div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="headingOne">
-                        <h4 class="panel-title">
-                            <a class="" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                <i class="fa fa-bars"></i>Section 1
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                        <div class="panel-body">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dui ligula, blandit non maximus id, tempus vitae nulla. Cras nec turpis vitae libero eleifend consequat. Phasellus eu rutrum erat. Etiam id urna sed odio placerat gravida. Integer molestie lectus eu.
-                        </div>
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="headingTwo">
-                        <h4 class="panel-title">
-                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                <i class="fa fa-link"></i>Section 2
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                        <div class="panel-body">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dui ligula, blandit non maximus id, tempus vitae nulla. Cras nec turpis vitae libero eleifend consequat. Phasellus eu rutrum erat. Etiam id urna sed odio placerat gravida. Integer molestie lectus eu.
-                        </div>
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="headingThree">
-                        <h4 class="panel-title">
-                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                <i class="fa fa-comment"></i>Section 3
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                        <div class="panel-body">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dui ligula, blandit non maximus id, tempus vitae nulla. Cras nec turpis vitae libero eleifend consequat. Phasellus eu rutrum erat. Etiam id urna sed odio placerat gravida. Integer molestie lectus eu.
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="panel-body">
+          <div class="page-header">
+            <h2>쪽지함</h2>
+          </div>
+          <table class="table table-condensed table-hover">
+  <thead>
+    <tr>
+      <th class="span1"><input type="checkbox"></th>
+      <th class="span2"></th>
+      <th class="span2"></th>
+      <th class="span9"></th>
+      <th class="span2"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><input type="checkbox"> <a href="#"><i class="icon-star-empty"></i></a></td>
+      <td><strong>John Doe</strong></td>
+      <td><span class="label pull-right">Notifications</span></td>
+      <td><strong>Message body goes here</strong></td>
+      <td><strong>11:23 PM</strong></td>
+    </tr>
+    <tr>
+      <td><input type="checkbox"> <a href="#"><i class="icon-star-empty"></i></a></td>
+      <td>John Doe</td>
+      <td><span class="label pull-right">Notifications</span></td>
+      <td>Message body goes here</td>
+      <td>Sept4</td>
+    </tr>
+    <tr>
+      <td><input type="checkbox"> <a href="#"><i class="icon-star"></i></a></td>
+      <td><strong>John Doe</strong></td>
+      <td><span class="label pull-right">Notifications</span></td>
+      <td><strong>Message body goes here</strong></td>
+      <td><strong>Sept3</strong></td>
+    </tr>
+    <tr>
+      <td><input type="checkbox"> <a href="#"><i class="icon-star"></i></a></td>
+      <td><strong>John Doe</strong></td>
+      <td><span class="label pull-right">Notifications</span></td>
+      <td><strong>Message body goes here</strong></td>
+      <td><strong>Sept3</strong></td>
+    </tr>
+  </tbody>
+</table>
+
         </div>
+      </div>
     </div>
-</div>
-
-
-
-
-
   </section>
 
-
   <style>
-  a:hover, a:focus{
-  outline: none;
-  text-decoration: none;
-}
-#accordion .panel{
-  border:0px none;
-  box-shadow:none;
-}
-#accordion .panel-heading{
-  padding:0;
-  background: #fff;
-}
-#accordion .panel-title a{
-  display: block;
-  position: relative;
-  background:transparent;
-  color:#de4d4e;
-  font-size:14px;
-  font-weight: bolder;
-  text-transform:uppercase;
-  margin-bottom:15px;
-  padding:15px 50px;
-  border-bottom:1px solid #de4d4e;
-  border-radius: 0 15px 0 15px;
-  transition:all 0.10s linear 0s;
-}
-#accordion .panel-title a.collapsed{
-  color:#808080;
-  border-bottom:1px solid #d3d3d3;
-  margin: 0;
-}
-#accordion .panel-title a i{
-  color:#de4d4e;
-  position: absolute;
-  top: 14px;
-  left:25px;
-}
-#accordion .panel-title a:before,
-#accordion .panel-title a.collapsed:before{
-  content:"";
-  position: absolute;
-  bottom:-15px;
-  left:36px;
-  border:7px solid transparent;
-  border-top:7px solid #de4d4e;
-}
-#accordion .panel-title a.collapsed:before{
-  content:"";
-  border: 0px none;
-}
-#accordion .panel-title a.collapsed:hover{
-  color: #6a6060;
-}
-#accordion .panel-title a:after,
-#accordion .panel-title a.collapsed:after{
-  content: "\f106";
-  font-family: FontAwesome;
-  color: #de4d4e;
-  font-size: 20px;
-  line-height: 20px;
-  position: absolute;
-  top: 14px;
-  right:25px;
-}
-#accordion .panel-title a.collapsed:after{
-  content: "\f107";
-  color:#808080;
-}
-#accordion .panel-body{
-  border-top:0 none;
-  color:#808080;
-}
+
   </style>
+
+
 
   <!--</div>-->
   <!--footer -->
