@@ -287,7 +287,7 @@
                      <ul class="dropdown-menu" style="border-radius:3px; border-color:white">
                        <li><a href="notice.html">공지사항</a></li>
                        <li><a href="FAQ.html">자주묻는질문</a></li>
-                       <li><a href="#">1대1문의</a></li>
+                       <li><a href="customerOne.html">1대1문의</a></li>
                      </ul>
                    </li>
                  </ul>
@@ -347,7 +347,7 @@
 
                       <div class="panel-body">
                               <div class="page-header">
-                                      <h2> 게시판 글쓰기</h2>
+                                      <h2>1대1문의</h2>
                               </div>
                               <form class="form-horizontal">
 
@@ -375,30 +375,7 @@
                                       </div>
                                       <div class="form-group">
 
-
-  <div class="container">
-      <div class="row">
-          <div class="col-xs-12 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-              <!-- image-preview-filename input [CUT FROM HERE]-->
-              <div class="input-group image-preview">
-                  <input type="text" class="form-control image-preview-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
-                  <span class="input-group-btn">
-                      <!-- image-preview-clear button -->
-                      <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
-                          <span class="glyphicon glyphicon-remove"></span> Clear
-                      </button>
-                      <!-- image-preview-input -->
-                      <div class="btn btn-default image-preview-input">
-                          <span class="glyphicon glyphicon-folder-open"></span>
-                          <span class="image-preview-input-title">Browse</span>
-                          <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/> <!-- rename it -->
-                      </div>
-                  </span>
-              </div><!-- /input-group image-preview [TO HERE]-->
-          </div>
-      </div>
-  </div>
-                                      </div>
+                            </div>
 
                                       <div class="form-group">
                                           <button type="submit" class="btn btn-default center-block">제출하기</button>
@@ -416,78 +393,12 @@
 
 
   <style>
-  a:hover, a:focus{
-  outline: none;
-  text-decoration: none;
-}
-#accordion .panel{
-  border:0px none;
-  box-shadow:none;
-}
-#accordion .panel-heading{
-  padding:0;
-  background: #fff;
-}
-#accordion .panel-title a{
-  display: block;
-  position: relative;
-  background:transparent;
-  color:#de4d4e;
-  font-size:14px;
-  font-weight: bolder;
-  text-transform:uppercase;
-  margin-bottom:15px;
-  padding:15px 50px;
-  border-bottom:1px solid #de4d4e;
-  border-radius: 0 15px 0 15px;
-  transition:all 0.10s linear 0s;
-}
-#accordion .panel-title a.collapsed{
-  color:#808080;
-  border-bottom:1px solid #d3d3d3;
-  margin: 0;
-}
-#accordion .panel-title a i{
-  color:#de4d4e;
-  position: absolute;
-  top: 14px;
-  left:25px;
-}
-#accordion .panel-title a:before,
-#accordion .panel-title a.collapsed:before{
-  content:"";
-  position: absolute;
-  bottom:-15px;
-  left:36px;
-  border:7px solid transparent;
-  border-top:7px solid #de4d4e;
-}
-#accordion .panel-title a.collapsed:before{
-  content:"";
-  border: 0px none;
-}
-#accordion .panel-title a.collapsed:hover{
-  color: #6a6060;
-}
-#accordion .panel-title a:after,
-#accordion .panel-title a.collapsed:after{
-  content: "\f106";
-  font-family: FontAwesome;
-  color: #de4d4e;
-  font-size: 20px;
-  line-height: 20px;
-  position: absolute;
-  top: 14px;
-  right:25px;
-}
-#accordion .panel-title a.collapsed:after{
-  content: "\f107";
-  color:#808080;
-}
-#accordion .panel-body{
-  border-top:0 none;
-  color:#808080;
-}
+  .page-header{
+      border-bottom: 0px;
+  }
+  .form-control{
+      border-radius:30px;
+  }
   </style>
 
   <!--</div>-->

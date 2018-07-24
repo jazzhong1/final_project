@@ -340,145 +340,166 @@
   </header>
 
   <section>
-    <div class="row">
-				<div class="col-12">
-					<h1 class="text-green mb-4 text-center">공지사항</h1>
-				</div>
-      </div>
-
-
     <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="headingOne">
-                        <h4 class="panel-title">
-                            <a class="" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                <i class="fa fa-bars"></i>Section 1
-                            </a>
-                        </h4>
+            <div class="tab" role="tabpanel">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab">예약현황</a></li>
+                    <li role="presentation"><a href="#Section2" aria-controls="profile" role="tab" data-toggle="tab">즐겨찾기</a></li>
+                    <li role="presentation"><a href="#Section3" aria-controls="messages" role="tab" data-toggle="tab">1대1문의</a></li>
+                    <li role="presentation"><a href="#Section3" aria-controls="messages" role="tab" data-toggle="tab">문의내역</a></li>
+                    <li role="presentation"><a href="#Section3" aria-controls="messages" role="tab" data-toggle="tab">회원정보수정</a></li>
+                    <li role="presentation"><a href="#Section3" aria-controls="messages" role="tab" data-toggle="tab">쪽지내역</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade in active" id="Section1">
+                        <p>1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a blandit enim. Aliquam gravida orci id fringilla feugiat. Integer convallis ut ex quis semper. Suspendisse ut lobortis urna. Proin viverra, eros iaculis iaculis posuere, risus justo tincidunt ex, eget tempor lectus erat vel massa. Cum sociis natoque penatibus et magnis.</p>
                     </div>
-                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                        <div class="panel-body">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dui ligula, blandit non maximus id, tempus vitae nulla. Cras nec turpis vitae libero eleifend consequat. Phasellus eu rutrum erat. Etiam id urna sed odio placerat gravida. Integer molestie lectus eu.
+                    <div role="tabpanel" class="tab-pane fade" id="Section2">
+                        <p>2 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a blandit enim. Aliquam gravida orci id fringilla feugiat. Integer convallis ut ex quis semper. Suspendisse ut lobortis urna. Proin viverra, eros iaculis iaculis posuere, risus justo tincidunt ex, eget tempor lectus erat vel massa. Cum sociis natoque penatibus et magnis.</p>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="Section3">
+                        <p>3 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a blandit enim. Aliquam gravida orci id fringilla feugiat. Integer convallis ut ex quis semper. Suspendisse ut lobortis urna. Proin viverra, eros iaculis iaculis posuere, risus justo tincidunt ex, eget tempor lectus erat vel massa. Cum sociis natoque penatibus et magnis. </p>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="Section4">
+                        <p>3 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a blandit enim. Aliquam gravida orci id fringilla feugiat. Integer convallis ut ex quis semper. Suspendisse ut lobortis urna. Proin viverra, eros iaculis iaculis posuere, risus justo tincidunt ex, eget tempor lectus erat vel massa. Cum sociis natoque penatibus et magnis. </p>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="Section5">
+                      <form class="form-horizontal">
+
+                        <div class="form-group">
+                          <label class="col-sm-3 control-label" for="inputId">아이디</label>
+                          <div class="col-sm-6">
+                            <input class="form-control" id="userId" type="text" placeholder="아이디">
+                          </div>
                         </div>
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="headingTwo">
-                        <h4 class="panel-title">
-                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                <i class="fa fa-link"></i>Section 2
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                        <div class="panel-body">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dui ligula, blandit non maximus id, tempus vitae nulla. Cras nec turpis vitae libero eleifend consequat. Phasellus eu rutrum erat. Etiam id urna sed odio placerat gravida. Integer molestie lectus eu.
+
+
+                        <div class="form-group">
+                          <label class="col-sm-3 control-label" for="inputPassword"> 현재 비밀번호</label>
+                          <div class="col-sm-6">
+                            <input class="form-control" id="inputPassword" type="password" placeholder="비밀번호">
+
+                          </div>
                         </div>
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="headingThree">
-                        <h4 class="panel-title">
-                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                <i class="fa fa-comment"></i>Section 3
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                        <div class="panel-body">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dui ligula, blandit non maximus id, tempus vitae nulla. Cras nec turpis vitae libero eleifend consequat. Phasellus eu rutrum erat. Etiam id urna sed odio placerat gravida. Integer molestie lectus eu.
+
+                        <div class="form-group">
+                          <label class="col-sm-3 control-label" for="inputPassword"> 새로운 비밀번호</label>
+                          <div class="col-sm-6">
+                            <input class="form-control" id="inputPassword" type="password" placeholder="비밀번호">
+                            <p class="help-block">숫자, 특수문자 포함 8자 이상</p>
+                          </div>
                         </div>
+                        <div class="form-group">
+                          <label class="col-sm-3 control-label" for="inputPasswordCheck">비밀번호 확인</label>
+                          <div class="col-sm-6">
+                            <input class="form-control" id="inputPasswordCheck" type="password" placeholder="비밀번호 확인">
+                            <p class="help-block"> 새로운 비밀번호를 한번 더 입력해주세요.</p>
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label class="col-sm-3 control-label" for="inputName">이름</label>
+                          <div class="col-sm-6">
+                            <input class="form-control" id="inputName" type="text" placeholder="이름">
+                          </div>
+                        </div>
+
+
+                        <div class="form-group">
+                          <label class="col-sm-3 control-label" for="">이메일</label>
+                          <div class="col-sm-6">
+
+                            <input type="email" class="form-control" placeholder="이메일을 입력해 주세요" />
+
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label class="col-sm-3 control-label" for="inputNumber">휴대폰번호</label>
+                          <div class="col-sm-6">
+                            <input class="form-control" id="inputNumber" type="text" placeholder="- 없이 입력해 주세요">
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <div class="col-sm-12 text-center">
+                            <button class="btn btn-primary" type="submit">수정 완료<i class="fa fa-check spaceLeft"></i></button>
+                            <button class="btn btn-danger" type="reset">취소<i class="fa fa-times spaceLeft"></i></button>
+                          </div>
+                        </div>
+
+
+                      </form>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="Section6">
+                        <p>eugiat. Integer convallis ut ex quis semper. Suspendisse ut lobortis urna. Proin viverra, eros iaculis iaculis posuere, risus justo tincidunt ex, eget tempor lectus erat vel massa. Cum sociis natoque penatibus et magnis. </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-
-
-
-
   </section>
 
-
   <style>
-  a:hover, a:focus{
-  outline: none;
-  text-decoration: none;
+  a:hover,a:focus{
+    text-decoration: none;
+    outline: none;
 }
-#accordion .panel{
-  border:0px none;
-  box-shadow:none;
+.tab .nav-tabs{
+    border-bottom: 0 none;
+    background: transparent;
 }
-#accordion .panel-heading{
-  padding:0;
-  background: #fff;
+.tab .nav-tabs li a{
+    font-size: 16px;
+    color: #333;
+    background: transparent;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 30px;
+    position: relative;
 }
-#accordion .panel-title a{
-  display: block;
-  position: relative;
-  background:transparent;
-  color:#de4d4e;
-  font-size:14px;
-  font-weight: bolder;
-  text-transform:uppercase;
-  margin-bottom:15px;
-  padding:15px 50px;
-  border-bottom:1px solid #de4d4e;
-  border-radius: 0 15px 0 15px;
-  transition:all 0.10s linear 0s;
+.tab .nav-tabs li.active a{
+    border: 0 none;
+    background: #fa6e6f;
+    color: #fff;
 }
-#accordion .panel-title a.collapsed{
-  color:#808080;
-  border-bottom:1px solid #d3d3d3;
-  margin: 0;
+.tab .nav-tabs li.active a:after{
+    content: "";
+    position: absolute;
+    left: 45%;
+    bottom: -14px;
+    border: 7px solid transparent;
+    border-top: 7px solid #fa6e6f;
 }
-#accordion .panel-title a i{
-  color:#de4d4e;
-  position: absolute;
-  top: 14px;
-  left:25px;
+.tab .tab-content{
+    padding: 12px;
+    font-size: 14px;
+    color: #5a5c5d;
+    line-height: 24px;
+    margin-top: 20px;
+    background: #fff;
+    border-bottom: 3px solid #fa6e6f;
 }
-#accordion .panel-title a:before,
-#accordion .panel-title a.collapsed:before{
-  content:"";
-  position: absolute;
-  bottom:-15px;
-  left:36px;
-  border:7px solid transparent;
-  border-top:7px solid #de4d4e;
-}
-#accordion .panel-title a.collapsed:before{
-  content:"";
-  border: 0px none;
-}
-#accordion .panel-title a.collapsed:hover{
-  color: #6a6060;
-}
-#accordion .panel-title a:after,
-#accordion .panel-title a.collapsed:after{
-  content: "\f106";
-  font-family: FontAwesome;
-  color: #de4d4e;
-  font-size: 20px;
-  line-height: 20px;
-  position: absolute;
-  top: 14px;
-  right:25px;
-}
-#accordion .panel-title a.collapsed:after{
-  content: "\f107";
-  color:#808080;
-}
-#accordion .panel-body{
-  border-top:0 none;
-  color:#808080;
+@media only screen and (max-width: 480px) {
+    .tab .nav-tabs li{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .tab .nav-tabs li a{
+        border: 1px solid #d3d3d3;
+    }
+    .tab .nav-tabs li.active a:after{
+        border:none;
+    }
 }
   </style>
+
+
 
   <!--</div>-->
   <!--footer -->
