@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="js/index.js">
+  <link href="css/index1.css" rel="stylesheet">
+  <link href="css/index2.css" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css" media="screen" title="no title" charset="utf-8">
+    <!-- Custom style -->
+    <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
+
+ 
+  <style>
+    .badge-default {
+      background-color: rgb(255, 232, 232);
+    }
+
+    .badge-primary {
+      background-color: #337ab7;
+    }
+
+    .badge-success {
+      background-color: #5cb85c;
+    }
+
+    .badge-info {
+      background-color: #5bc0de;
+    }
+
+    .badge-warning {
+      background-color: #f0ad4e;
+    }
+
+    .badge-danger {
+      background-color: #d9534f;
+    }
+
+    .navbar-icon-top .navbar-nav>li>a>.fa,
+    .navbar-icon-top .navbar-nav>li>a>.glyphicon {
+      position: relative;
+      width: 36px;
+      font-size: 24px;
+    }
+
+    .navbar-icon-top .navbar-nav>li>a>.fa>.badge,
+    .navbar-icon-top .navbar-nav>li>a>.glyphicon>.badge {
+      position: absolute;
+      right: 0;
+      font-family: sans-serif;
+    }
+
+    .navbar-icon-top .navbar-nav>li>a>.fa {
+      top: 3px;
+      line-height: 12px;
+    }
+
+    .navbar-icon-top .navbar-nav>li>a>.fa>.badge {
+      top: -10px;
+    }
+
+    .navbar-icon-top .navbar-nav>li>a>.glyphicon {
+      top: 6px;
+      line-height: 6px;
+    }
+
+    .navbar-icon-top .navbar-nav>li>a>.glyphicon>.badge {
+      top: -16px;
+    }
+
+    @media (min-width: 768px) {
+      .navbar-icon-top .navbar-brand {
+        padding: 25px 15px;
+      }
+      .navbar-icon-top .navbar-text {
+        margin-top: 25px;
+        margin-bottom: 25px;
+      }
+      .navbar-icon-top .navbar-btn,
+      .navbar-icon-top .navbar-form {
+        margin-top: 18px;
+        margin-bottom: 18px;
+      }
+      .navbar-icon-top .navbar-nav>li>a {
+        text-align: center;
+        display: table-cell;
+        height: 70px;
+        vertical-align: middle;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+      .navbar-icon-top .navbar-nav>li>a>.fa,
+      .navbar-icon-top .navbar-nav>li>a>.glyphicon {
+        display: block;
+        width: 48px;
+        margin: 2px auto 4px auto;
+        top: 0;
+        line-height: 24px;
+      }
+      .navbar-icon-top .navbar-nav>li>a>.fa>.badge,
+      .navbar-icon-top .navbar-nav>li>a>.glyphicon>.badge {
+        top: -7px;
+      }
+    }
+
+    .navbar-default .navbar-nav>.open>a,
+    .navbar-default .navbar-nav>.open>a:focus,
+    .navbar-default .navbar-nav>.open>a:hover {
+      color: #555;
+      background-color: #fef2f2;
+    }
+
+    .navbar .pull-right>li>.dropdown-menu:before,
+    .navbar .nav>li>.dropdown-menu.pull-right:before {
+      left: auto;
+      right: 12px;
+    }
+
+    .navbar .nav>li>.dropdown-menu:before {
+      content: '';
+      display: inline-block;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-bottom: 7px solid #b4b4b4;
+      border-bottom-color: rgb(255, 255, 255);
+      position: absolute;
+      top: -7px;
+      right: 9px;
+    }
+
+    /*nav 끝*/
+
+
+
+
+
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-icon-top navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+          <a class="navbar-brand" href="#">로고~~</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+            <!--active사용시 home하얀색으로 변함-->
+            <li><a href="#">Introduce</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Market</a></li>
+            <li><a href="#">Service center</a></li>
+
+          </ul>
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search w3-spin"></span></button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#">
+                            <i class="fa fa-envelope-o">
+                                <span class="badge badge-danger">11</span>
+                            </i>
+                            Messages
+                        </a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <!--<i class="fa fa-user-circle-o"></i>-->
+                <img class="img-circle" src="images/image-7.jpg" alt="" style="width:50px; height:50px;">
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" style="border-radius:10px; border-color:white">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">마이페이지</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+    <br><br><br><br>
+    <!--
+
+                <li>
+                  <div class="w3-threequarter">
+                    <input type="text" class="w3-bar-item w3-input w3-border w3-round-xlarge" placeholder="검색" style="height:30px; margin-top:10px">
+                  </div>
+                </li>-->
+
+
+  </header>
+
+<section>
+<div class="container">
+
+
+  <article>
+      
+  <div class="col-md-12">
+        <div class="page-header">
+    	    <h1>회원가입 <small>사용자</small></h1>
+        </div>
+        <form class="form-horizontal">
+        <div class="form-group">
+          <label class="col-sm-3 control-label" for="inputEmail">아이디</label>
+        <div class="col-sm-6">
+          <input class="form-control" id="inputid" type="text" placeholder="아이디">
+        </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-3 control-label" for="inputPassword">비밀번호</label>
+        <div class="col-sm-6">
+          <input class="form-control" id="inputPassword" type="password" placeholder="비밀번호">
+        <p class="help-block">숫자, 특수문자 포함 8자 이상</p>
+        </div>
+        </div>
+          <div class="form-group">
+              <label class="col-sm-3 control-label" for="inputPasswordCheck">비밀번호 확인</label>
+             <div class="col-sm-6">
+              <input class="form-control" id="inputPasswordCheck" type="password" placeholder="비밀번호 확인">
+                <p class="help-block">비밀번호를 한번 더 입력해주세요.</p>
+             </div>
+          </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label" for="inputName">이름</label>
+          <div class="col-sm-6">
+            <input class="form-control" id="inputName" type="text" placeholder="이름">
+          </div>
+        </div>
+        <div class="form-group">
+                <label class="col-sm-3 control-label" for="inputEmail">이메일</label>
+              <div class="col-sm-6">
+                <input class="form-control" id="inputEmail" type="email" placeholder="이메일">
+              </div>
+              </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label" for="inputNumber">휴대폰번호</label>
+              <div class="col-sm-6">
+                <div class="input-group">
+                  <input type="tel" class="form-control" id="inputNumber" placeholder="- 없이 입력해 주세요" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-success">인증번호 전송<i class="fa fa-mail-forward spaceLeft"></i></button>
+                  </span>
+                </div>
+              </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label" for="inputNumberCheck">인증번호 확인</label>
+          <div class="col-sm-6">
+            <div class="input-group">
+              <input class="form-control" id="inputNumberCheck" type="text" placeholder="인증번호">
+              <span class="input-group-btn">
+                <button class="btn btn-success" type="button">인증번호 확인<i class="fa fa-edit spaceLeft"></i></button>
+              </span>
+            </div>
+            <p class="help-block">전송된 인증번호를 입력해주세요.</p>
+          </div>
+        </div>
+          <div class="form-group">
+              <label class="col-sm-3 control-label" for="inputAgree">약관 동의</label>
+            <div class="col-sm-6" data-toggle="buttons">
+              <label class="btn btn-warning active">
+                <input id="agree" type="checkbox" autocomplete="off" chacked>
+                  <span class="fa fa-check"></span>
+              </label>
+              <a href="#">이용약관</a> 에 동의 합니다.
+            </div>
+          </div>
+        <div class="form-group">
+          <div class="col-sm-12 text-center">
+            <button class="btn btn-primary" type="submit">회원가입<i class="fa fa-check spaceLeft"></i></button>
+            <button class="btn btn-danger" type="submit">가입취소<i class="fa fa-times spaceLeft"></i></button>
+          </div>
+        </div>
+        </form>
+          <hr>
+        </div>
+      </article>
+    </div>
+</section>
+ 
+
+  <!--</div>-->
+  <!--footer -->
+  <footer id="contact" class="contact-us">
+    <div class="container">
+      <div class="row">
+        <div class="contact-area">
+          <h2>Contact Us</h2>
+          <ul class="contact-list">
+            <li>
+              <i class="fa fa-phone"></i> <a href="##">  +44 (0) 232 090 505</a>
+            </li>
+            <li>
+              <i class="fa fa-envelope"></i> <a href="#">  hi@dsfg.co.uk</a>
+            </li>
+            <li>
+              <i class="fa fa-map-marker"></i> <a href="#">  Rampura,Dhaka Bangladesh k</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

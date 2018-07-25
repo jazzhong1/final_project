@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="js/modernizr.js"></script>
+  <script src="js/jquery-2.1.1.js"></script>
+  <script src="js/jquery.mobile.custom.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="js/index.js">
+  <link href="css/index1.css" rel="stylesheet">
+  <link href="css/index2.css" rel="stylesheet">
+
+  <style>
+    .badge-default {
+      background-color: rgb(255, 232, 232);
+    }
+
+    .badge-primary {
+      background-color: #337ab7;
+    }
+
+    .badge-success {
+      background-color: #5cb85c;
+    }
+
+    .badge-info {
+      background-color: #5bc0de;
+    }
+
+    .badge-warning {
+      background-color: #f0ad4e;
+    }
+
+    .badge-danger {
+      background-color: #d9534f;
+    }
+
+    .navbar-icon-top .navbar-nav>li>a>.fa,
+    .navbar-icon-top .navbar-nav>li>a>.glyphicon {
+      position: relative;
+      width: 36px;
+      font-size: 24px;
+    }
+
+    .navbar-icon-top .navbar-nav>li>a>.fa>.badge,
+    .navbar-icon-top .navbar-nav>li>a>.glyphicon>.badge {
+      position: absolute;
+      right: 0;
+      font-family: sans-serif;
+    }
+
+    .navbar-icon-top .navbar-nav>li>a>.fa {
+      top: 3px;
+      line-height: 12px;
+    }
+
+    .navbar-icon-top .navbar-nav>li>a>.fa>.badge {
+      top: -10px;
+    }
+
+    .navbar-icon-top .navbar-nav>li>a>.glyphicon {
+      top: 6px;
+      line-height: 6px;
+    }
+
+    .navbar-icon-top .navbar-nav>li>a>.glyphicon>.badge {
+      top: -16px;
+    }
+
+    @media (min-width: 768px) {
+      .navbar-icon-top .navbar-brand {
+        padding: 25px 15px;
+      }
+      .navbar-icon-top .navbar-text {
+        margin-top: 25px;
+        margin-bottom: 25px;
+      }
+      .navbar-icon-top .navbar-btn,
+      .navbar-icon-top .navbar-form {
+        margin-top: 18px;
+        margin-bottom: 18px;
+      }
+      .navbar-icon-top .navbar-nav>li>a {
+        text-align: center;
+        display: table-cell;
+        height: 70px;
+        vertical-align: middle;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+      .navbar-icon-top .navbar-nav>li>a>.fa,
+      .navbar-icon-top .navbar-nav>li>a>.glyphicon {
+        display: block;
+        width: 48px;
+        margin: 2px auto 4px auto;
+        top: 0;
+        line-height: 24px;
+      }
+      .navbar-icon-top .navbar-nav>li>a>.fa>.badge,
+      .navbar-icon-top .navbar-nav>li>a>.glyphicon>.badge {
+        top: -7px;
+      }
+    }
+
+    .navbar-default .navbar-nav>.open>a,
+    .navbar-default .navbar-nav>.open>a:focus,
+    .navbar-default .navbar-nav>.open>a:hover {
+      color: #555;
+      background-color: #fef2f2;
+    }
+
+    .navbar .pull-right>li>.dropdown-menu:before,
+    .navbar .nav>li>.dropdown-menu.pull-right:before {
+      left: auto;
+      right: 12px;
+    }
+
+    .navbar .nav>li>.dropdown-menu:before {
+      content: '';
+      display: inline-block;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-bottom: 7px solid #b4b4b4;
+      border-bottom-color: rgb(255, 255, 255);
+      position: absolute;
+      top: -7px;
+      right: 9px;
+    }
+
+    /*nav 끝*/
+
+    @import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css);
+    .col-item {
+      border: 1px solid #E1E1E1;
+      border-radius: 5px;
+      background: #FFF;
+    }
+
+    .col-item .photo img {
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .col-item .info {
+      padding: 10px;
+      border-radius: 0 0 5px 5px;
+      margin-top: 1px;
+    }
+
+    .col-item:hover .info {
+      background-color: #F5F5DC;
+    }
+
+    .col-item .price {
+      /*width: 50%;*/
+      float: left;
+      margin-top: 5px;
+    }
+
+    .col-item .price h5 {
+      line-height: 20px;
+      margin: 0;
+    }
+
+    .price-text-color {
+      color: #219FD1;
+    }
+
+    .col-item .info .rating {
+      color: #777;
+    }
+
+    .col-item .rating {
+      /*width: 50%;*/
+      float: left;
+      font-size: 17px;
+      text-align: right;
+      line-height: 52px;
+      margin-bottom: 10px;
+      height: 52px;
+    }
+
+    .col-item .separator {
+      border-top: 1px solid #E1E1E1;
+    }
+
+    .clear-left {
+      clear: left;
+    }
+
+    .col-item .separator p {
+      line-height: 20px;
+      margin-bottom: 0;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .col-item .separator p i {
+      margin-right: 5px;
+    }
+
+    .col-item .btn-add {
+      width: 50%;
+      float: left;
+    }
+
+    .col-item .btn-add {
+      border-right: 1px solid #E1E1E1;
+    }
+
+    .col-item .btn-details {
+      width: 50%;
+      float: left;
+      padding-left: 10px;
+    }
+
+    .controls {
+      margin-top: 10px;
+    }
+
+    [data-slide="prev"] {
+      margin-right: 10px;
+    }
+
+    #custom-hr {
+
+      height: 3px;
+      border: 0;
+      height: 3px;
+      background: rgb(61, 61, 61);
+      margin-top: 5px;
+      margin-bottom: 0px;
+
+    }
+
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-icon-top navbar-default navbar-fixed-top">
+
+
+
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+          <a class="navbar-brand" href="#">로고~~</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
+            <!--active사용시 home하얀색으로 변함-->
+            <li><a href="intro.html">Introduce</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="#">Market</a></li>
+
+
+          </ul>
+
+                 <ul class="nav navbar-nav">
+                   <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                       <!--<i class="fa fa-user-circle-o"></i>-->
+                    ServiceCenter
+                     </a>
+                     <ul class="dropdown-menu" style="border-radius:3px; border-color:white">
+                       <li><a href="notice.html">공지사항</a></li>
+                       <li><a href="FAQ.html">자주묻는질문</a></li>
+                     </ul>
+                   </li>
+                 </ul>
+
+
+
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search w3-spin"></span></button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#">
+                            <i class="fa fa-envelope-o">
+                                <span class="badge badge-danger">11</span>
+                            </i>
+                            Messages
+                        </a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <!--<i class="fa fa-user-circle-o"></i>-->
+                <img class="img-circle" src="images/image-7.jpg" alt="" style="width:50px; height:50px;">
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" style="border-radius:3px; border-color:white">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="mypageReserve.html">마이페이지</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+    <br><br><br><br>
+    <!--
+
+                <li>
+                  <div class="w3-threequarter">
+                    <input type="text" class="w3-bar-item w3-input w3-border w3-round-xlarge" placeholder="검색" style="height:30px; margin-top:10px">
+                  </div>
+                </li>-->
+
+
+  </header>
+
+  <section>
+    <div class='container'>
+      <div class="panel">
+
+        <ul class="nav nav-tabs">
+          <li role="presentation"><a href="mypageReserve.html">예약현황</a></li>
+          <li role="presentation"><a href="mypageBookmark.html">즐겨찾기</a></li>
+          <li role="presentation"><a href="mypageQna.html">1대1문의</a></li>
+          <li role="presentation"><a href="mypageQnaList.html">문의내역</a></li>
+          <li role="presentation"><a href="mypageMessage.html">쪽지내역</a></li>
+          <li class="active" role="presentation"><a href="mypageUpdate.html">회원정보수정</a></li>
+          <li role="presentation"><a href="mypageDelete.html">탈퇴</a></li>
+        </ul>
+
+        <div class="panel-body">
+          <div class="page-header">
+            <h2> 회원 정보 수정</h2>
+          </div>
+          <form class="form-horizontal">
+
+            <div class="form-group">
+              <label class="col-sm-3 control-label" for="inputId">아이디</label>
+              <div class="col-sm-6">
+                <input class="form-control" id="userId" type="text" placeholder="아이디">
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <label class="col-sm-3 control-label" for="inputPassword"> 현재 비밀번호</label>
+              <div class="col-sm-6">
+                <input class="form-control" id="inputPassword" type="password" placeholder="비밀번호">
+
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-sm-3 control-label" for="inputPassword"> 새로운 비밀번호</label>
+              <div class="col-sm-6">
+                <input class="form-control" id="inputPassword" type="password" placeholder="비밀번호">
+                <p class="help-block">숫자, 특수문자 포함 8자 이상</p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-3 control-label" for="inputPasswordCheck">비밀번호 확인</label>
+              <div class="col-sm-6">
+                <input class="form-control" id="inputPasswordCheck" type="password" placeholder="비밀번호 확인">
+                <p class="help-block"> 새로운 비밀번호를 한번 더 입력해주세요.</p>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-sm-3 control-label" for="inputName">이름</label>
+              <div class="col-sm-6">
+                <input class="form-control" id="inputName" type="text" placeholder="이름">
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <label class="col-sm-3 control-label" for="">이메일</label>
+              <div class="col-sm-6">
+
+                <input type="email" class="form-control" placeholder="이메일을 입력해 주세요" />
+
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-sm-3 control-label" for="inputNumber">휴대폰번호</label>
+              <div class="col-sm-6">
+                <input class="form-control" id="inputNumber" type="text" placeholder="- 없이 입력해 주세요">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="col-sm-12 text-center">
+                <button class="btn btn-primary" type="submit">수정 완료<i class="fa fa-check spaceLeft"></i></button>
+                <button class="btn btn-danger" type="reset">취소<i class="fa fa-times spaceLeft"></i></button>
+              </div>
+            </div>
+
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+
+  </style>
+
+
+
+  <!--</div>-->
+  <!--footer -->
+  <footer id="contact" class="contact-us">
+    <div class="container">
+      <div class="row">
+        <div class="contact-area">
+          <h2>Contact Us</h2>
+          <ul class="contact-list">
+            <li>
+              <i class="fa fa-phone"></i> <a href="##">  +44 (0) 232 090 505</a>
+            </li>
+            <li>
+              <i class="fa fa-envelope"></i> <a href="#">  hi@dsfg.co.uk</a>
+            </li>
+            <li>
+              <i class="fa fa-map-marker"></i> <a href="#">  Rampura,Dhaka Bangladesh k</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

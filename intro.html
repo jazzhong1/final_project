@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="js/modernizr.js"></script>
+  <script src="js/jquery-2.1.1.js"></script>
+  <script src="js/jquery.mobile.custom.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="js/index.js">
+  <link href="css/index1.css" rel="stylesheet">
+  <link href="css/index2.css" rel="stylesheet">
+
+  <style>
+    .badge-default {
+      background-color: rgb(255, 232, 232);
+    }
+
+    .badge-primary {
+      background-color: #337ab7;
+    }
+
+    .badge-success {
+      background-color: #5cb85c;
+    }
+
+    .badge-info {
+      background-color: #5bc0de;
+    }
+
+    .badge-warning {
+      background-color: #f0ad4e;
+    }
+
+    .badge-danger {
+      background-color: #d9534f;
+    }
+
+    .navbar-icon-top .navbar-nav>li>a>.fa,
+    .navbar-icon-top .navbar-nav>li>a>.glyphicon {
+      position: relative;
+      width: 36px;
+      font-size: 24px;
+    }
+
+    .navbar-icon-top .navbar-nav>li>a>.fa>.badge,
+    .navbar-icon-top .navbar-nav>li>a>.glyphicon>.badge {
+      position: absolute;
+      right: 0;
+      font-family: sans-serif;
+    }
+
+    .navbar-icon-top .navbar-nav>li>a>.fa {
+      top: 3px;
+      line-height: 12px;
+    }
+
+    .navbar-icon-top .navbar-nav>li>a>.fa>.badge {
+      top: -10px;
+    }
+
+    .navbar-icon-top .navbar-nav>li>a>.glyphicon {
+      top: 6px;
+      line-height: 6px;
+    }
+
+    .navbar-icon-top .navbar-nav>li>a>.glyphicon>.badge {
+      top: -16px;
+    }
+
+    @media (min-width: 768px) {
+      .navbar-icon-top .navbar-brand {
+        padding: 25px 15px;
+      }
+      .navbar-icon-top .navbar-text {
+        margin-top: 25px;
+        margin-bottom: 25px;
+      }
+      .navbar-icon-top .navbar-btn,
+      .navbar-icon-top .navbar-form {
+        margin-top: 18px;
+        margin-bottom: 18px;
+      }
+      .navbar-icon-top .navbar-nav>li>a {
+        text-align: center;
+        display: table-cell;
+        height: 70px;
+        vertical-align: middle;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+      .navbar-icon-top .navbar-nav>li>a>.fa,
+      .navbar-icon-top .navbar-nav>li>a>.glyphicon {
+        display: block;
+        width: 48px;
+        margin: 2px auto 4px auto;
+        top: 0;
+        line-height: 24px;
+      }
+      .navbar-icon-top .navbar-nav>li>a>.fa>.badge,
+      .navbar-icon-top .navbar-nav>li>a>.glyphicon>.badge {
+        top: -7px;
+      }
+    }
+
+    .navbar-default .navbar-nav>.open>a,
+    .navbar-default .navbar-nav>.open>a:focus,
+    .navbar-default .navbar-nav>.open>a:hover {
+      color: #555;
+      background-color: #fef2f2;
+    }
+
+    .navbar .pull-right>li>.dropdown-menu:before,
+    .navbar .nav>li>.dropdown-menu.pull-right:before {
+      left: auto;
+      right: 12px;
+    }
+
+    .navbar .nav>li>.dropdown-menu:before {
+      content: '';
+      display: inline-block;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-bottom: 7px solid #b4b4b4;
+      border-bottom-color: rgb(255, 255, 255);
+      position: absolute;
+      top: -7px;
+      right: 9px;
+    }
+
+    /*nav 끝*/
+
+    @import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css);
+    .col-item {
+      border: 1px solid #E1E1E1;
+      border-radius: 5px;
+      background: #FFF;
+    }
+
+    .col-item .photo img {
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .col-item .info {
+      padding: 10px;
+      border-radius: 0 0 5px 5px;
+      margin-top: 1px;
+    }
+
+    .col-item:hover .info {
+      background-color: #F5F5DC;
+    }
+
+    .col-item .price {
+      /*width: 50%;*/
+      float: left;
+      margin-top: 5px;
+    }
+
+    .col-item .price h5 {
+      line-height: 20px;
+      margin: 0;
+    }
+
+    .price-text-color {
+      color: #219FD1;
+    }
+
+    .col-item .info .rating {
+      color: #777;
+    }
+
+    .col-item .rating {
+      /*width: 50%;*/
+      float: left;
+      font-size: 17px;
+      text-align: right;
+      line-height: 52px;
+      margin-bottom: 10px;
+      height: 52px;
+    }
+
+    .col-item .separator {
+      border-top: 1px solid #E1E1E1;
+    }
+
+    .clear-left {
+      clear: left;
+    }
+
+    .col-item .separator p {
+      line-height: 20px;
+      margin-bottom: 0;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .col-item .separator p i {
+      margin-right: 5px;
+    }
+
+    .col-item .btn-add {
+      width: 50%;
+      float: left;
+    }
+
+    .col-item .btn-add {
+      border-right: 1px solid #E1E1E1;
+    }
+
+    .col-item .btn-details {
+      width: 50%;
+      float: left;
+      padding-left: 10px;
+    }
+
+    .controls {
+      margin-top: 10px;
+    }
+
+    [data-slide="prev"] {
+      margin-right: 10px;
+    }
+
+    #custom-hr {
+
+      height: 3px;
+      border: 0;
+      height: 3px;
+      background: rgb(61, 61, 61);
+      margin-top: 5px;
+      margin-bottom: 0px;
+
+    }
+
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-icon-top navbar-default navbar-fixed-top">
+
+
+
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+          <a class="navbar-brand" href="#">로고~~</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
+            <!--active사용시 home하얀색으로 변함-->
+            <li><a href="intro.html">Introduce</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="#">Market</a></li>
+
+
+          </ul>
+
+                 <ul class="nav navbar-nav">
+                   <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                       <!--<i class="fa fa-user-circle-o"></i>-->
+                    ServiceCenter
+                     </a>
+                     <ul class="dropdown-menu" style="border-radius:3px; border-color:white">
+                       <li><a href="notice.html">공지사항</a></li>
+                       <li><a href="FAQ.html">자주묻는질문</a></li>
+                      
+                     </ul>
+                   </li>
+                 </ul>
+
+
+
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search w3-spin"></span></button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#">
+                            <i class="fa fa-envelope-o">
+                                <span class="badge badge-danger">11</span>
+                            </i>
+                            Messages
+                        </a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <!--<i class="fa fa-user-circle-o"></i>-->
+                <img class="img-circle" src="images/image-7.jpg" alt="" style="width:50px; height:50px;">
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" style="border-radius:3px; border-color:white">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="mypageReserve.html">마이페이지</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+    <br><br><br><br>
+    <!--
+
+                <li>
+                  <div class="w3-threequarter">
+                    <input type="text" class="w3-bar-item w3-input w3-border w3-round-xlarge" placeholder="검색" style="height:30px; margin-top:10px">
+                  </div>
+                </li>-->
+
+
+  </header>
+
+  <section>
+
+
+    <div class="container">
+	<div class="row">
+    <div class="col-md-12">
+      <h2>Our Service</h2>
+    </div>
+	<div class="col-md-3 col-sm-6 col-xsx-6">
+            <div class="serviceBox">
+                <div class="service-icon">
+                    <span><i class="fa fa-id-card-o"></i></span>
+                </div>
+                <div class="service-content">
+                    <h3 class="title">nail multi platform</h3>
+                    <p class="description">여러 네일샵들의 디자인을 비교하여 선택할 수 있습니다.</p>
+                    <a href="WebDesigning.html" class="read-more fa fa-plus" data-toggle="tooltip" title="Read More"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6 col-xsx-6">
+            <div class="serviceBox green">
+                <div class="service-icon">
+                    <span><i class="fa fa-desktop"></i></span>
+                </div>
+                <div class="service-content">
+                    <h3 class="title">reservation</h3>
+                    <p class="description">전화로 문의NO. 원하는 네일샵 예약을 손쉽게 할 수 있습니다.</p>
+                    <a href="WebDevelopment.html" class="read-more fa fa-plus" data-toggle="tooltip" title="Read More"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6 col-xsx-6">
+            <div class="serviceBox orange">
+                <div class="service-icon">
+                    <span><i class="fa fa-tablet"></i></span>
+                </div>
+                <div class="service-content">
+                    <h3 class="title">nail market</h3>
+                    <p class="description">네일관련 재료들만 손쉽게 사고 팔 수 있는 마켓을 이용할 수 있습니다.</p>
+                    <a href="MobileAppDevelopment.html" class="read-more fa fa-plus" data-toggle="tooltip" title="Read More"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6 col-xsx-6">
+            <div class="serviceBox blue">
+                <div class="service-icon">
+                    <span><i class="fa fa-shopping-cart"></i></span>
+                </div>
+                <div class="service-content">
+                    <h3 class="title">bookmark</h3>
+                    <p class="description">원하는 네일샵, 네일디자인을 즐겨찾기로 담을수 있습니다.</p>
+                    <a href="ECommarce.html" class="read-more fa fa-plus" data-toggle="tooltip" title="Read More"></a>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>
+  </section>
+
+
+  <style>
+  .serviceBox{text-align: center;margin-top: 60px;position: relative;z-index: 1; margin-bottom: 21px;}
+  .serviceBox .service-icon{width: 78px;height: 78px;border-radius:3px;background: #fff;margin: 0 auto;position: absolute;top: -34px;left: 0;right: 0;z-index: 1;transition: all 0.3s ease-out 0s;}
+  .serviceBox:hover .service-icon{transform: rotate(45deg);}
+  .serviceBox .service-icon span{display: inline-block;width: 60px;height: 60px;line-height: 60px;border-radius:3px;background: #727cb6;font-size: 30px;color: #fff;margin: auto;position: absolute;top: 0;left: 0;bottom: 0;right: 0;transition: all 0.3s ease-out 0s;}
+  .serviceBox .service-icon span i{transition: all 0.3s ease-out 0s;}
+  .serviceBox:hover .service-icon span i{transform: rotate(-45deg);}
+  .serviceBox .service-content{background: #fff;border: 1px solid #e7e7e7;border-radius: 3px;padding: 55px 15px;position: relative;}
+  .serviceBox .service-content:before{content: "";display: block;width: 80px;height: 80px;border: 1px solid #e7e7e7;border-radius: 3px;margin: 0 auto;position: absolute;top: -37px;left: 0;right: 0;z-index: -1;transition: all 0.3s ease-out 0s;}
+  .serviceBox:hover .service-content:before{transform: rotate(45deg);}
+  .serviceBox .title{font-size: 17px;font-weight: 500;color: #324545;text-transform: uppercase;margin: 0 0 25px 0;position: relative;transition: all 0.3s ease-out 0s;}
+  .serviceBox:hover .title{color: #727cb6;}
+  .serviceBox .description{font-size: 14px;font-weight: 500;line-height: 24px;margin-bottom: 0;}
+  .serviceBox .read-more{display: block;width: 40px;height: 40px;line-height: 38px;border-radius: 50%;background: #fff;border: 1px solid #e7e7e7;font-size: 14px;color: #c4c2c2;margin: 0 auto;position: absolute;bottom: -17px;left: 0; right: 0;transition: all 0.3s ease-out 0s;}
+  .serviceBox .read-more:hover{border: 1px solid #727cb6;color: #727cb6;text-decoration: none;}
+  .serviceBox.green .service-icon span{ background: #008b8b; }
+  .serviceBox.blue .service-icon span{ background: #3498db; }
+  .serviceBox.orange .service-icon span{ background: #e67e22; }
+  .serviceBox.green:hover .title{ color: #008b8b; }
+  .serviceBox.blue:hover .title{ color: #3498db; }
+  .serviceBox.orange:hover .title{ color: #e67e22; }
+
+  .serviceBox:hover .read-more{border: 1px solid #727cb6;color: #727cb6;}
+  .serviceBox.green:hover .read-more{border: 1px solid #008b8b;color: #008b8b;}
+  .serviceBox.blue:hover .read-more{border: 1px solid #3498db;color: #3498db;}
+  .serviceBox.orange:hover .read-more{border: 1px solid #e67e22;color: #e67e22;}
+  </style>
+
+  <!--</div>-->
+  <!--footer -->
+  <footer id="contact" class="contact-us">
+    <div class="container">
+      <div class="row">
+        <div class="contact-area">
+          <h2>Contact Us</h2>
+          <ul class="contact-list">
+            <li>
+              <i class="fa fa-phone"></i> <a href="##">  +44 (0) 232 090 505</a>
+            </li>
+            <li>
+              <i class="fa fa-envelope"></i> <a href="#">  hi@dsfg.co.uk</a>
+            </li>
+            <li>
+              <i class="fa fa-map-marker"></i> <a href="#">  Rampura,Dhaka Bangladesh k</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
