@@ -16,7 +16,7 @@
   <link href="css/index1.css" rel="stylesheet">
   <link href="css/index2.css" rel="stylesheet">
 
-  
+
   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
 
@@ -239,17 +239,18 @@
          background-image: url('https://cdn4.iconfinder.com/data/icons/flatified/512/photos.png');
          background-position:0px 0px;
        }
-       
+
        .container{
     margin-top:20px;
 }
 .image-preview-input {
-    position: relative;
-	overflow: hidden;
-	margin: 0px;    
+    position: absolute;
+	  overflow: hidden;
+	  margin: 0px;
     color: #333;
     background-color: #fff;
-    border-color: #ccc;    
+    border-color: #ccc;
+    z-index: 2;
 }
 .image-preview-input input[type=file] {
 	position: absolute;
@@ -271,9 +272,9 @@
 <section>
     <div class="container">
             <div class="panel">
-              
-                   
-                   
+
+
+
                     <div class="panel-body">
                             <div class="page-header">
                                     <h2> 게시판 글쓰기</h2>
@@ -281,7 +282,7 @@
                             <div id="summernote"></div>
 
                             <button class="btn-default" type="button" onclick="showContent();">작성</button>
-                            
+
 
 
 
@@ -297,10 +298,10 @@
         }
                             </script>
 
-                         
+
                         </div>
                 </div>
-            
+
 
 
     </div>
@@ -308,8 +309,8 @@
 
 
 
-   
- 
+
+
 
   <!--</div>-->
   <!--footer -->
@@ -338,17 +339,17 @@
 
 </html>
 <script>
-$(document).on('click', '#close-preview', function(){ 
+$(document).on('click', '#close-preview', function(){
     $('.image-preview').popover('hide');
     // Hover befor close the preview
     $('.image-preview').hover(
         function () {
            $('.image-preview').popover('show');
-        }, 
+        },
          function () {
            $('.image-preview').popover('hide');
         }
-    );    
+    );
 });
 
 $(function() {
@@ -374,27 +375,27 @@ $(function() {
         $('.image-preview-filename').val("");
         $('.image-preview-clear').hide();
         $('.image-preview-input input:file').val("");
-        $(".image-preview-input-title").text("Browse"); 
-    }); 
+        $(".image-preview-input-title").text("Browse");
+    });
     // Create the preview image
-    $(".image-preview-input input:file").change(function (){     
+    $(".image-preview-input input:file").change(function (){
         var img = $('<img/>', {
             id: 'dynamic',
             width:250,
             height:200
-        });      
+        });
         var file = this.files[0];
         var reader = new FileReader();
         // Set preview image into the popover data-content
         reader.onload = function (e) {
             $(".image-preview-input-title").text("Change");
             $(".image-preview-clear").show();
-            $(".image-preview-filename").val(file.name);            
+            $(".image-preview-filename").val(file.name);
             img.attr('src', e.target.result);
             $(".image-preview").attr("data-content",$(img)[0].outerHTML).popover("show");
-        }        
+        }
         reader.readAsDataURL(file);
-    });  
+    });
 });
 
 </script>
