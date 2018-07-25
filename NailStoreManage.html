@@ -9,6 +9,7 @@
 <!-- <link href="js/index.js">
 <link href="css/index1.css" rel="stylesheet">
 <link href="css/index2.css" rel="stylesheet"> -->
+
 <head>
 	<meta charset="utf-8">
 	<title>NailStoreManage</title>
@@ -29,7 +30,6 @@
 			padding: 0;
 			list-style: none;
 		}
-
 		.b_icon {
 			position: absolute;
 			width: 32px;
@@ -39,9 +39,11 @@
 			transition: all .2s ease-out;
 
 		}
+
 		.b_icon.active {
 			content: url("icons/love_filled.svg");
 		}
+
 		.icon {
 			position: relative;
 			width: 32px;
@@ -172,7 +174,8 @@
 			-webkit-transition: all .4s ease-in-out;
 			transition: all .4s ease-in-out;
 		}
-    #border #line.five {
+
+		#border #line.five {
 			width: 5px;
 			height: 54px;
 			background-color: #feb0a7;
@@ -183,7 +186,7 @@
 		}
 
 		#left-side {
-			padding-top:100px;
+			padding-top: 100px;
 			padding: 70px;
 			padding-right: 10px;
 			height: 100%;
@@ -191,11 +194,12 @@
 			overflow: hidden;
 			position: relative;
 		}
+
 		#left-side #first,
 		#left-side #second,
 		#left-side #third,
 		#left-side #fourth,
-    #left-side #fifth {
+		#left-side #fifth {
 			height: 100%;
 			width: 100%;
 			-webkit-transition: all .6s ease-in-out;
@@ -219,11 +223,12 @@
 
 
 		}
+
 		#left-side #first h1,
 		#left-side #second h1,
 		#left-side #third h1,
 		#left-side #fourth h1,
-    #left-side #fifth h1 {
+		#left-side #fifth h1 {
 			font-weight: 800;
 			color: #333;
 		}
@@ -232,7 +237,7 @@
 		#left-side #second p,
 		#left-side #third p,
 		#left-side #fourth p,
-    #left-side #fifth p {
+		#left-side #fifth p {
 			color: #333;
 			font-weight: 500;
 			padding-left: 30px;
@@ -243,7 +248,7 @@
 		#left-side #second.active,
 		#left-side #third.active,
 		#left-side #fourth.active,
-    #left-side #fifth.active {
+		#left-side #fifth.active {
 			overflow: auto;
 			margin-top: 0px;
 			display: flex;
@@ -251,6 +256,7 @@
 			-webkit-transition: all .6s ease-in-out;
 			transition: all .6s ease-in-out;
 			overflow-x: hidden;
+			width: 100%;
 		}
 
 		.NailStoreMap {
@@ -262,18 +268,34 @@
 			text-align: center;
 			box-shadow: 5px 5px 30px -10px #ff9494;
 			border-radius: 14px;
-		}.animatepop{
+		}
+
+		.animatepop {
 			-webkit-transition: all .2s;
 			transition: all .2s;
 			-webkit-animation: intro 1s 0.1s forwards;
 			animation: intro 1s 0.1s forwards;
-		}.pinkshadow{
-				box-shadow: 5px 5px 30px -10px #ff9494;
-		}.radius14{
-				border-radius: 14px;
-		}.zindex{
+		}
+		.pinkshadow {
+			box-shadow: 5px 5px 30px -10px #ff9494;
+		}
+
+		.radius14 {
+			border-radius: 14px;
+			width: 100%;
+			height: 220px;
+			max-height: 250px;
+		}
+		.zindex {
 			position: absolute;
 			z-index: 1;
+		}
+		.wh100 {
+			width: 100%;
+			/* max-height: 250px; */
+			height:250px;
+			position: relative;
+			overflow: hidden;
 		}
 
 		@-webkit-keyframes intro {
@@ -333,14 +355,16 @@
 			box-shadow: 0px 1px 0px rgba(0, 0, 0, .5);
 			animation: intro 2s linear forwards;
 		}
+
 		.addrText p {
 			/* font-family: sans-serif; */
 			font-size: 1em;
 			color: #f96767;
 			/* text-shadow: 2px 2px 2px rgba(0,0,0,.5); */
 		}
+
 		.row {
-			width:100%;
+			width: 100%;
 		}
 
 		@media (max-width: 768px) {
@@ -358,7 +382,7 @@
 				/* 스크롤 바 숨기기 */
 				overflow: scroll;
 				overflow-x: hidden;
-				height:100%;
+				height: 100%;
 			}
 
 			::-webkit-scrollbar {
@@ -378,62 +402,74 @@
 			#left-side #second,
 			#left-side #third,
 			#left-side #fourth,
-       #left-side #fifth{
+			#left-side #fifth {
 				margin-top: 0px;
-				margin-bottom : 20px;
+				margin-bottom: 20px;
 				display: flex;
 				opacity: 1;
 				-webkit-transition: all .6s ease-in-out;
 				transition: all .6s ease-in-out;
 			}
-			#left-side #first{
+			#left-side #first {
 				height: auto;
 				margin-top: 0px;
-				margin-bottom : 20px;
+				margin-bottom: 20px;
 				display: block;
 				opacity: 1;
 				-webkit-transition: all .6s ease-in-out;
 				transition: all .6s ease-in-out;
 			}
 
-			.disappear{
+			.disappear {
 				display: none;
-			}.appear{
+			}
+			.appear {
 				display: block;
-			}.row{
-				position: relative; !important;
-				height: auto; !important;
+			}
+			.row {
+				position: relative;
+				 !important;
+				height: auto;
+				 !important;
 			}
 		}
+
 		/* media end */
-    /* 파일 삽입 css */
-.image-input {
-    position: relative;
-    overflow: hidden;
-    margin: 0px;
-    color: #333;
-    background-color: #fff;
-    border-color: #ccc;
-}
-.image-input input[type=file] {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 0;
-  padding: 0;
-  font-size: 20px;
-  cursor: pointer;
-  opacity: 0;
-  filter: alpha(opacity=0);
-}
-.image-input-title {
-    margin-left:2px;
-}.bottom{
-    position: absolute;
-    bottom: 0px;
-}
+
+		/* 파일 삽입 css */
+
+		.image-input {
+			position: relative;
+			overflow: hidden;
+			margin: 0px;
+			color: #333;
+			background-color: #fff;
+			border-color: #ccc;
+		}
+
+		.image-input input[type=file] {
+			position: absolute;
+			top: 0;
+			right: 0;
+			margin: 0;
+			padding: 0;
+			font-size: 20px;
+			cursor: pointer;
+			opacity: 0;
+			filter: alpha(opacity=0);
+		}
+
+		.image-input-title {
+			margin-left: 2px;
+		}
+
+		.bottom {
+			position: absolute;
+			bottom: 0px;
+		}
 	</style>
 </head>
+
 <body>
 	<header>
 		<nav class="navbar navbar-icon-top navbar-default navbar-fixed-top">
@@ -493,16 +529,7 @@
 			<!-- /.container-fluid -->
 		</nav>
 		<br><br><br><br>
-		<!--
-
-								<li>
-									<div class="w3-threequarter">
-										<input type="text" class="w3-bar-item w3-input w3-border w3-round-xlarge" placeholder="검색" style="height:30px; margin-top:10px">
-									</div>
-								</li>-->
-
-
-	</header>
+		</header>
 	<div class="container-fluid">
 		<div id="wrapper">
 
@@ -512,210 +539,205 @@
 
 					<div class="row">
 
-							<!-- 가게 이미지 시작 -->
-							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-10 animatepop">
-								<div class="hovereffect" style="position:relative;">
-                  <div class="input-group image zindex bottom"><!-- 파일 삽입 -->
-                      <input type="text" class="form-control image-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
-                      <span class="input-group-btn">
-                          <button type="button" class="btn btn-default image-clear" style="display:none;">
-                              <span class="glyphicon glyphicon-remove"></span> Clear
-                          </button>
-                          <div class="btn btn-default image-input">
-                              <span class="glyphicon glyphicon-folder-open"></span>
-                              <span class="image-input-title">Browse</span>
-                              <input type="file" accept="image/png, image/jpeg, image/gif" name="store-image"/> <!-- rename it -->
-                          </div>
-                      </span>
-                  </div>
-									<img class="img-responsive radius14" src="http://placehold.it/350x250" alt="">
-									<div class="overlay">
-										<h2>가게 이름</h2>
-										<p>
-											<a href="#">가게 이미지</a>
-										</p>
-									</div>
-								</div>
-							</div><!--가게 이미지 끝-->
+						<!-- 가게 이미지 시작 -->
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-10 animatepop">
+							<div class="wh100">
+		             <div class="input-group image-preview zindex bottom">
+                 <input type="text" class="form-control image-preview-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
+                 <span class="input-group-btn">
+                     <!-- image-preview-clear button -->
+                     <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
+                         <span class="glyphicon glyphicon-remove"></span> Clear
+                     </button>
+                     <!-- image-preview-input -->
+                     <div class="btn btn-default image-preview-input">
+                         <span class="glyphicon glyphicon-folder-open"></span>
+                         <span class="image-preview-input-title">Browse</span>
+                         <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/> <!-- rename it -->
+                     </div>
+                 </span>
+             </div><!-- /input-group image-preview [TO HERE]-->
+
+								<img class="img-responsive radius14" src="http://placehold.it/350x250" alt="" >
+							</div>
+							</div>
+						<!--가게 이미지 끝-->
 						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-10">
-							 <label> 가게 이름 :  <input type="text" class="form-control" value="가게이름"></label>
-               <br>
-            <label>상세 설명 :  <br>
+							<label> 가게 이름 :  <input type="text" class="form-control" value="가게이름"></label>
+							<br>
+							<label>상세 설명 :  <br>
               <textarea name="content" cols="40" rows="8" id="storeInfo">가게에 대한 설명 ex) 상세정보 시술가격표 등등...
                     </textarea></label>
 						</div>
 					</div>
 					<div class="row" style="margin-top:20px;">
-					 <input type="text" class="form-control" value="공지 사항 입력 ">
+						<input type="text" class="form-control" value="공지 사항 입력 ">
 					</div>
 					<div class="row">
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-10 animatepop " style="margin-top:10px;">
-              <div class="hovereffect" style="position:relative;">
-                <div class="input-group image zindex bottom"><!-- 파일 삽입 -->
-                    <input type="text" class="form-control image-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
-                    <span class="input-group-btn">
-                        <button type="button" class="btn btn-default image-clear" style="display:none;">
-                            <span class="glyphicon glyphicon-remove"></span> Clear
-                        </button>
-                        <div class="btn btn-default image-input">
-                            <span class="glyphicon glyphicon-folder-open"></span>
-                            <span class="image-input-title">Browse</span>
-                            <input type="file" accept="image/png, image/jpeg, image/gif" name="store-image"/> <!-- rename it -->
-                        </div>
-                    </span>
-                </div>
-								<img class="img-responsive radius14" src="http://placehold.it/350x250" alt="">
-								<div class="overlay">
-									<h2>네일 디자인 이름</h2>
-									<p>
-										<a href="#">더보기</a>
-									</p>
-								</div>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-10 animatepop">
+							<div class="wh100">
+								 <div class="input-group image-preview zindex bottom">
+								 <input type="text" class="form-control image-preview-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
+								 <span class="input-group-btn">
+										 <!-- image-preview-clear button -->
+										 <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
+												 <span class="glyphicon glyphicon-remove"></span> Clear
+										 </button>
+										 <!-- image-preview-input -->
+										 <div class="btn btn-default image-preview-input">
+												 <span class="glyphicon glyphicon-folder-open"></span>
+												 <span class="image-preview-input-title">Browse</span>
+												 <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/> <!-- rename it -->
+										 </div>
+								 </span>
+						 </div><!-- /input-group image-preview [TO HERE]-->
+
+								<img class="img-responsive radius14" src="http://placehold.it/350x250" alt="" >
 							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-10 animatepop" style="margin-top:10px;">
-              <div class="hovereffect" style="position:relative;">
-                <div class="input-group image zindex bottom"><!-- 파일 삽입 -->
-                    <input type="text" class="form-control image-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
-                    <span class="input-group-btn">
-                        <button type="button" class="btn btn-default image-clear" style="display:none;">
-                            <span class="glyphicon glyphicon-remove"></span> Clear
-                        </button>
-                        <div class="btn btn-default image-input">
-                            <span class="glyphicon glyphicon-folder-open"></span>
-                            <span class="image-input-title">Browse</span>
-                            <input type="file" accept="image/png, image/jpeg, image/gif" name="store-image"/> <!-- rename it -->
-                        </div>
-                    </span>
-                </div>
-								<img class="img-responsive radius14" src="http://placehold.it/350x250" alt="">
-								<div class="overlay">
-									<h2>네일 디자인 이름</h2>
-									<p>
-										<a href="#">더보기</a>
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-10 animatepop disappear" style="margin-top:10px;">
-              <div class="hovereffect" style="position:relative;">
-                <div class="input-group image zindex bottom"><!-- 파일 삽입 -->
-                    <input type="text" class="form-control image-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
-                    <span class="input-group-btn">
-                        <button type="button" class="btn btn-default image-clear" style="display:none;">
-                            <span class="glyphicon glyphicon-remove"></span> Clear
-                        </button>
-                        <div class="btn btn-default image-input">
-                            <span class="glyphicon glyphicon-folder-open"></span>
-                            <span class="image-input-title">Browse</span>
-                            <input type="file" accept="image/png, image/jpeg, image/gif" name="store-image"/> <!-- rename it -->
-                        </div>
-                    </span>
-                </div>
-								<img class="img-responsive radius14" src="http://placehold.it/350x250" alt="">
-								<div class="overlay">
-									<h2>네일 디자인 이름</h2>
-									<p>
-										<a href="#">더보기</a>
-									</p>
-								</div>
-							</div>
-						</div>
+							</div>	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-10 animatepop">
+									<div class="wh100">
+				             <div class="input-group image-preview zindex bottom">
+		                 <input type="text" class="form-control image-preview-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
+		                 <span class="input-group-btn">
+		                     <!-- image-preview-clear button -->
+		                     <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
+		                         <span class="glyphicon glyphicon-remove"></span> Clear
+		                     </button>
+		                     <!-- image-preview-input -->
+		                     <div class="btn btn-default image-preview-input">
+		                         <span class="glyphicon glyphicon-folder-open"></span>
+		                         <span class="image-preview-input-title">Browse</span>
+		                         <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/> <!-- rename it -->
+		                     </div>
+		                 </span>
+		             </div><!-- /input-group image-preview [TO HERE]-->
+
+										<img class="img-responsive radius14" src="http://placehold.it/350x250" alt="" >
+									</div>
+									</div>	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-10 animatepop">
+											<div class="wh100">
+						             <div class="input-group image-preview zindex bottom">
+				                 <input type="text" class="form-control image-preview-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
+				                 <span class="input-group-btn">
+				                     <!-- image-preview-clear button -->
+				                     <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
+				                         <span class="glyphicon glyphicon-remove"></span> Clear
+				                     </button>
+				                     <!-- image-preview-input -->
+				                     <div class="btn btn-default image-preview-input">
+				                         <span class="glyphicon glyphicon-folder-open"></span>
+				                         <span class="image-preview-input-title">Browse</span>
+				                         <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/> <!-- rename it -->
+				                     </div>
+				                 </span>
+				             </div><!-- /input-group image-preview [TO HERE]-->
+
+												<img class="img-responsive radius14" src="http://placehold.it/350x250" alt="" >
+											</div>
+											</div>
 						<style>
-							.hovereffect {
-								width: 100%;
-								height: 100%;
-								float: left;
-								overflow: hidden;
-								position: relative;
-								text-align: center;
-								cursor: default;
-							}
-
-							.hovereffect .overlay {
-								position: absolute;
-								overflow: hidden;
-								width: 80%;
-								height: 80%;
-								left: 10%;
-								top: 10%;
-								border-bottom: 1px solid #FFF;
-								border-top: 1px solid #FFF;
-								-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-								transition: opacity 0.35s, transform 0.35s;
-								-webkit-transform: scale(0, 1);
-								-ms-transform: scale(0, 1);
-								transform: scale(0, 1);
-							}
-
-							.hovereffect:hover .overlay {
-								opacity: 1;
-								filter: alpha(opacity=100);
-								-webkit-transform: scale(1);
-								-ms-transform: scale(1);
-								transform: scale(1);
-							}
-
-							.hovereffect img {
-								display: block;
-								position: relative;
-								-webkit-transition: all 0.35s;
-								transition: all 0.35s;
-							}
-
-							.hovereffect:hover img {
-								filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.6" /><feFuncG type="linear" slope="0.6" /><feFuncB type="linear" slope="0.6" /></feComponentTransfer></filter></svg>#filter');
-								filter: brightness(0.6);
-								-webkit-filter: brightness(0.6);
-							}
-
-							.hovereffect h2 {
-								text-transform: uppercase;
-								text-align: center;
-								position: relative;
-								font-size: 17px;
-								background-color: transparent;
-								color: #FFF;
-								padding: 1em 0;
-								opacity: 0;
-								filter: alpha(opacity=0);
-								-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-								transition: opacity 0.35s, transform 0.35s;
-								-webkit-transform: translate3d(0, -100%, 0);
-								transform: translate3d(0, -100%, 0);
-							}
-
-							.hovereffect a,
-							.hovereffect p {
-								color: #FFF;
-								padding: 1em 0;
-								opacity: 0;
-								filter: alpha(opacity=0);
-								-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-								transition: opacity 0.35s, transform 0.35s;
-								-webkit-transform: translate3d(0, 100%, 0);
-								transform: translate3d(0, 100%, 0);
-							}
-
-							.hovereffect:hover a,
-							.hovereffect:hover p,
-							.hovereffect:hover h2 {
-								opacity: 1;
-								filter: alpha(opacity=100);
-								-webkit-transform: translate3d(0, 0, 0);
-								transform: translate3d(0, 0, 0);
-							}
-	</style>
+						.image-preview-input { position: relative; overflow: hidden; margin: 0px; color: #333; background-color: #fff; border-color: #ccc; }
+						.image-preview-input input[type=file] { position: absolute; top: 0; right: 0; margin: 0; padding: 0; font-size: 20px; cursor: pointer; opacity: 0; filter: alpha(opacity=0); }
+						.image-preview-input-title { margin-left:2px; }
+						</style>
 					</div>
-				<div class="row appear" style="display:none;"><a href="더보기"> 더 보 기 </a> </div>
-			</div>
-
-
-				<div id="second" >
-
-					<h1>매출관리</h1>
-
+					<div class="row appear" style="display:none;"><a href="더보기"> 더 보 기 </a> </div>
 				</div>
+
+
+				<div id="second">
+<form class="form-signin">
+	 <div class="container">
+	     <div class="row">
+	         <div class="col-md-7 col-md-offset-2">
+
+	         <div class="panel panel-default">
+
+	         <div class="panel panel-primary">
+
+
+	             <div class="text-center">
+	                 <h3 style="color:#2C3E50" >Financial Reports</h3>
+	                 <h4> <label for="Choose Report"  style="color:#E74C3C">Choose Report</label></h4>
+	                 <div class="input-group"><span class="input-group-addon"><span class="glyphicon glyphicon-tasks"></span></span>
+	                     <select class="form-control"  >
+	                                     <option value="Income" selected>Income</option>
+	                                     <option value="Expenses">Expenses</option>
+	                                     <option value="Profit">Profit</option>
+	                                 </select></div>
+	                 <h5><label for="Choose Report" style="color:#E74C3C"> Time :</label>
+	                              <input id="a" type="radio" name="type" value="Daily">Daily
+	                              <input id="b" type="radio" name="type" value="Weekly">Weekly
+	                              <input id="c" type="radio" name="type" value="Monthly">Monthly</h5>
+
+	                                 <div class="customer" >
+	                                     <div class="input-group">
+	                                         <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+	                                         <input type="date" class="form-control" placeholder="Date" />
+	                                     </div>
+	                                 </div>
+	                 </br><button type="button" class="btn btn-primary btn-lg btn3d"><span class="glyphicon glyphicon-search"></span> View</button>
+	             </div>
+	         <div class="panel-body">
+
+	   <table class="table table-striped table-condensed">
+	                   <thead>
+	                   <tr>
+	                       <th class="text-center" width="115px">번호</th>
+	                       <th class="text-center" width="115px">회원이름</th>
+	                       <th class="text-center" width="115px">매출</th>
+	                       <th class="text-center" width="115px">날짜</th>
+	                       <th class="text-center" width="115px">시술내용</th>
+	                   </tr>
+	               </thead>
+	               <tbody>
+	                 <tr>
+	                     <td class="text-center" width="150px">1</td>
+	                     <td class="text-center" width="150px">Mai Ahmed</td>
+	                     <td class="text-center" width="150px">500</span></td>
+	                     <td class="text-center" width="150px">3/12/2016</span></td>
+	                     <td class="text-center" width="150px">Prescription</span></td>
+	                 </tr>
+	                 <tr>
+	                     <td class="text-center">2</td>
+	                     <td class="text-center">Mai Ahmed</td>
+	                     <td class="text-center">60</span></td>
+	                     <td class="text-center">3/12/2016</span></td>
+	                     <td class="text-center">Appoitment</span></td>
+	                 </tr>
+	                 <tr>
+	                     <td class="text-center">3</td>
+	                     <td class="text-center">Ahmed Waled</td>
+	                     <td class="text-center">180</span></td>
+	                     <td class="text-center">3/12/2016</span></td>
+	                     <td class="text-center">Prescription</span></td>
+	                 </tr>
+	                 <tr>
+	                     <td class="text-center">3</td>
+	                     <td class="text-center">Waled</td>
+	                     <td class="text-center">180</span></td>
+	                     <td class="text-center">3/12/2016</span></td>
+	                     <td class="text-center">Prescription</span></td>
+	                 </tr>
+	                 <tr>
+	                     <td class="text-center">3</td>
+	                     <td class="text-center">Waled</td>
+	                     <td class="text-center">180</span></td>
+	                     <td class="text-center">3/12/2016</span></td>
+	                     <td class="text-center">Prescription</span></td>
+	                 </tr>
+	               </tbody>
+	               </table>
+	      <div class="text-center">
+	             <h4> <label style="color:#E74C3C" for="Total">Total :</label>7740</h4> </div>
+	   </div>
+	        </div>
+	         </div>
+	 </form>
+				</div>
+			</div>
+		</div>
+	</div>
 				<div id="third" class="active">
 
 
@@ -725,151 +747,169 @@
 
 				</div>
 				<div id="fourth">
-          <section>
-            <div class="row">
-                <div class="col-12">
-                  <h1 class="text-green mb-4 text-center">문의사항</h1>
-                </div>
-              </div>
-            <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="headingOne">
-                                <h4 class="panel-title">
+					<div class="row">
+						<div class="col-12">
+							<h1 class="text-green mb-4 text-center">문의사항</h1>
+						</div>
+					</div>
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+								<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+									<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingOne">
+											<h4 class="panel-title">
                                     <a class="" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                         <i class="fa fa-bars"></i>질문 1
                                     </a>
                                 </h4>
-                            </div>
-                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                <div class="panel-body">
-                                  <p> 질문 내용 !</p>
-                                  <form class="" action="/insertAnswer.html" method="post">
-                                    <div class="form-group">
-                                      <label> 답변 :  <input type="text" class="form-control" placeholder="답변 내용 입력"></label>
-                                      <button type="submit" name="answer-submit" class="btn btn-default">전송!</button>
-                                    </div>
-                                  </form>
+										</div>
+										<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+											<div class="panel-body">
+												<p> 질문 내용 !</p>
+												<form class="" action="/insertAnswer.html" method="post">
+													<div class="form-group">
+														<label> 답변 :  <input type="text" class="form-control" placeholder="답변 내용 입력"></label>
+														<button type="submit" name="answer-submit" class="btn btn-default">전송!</button>
+													</div>
+												</form>
 
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="headingTwo">
-                                <h4 class="panel-title">
+											</div>
+										</div>
+									</div>
+									<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingTwo">
+											<h4 class="panel-title">
                                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                         <i class="fa fa-link"></i>질문 2
                                     </a>
                                 </h4>
-                            </div>
-                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                                <div class="panel-body">
-                                  <p> 질문 내용 !</p>
-                                   <label> 답변 :  <input type="text" class="form-control" placeholder="답변 내용 입력"></label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="headingThree">
-                                <h4 class="panel-title">
+										</div>
+										<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+											<div class="panel-body">
+												<p> 질문 내용 !</p>
+												<form class="" action="/insertAnswer.html" method="post">
+													<div class="form-group">
+														<label> 답변 :  <input type="text" class="form-control" placeholder="답변 내용 입력"></label>
+														<button type="submit" name="answer-submit" class="btn btn-default">전송!</button>
+													</div>
+												</form>
+											</div>
+										</div>
+									</div>
+									<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingThree">
+											<h4 class="panel-title">
                                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                         <i class="fa fa-comment"></i>질문 3
                                     </a>
                                 </h4>
-                            </div>
-                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                <div class="panel-body">
-                                  <p> 질문 내용 !</p>
-                                   <label> 답변 :  <input type="text" class="form-control" placeholder="답변 내용 입력"></label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-          </section>
+										</div>
+										<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+											<div class="panel-body">
+												<p> 질문 내용 !</p>
+												<form class="" action="/insertAnswer.html" method="post">
+													<div class="form-group">
+														<label> 답변 :  <input type="text" class="form-control" placeholder="답변 내용 입력"></label>
+														<button type="submit" name="answer-submit" class="btn btn-default">전송!</button>
+													</div>
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<style>
+						a:hover,
+						a:focus {
+							outline: none;
+							text-decoration: none;
+						}
 
+						#accordion .panel {
+							border: 0px none;
+							box-shadow: none;
+						}
 
-          <style>
-          a:hover, a:focus{
-          outline: none;
-          text-decoration: none;
-        }
-        #accordion .panel{
-          border:0px none;
-          box-shadow:none;
-        }
-        #accordion .panel-heading{
-          padding:0;
-          background: #fff;
-        }
-        #accordion .panel-title a{
-          display: block;
-          position: relative;
-          background:transparent;
-          color:#de4d4e;
-          font-size:14px;
-          font-weight: bolder;
-          text-transform:uppercase;
-          margin-bottom:15px;
-          padding:15px 50px;
-          border-bottom:1px solid #de4d4e;
-          border-radius: 0 15px 0 15px;
-          transition:all 0.10s linear 0s;
-        }
-        #accordion .panel-title a.collapsed{
-          color:#808080;
-          border-bottom:1px solid #d3d3d3;
-          margin: 0;
-        }
-        #accordion .panel-title a i{
-          color:#de4d4e;
-          position: absolute;
-          top: 14px;
-          left:25px;
-        }
-        #accordion .panel-title a:before,
-        #accordion .panel-title a.collapsed:before{
-          content:"";
-          position: absolute;
-          bottom:-15px;
-          left:36px;
-          border:7px solid transparent;
-          border-top:7px solid #de4d4e;
-        }
-        #accordion .panel-title a.collapsed:before{
-          content:"";
-          border: 0px none;
-        }
-        #accordion .panel-title a.collapsed:hover{
-          color: #6a6060;
-        }
-        #accordion .panel-title a:after,
-        #accordion .panel-title a.collapsed:after{
-          content: "\f106";
-          font-family: FontAwesome;
-          color: #de4d4e;
-          font-size: 20px;
-          line-height: 20px;
-          position: absolute;
-          top: 14px;
-          right:25px;
-        }
-        #accordion .panel-title a.collapsed:after{
-          content: "\f107";
-          color:#808080;
-        }
-        #accordion .panel-body{
-          border-top:0 none;
-          color:#808080;
-        }
-          </style>
+						#accordion .panel-heading {
+							padding: 0;
+							background: #fff;
+						}
+
+						#accordion .panel-title a {
+							display: block;
+							position: relative;
+							background: transparent;
+							color: #de4d4e;
+							font-size: 14px;
+							font-weight: bolder;
+							text-transform: uppercase;
+							margin-bottom: 15px;
+							padding: 15px 50px;
+							border-bottom: 1px solid #de4d4e;
+							border-radius: 0 15px 0 15px;
+							transition: all 0.10s linear 0s;
+						}
+
+						#accordion .panel-title a.collapsed {
+							color: #808080;
+							border-bottom: 1px solid #d3d3d3;
+							margin: 0;
+						}
+
+						#accordion .panel-title a i {
+							color: #de4d4e;
+							position: absolute;
+							top: 14px;
+							left: 25px;
+						}
+
+						#accordion .panel-title a:before,
+						#accordion .panel-title a.collapsed:before {
+							content: "";
+							position: absolute;
+							bottom: -15px;
+							left: 36px;
+							border: 7px solid transparent;
+							border-top: 7px solid #de4d4e;
+						}
+
+						#accordion .panel-title a.collapsed:before {
+							content: "";
+							border: 0px none;
+						}
+
+						#accordion .panel-title a.collapsed:hover {
+							color: #6a6060;
+						}
+
+						#accordion .panel-title a:after,
+						#accordion .panel-title a.collapsed:after {
+							content: "\f106";
+							font-family: FontAwesome;
+							color: #de4d4e;
+							font-size: 20px;
+							line-height: 20px;
+							position: absolute;
+							top: 14px;
+							right: 25px;
+						}
+
+						#accordion .panel-title a.collapsed:after {
+							content: "\f107";
+							color: #808080;
+						}
+
+						#accordion .panel-body {
+							border-top: 0 none;
+							color: #808080;
+						}
+					</style>
 
 				</div>
-        <div id="fifth" style="height:700px;">
+				<div id="fifth" style="height:700px;">
 
 					<h1>디자이너 관리</h1>
 
@@ -884,192 +924,167 @@
 				<ul>
 					<li class="shop active">
 						<div class="icon active">
-	                <img src="icons/shop.svg" alt="">
+							<img src="icons/shop.svg" alt="">
 						</div>
 						Shop
 					</li>
 					<li class="map">
 						<div class="icon">
-						  <img src="icons/paper.svg" alt="">
+							<img src="icons/paper.svg" alt="">
 						</div>
 						매출관리
 					</li>
 					<li class="reserve">
 						<div class="icon">
-							 <img src="icons/calander.svg" alt="">
+							<img src="icons/calander.svg" alt="">
 						</div>
 						Reserve(예약)
 					</li>
 					<li class="qna">
 						<div class="icon">
-							  <img src="icons/customer.svg" alt="">
+							<img src="icons/customer.svg" alt="">
 						</div>
 						QnA(문의)
 					</li>
-          <li class="designer">
-            <div class="icon">
-                <img src="icons/designer.svg" alt="">
-            </div>
-            임시
-          </li>
+					<li class="designer">
+						<div class="icon">
+							<img src="icons/designer.svg" alt="">
+						</div>
+						임시
+					</li>
 				</ul>
 			</div>
 		</div>
 		<script>
-		$( window ).resize(function() {
-	  if($(window).width()<768){
-			$("#line").addClass("one");
-			$("#line").removeClass("two");
-			$("#line").removeClass("three");
-			$("#line").removeClass("four");
-      $("#line").removeClass("five");
-		}
-	});
-	// 메뉴 이동
+			$(window).resize(function() {
+				if ($(window).width() < 768) {
+					$("#line").addClass("one");
+					$("#line").removeClass("two");
+					$("#line").removeClass("three");
+					$("#line").removeClass("four");
+					$("#line").removeClass("five");
+				}
+			});
+			// 메뉴 이동
 			$(".shop").click(function() {
-        $("#first").addClass("active");
-        $("#second").removeClass("active");
-        $("#third").removeClass("active");
-        $("#fourth").removeClass("active");
-            $("#fifth").removeClass("active");
+				$("#first").addClass("active");
+				$("#second").removeClass("active");
+				$("#third").removeClass("active");
+				$("#fourth").removeClass("active");
+				$("#fifth").removeClass("active");
 				$("#line").addClass("one");
 				$("#line").removeClass("two");
 				$("#line").removeClass("three");
 				$("#line").removeClass("four");
-        $("#line").removeClass("five");
+				$("#line").removeClass("five");
 			})
 			$(".map").click(function() {
-        $("#first").removeClass("active");
-        $("#second").addClass("active");
-        $("#third").removeClass("active");
-        $("#fourth").removeClass("active");
-$("#fifth").removeClass("active");
+				$("#first").removeClass("active");
+				$("#second").addClass("active");
+				$("#third").removeClass("active");
+				$("#fourth").removeClass("active");
+				$("#fifth").removeClass("active");
 				$("#line").addClass("two");
 				$("#line").removeClass("one");
 				$("#line").removeClass("three");
 				$("#line").removeClass("four");
-        $("#line").removeClass("five");
+				$("#line").removeClass("five");
 			})
 
 			$(".reserve").click(function() {
-        $("#first").removeClass("active");
+				$("#first").removeClass("active");
 				$("#second").removeClass("active");
 				$("#third").addClass("active");
 				$("#fourth").removeClass("active");
-$("#fifth").removeClass("active");
+				$("#fifth").removeClass("active");
 				$("#line").addClass("three");
 				$("#line").removeClass("two");
 				$("#line").removeClass("one");
 				$("#line").removeClass("four");
-        $("#line").removeClass("five");
+				$("#line").removeClass("five");
 			})
 
 			$(".qna").click(function() {
-        $("#first").removeClass("active");
+				$("#first").removeClass("active");
 				$("#second").removeClass("active");
 				$("#third").removeClass("active");
 				$("#fourth").addClass("active");
-        $("#fifth").removeClass("active");
-        $("#line").removeClass("five");
+				$("#fifth").removeClass("active");
+				$("#line").removeClass("five");
 				$("#line").addClass("four");
 				$("#line").removeClass("two");
 				$("#line").removeClass("three");
 				$("#line").removeClass("one");
 			})
-      $(".designer").click(function() {
-        $("#first").removeClass("active");
-        $("#second").removeClass("active");
-        $("#third").removeClass("active");
-        $("#fourth").removeClass("active");
-        $("#fifth").addClass("active");
-        $("#line").removeClass("four");
-        $("#line").removeClass("two");
-        $("#line").removeClass("three");
-        $("#line").removeClass("one");
-        $("#line").addClass("five");
-      })
+			$(".designer").click(function() {
+				$("#first").removeClass("active");
+				$("#second").removeClass("active");
+				$("#third").removeClass("active");
+				$("#fourth").removeClass("active");
+				$("#fifth").addClass("active");
+				$("#line").removeClass("four");
+				$("#line").removeClass("two");
+				$("#line").removeClass("three");
+				$("#line").removeClass("one");
+				$("#line").addClass("five");
+			})
 			//메뉴이동 끝
-//파일 삽입
-$(document).on('click', '#close-preview', function(){
-    $('.image').popover('hide');
-    // Hover befor close the preview
-    $('.image').hover(
-        function () {
-           $('.image').popover('show');
-        },
-         function () {
-           $('.image').popover('hide');
-        }
-    );
-});
+			//파일 삽입
 
-$(function() {
-    // Create the close button
-    var closebtn = $('<button/>', {
-        type:"button",
-        text: 'x',
-        id: 'close-preview',
-        style: 'font-size: initial;',
-    });
-    closebtn.attr("class","close pull-right");
-    // Set the popover default content
-    $('.image').popover({
-        trigger:'manual',
-        html:true,
-        title: "<strong>Preview</strong>"+$(closebtn)[0].outerHTML,
-        content: "There's no image",
-        placement:'bottom'
-    });
-    // Clear event
-    $('.image-clear').click(function(){
-        $('.image').attr("data-content","").popover('hide');
-        $('.image-filename').val("");
-        $('.image-clear').hide();
-        $('.image-input input:file').val("");
-        $(".image-input-title").text("Browse");
-    });
-    // Create the preview image
-    $(".image-input input:file").change(function (){
-        var img = $('<img/>', {
-            id: 'dynamic',
-            width:250,
-            height:200
-        });
-        var file = this.files[0];
-        var reader = new FileReader();
-        // Set preview image into the popover data-content
-        reader.onload = function (e) {
-            $(".image-input-title").text("Change");
-            $(".image-clear").show();
-            $(".image-filename").val(file.name);
-            img.attr('src', e.target.result);
-            $(".image").attr("data-content",$(img)[0].outerHTML).popover("show");
-        }
-        reader.readAsDataURL(file);
-    });
-});//파일 삽입 끝
+	    $('.image-preview-clear').click(function(){
+				var container = $(this).closest(".animatepop");
+					$(this).closest('.input-group').next().attr("src","http://placehold.it/350x250");
+	     		container.find('.image-preview-filename').val("");
+	       container.find('.image-preview-clear').hide();
+	       container.find('.image-preview-input input:file').val("");
+	       container.find(".image-preview-input-title").text("Browse");
+	    });
+	    // Create the preview image
+	    $(".image-preview-input input:file").change(function (){
+	        var file = this.files[0];
+	        var reader = new FileReader();
+
+					var container = $(this).closest(".animatepop");
+					var image = container.find(".img-responsive");
+	        reader.onload = function (e) {
+	            container.find(".image-preview-input-title").text("Change");
+	            container.find(".image-preview-clear").show();
+	            container.find(".image-preview-filename").val(file.name);
+							image
+							.attr('src', e.target.result)
+							.css('width','100%')
+							.css('height','100%')
+							.css('position','relative');
+	        }
+						 reader.readAsDataURL(file);
+	    });
+			$(".image-preview-filename").change(function(){
+				console.log("출력됨");
+			});
+ //파일 삽입 끝
+
 		</script>
 	</div>
 	<footer id="contact" class="contact-us">
-    <div class="container">
-      <div class="row">
-        <div class="contact-area">
-          <h2>Contact Us</h2>
-          <ul class="contact-list">
-            <li>
-              <i class="fa fa-phone"></i> <a href="##">  +44 (0) 232 090 505</a>
-            </li>
-            <li>
-              <i class="fa fa-envelope"></i> <a href="#">  hi@dsfg.co.uk</a>
-            </li>
-            <li>
-              <i class="fa fa-map-marker"></i> <a href="#">  Rampura,Dhaka Bangladesh k</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
+		<div class="container">
+			<div class="row">
+				<div class="contact-area">
+					<h2>Contact Us</h2>
+					<ul class="contact-list">
+						<li>
+							<i class="fa fa-phone"></i> <a href="##">  +44 (0) 232 090 505</a>
+						</li>
+						<li>
+							<i class="fa fa-envelope"></i> <a href="#">  hi@dsfg.co.uk</a>
+						</li>
+						<li>
+							<i class="fa fa-map-marker"></i> <a href="#">  Rampura,Dhaka Bangladesh k</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
 </body>
 
 </html>

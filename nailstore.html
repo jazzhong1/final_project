@@ -244,7 +244,7 @@
 			width: 70%;
 			margin-top: 5px;
 			margin-left: 5px;
-			height: 500px;
+			height: 380px;
 
 			text-align: center;
 			box-shadow: 5px 5px 30px -10px #ff9494;
@@ -636,16 +636,24 @@
 
 				</div>
 				<div id="fourth">
-					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-10 animatepop">
-						<h3>Nail Shop Name</h3>
-						<p>Nail Shop Tel 02.355.2311 </p>
-						<p>OpenTime : 11:00</p>
-						<p>CloseTime : 21:00</p>
-					</div><!--가게 Info 끝-->
-					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-10">
-					
-					</div>
 
+
+					<div class="row">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-10 animatepop">
+							<h3>Nail Shop Name</h3>
+							<p>Nail Shop Tel 02.355.2311 </p>
+							<p>OpenTime : 11:00</p>
+							<p>CloseTime : 21:00</p>
+						</div><!--가게 Info 끝-->
+							<div class="col-lg-7 col-md-7 col-sm-7 col-xs-10">
+								<form class="" action="/insertQnA.html" method="post">
+									<div class="form-group">
+										<label> 문의사항 :  <input type="text" class="form-control" placeholder="문의 내용 입력" autofocus></label>
+										<button type="submit" name="answer-submit" class="btn btn-default">전송!</button>
+									</div>
+								</form>
+							</div>
+					</div>
 				</div>
 			</div>
 			<div id="border">
