@@ -2,6 +2,7 @@
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -70,7 +71,7 @@
 
 		#wrapper {
 			width: 100%;
-			height: auto;
+			height: 100%;
 			position: relative;
 			top: 0;
 			bottom: 0;
@@ -89,6 +90,7 @@
 			-ms-flex-pack: left;
 			justify-content: left;
 			overflow: hidden;
+			padding-top: 10px;
 		}
 
 		#right-side {
@@ -602,9 +604,8 @@
 			</div>
 			<!-- /.container-fluid -->
 		</nav>
-		<br><br><br><br>
 		</header>
-	<div class="container-fluid">
+	<div>
 		<div id="wrapper">
 
 			<div id="left-side">
@@ -648,74 +649,221 @@
 						<input type="text" class="form-control" value="공지 사항 입력 ">
 					</div>
 					<div class="row">
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-10 animatepop">
-							<div class="wh100">
-								 <div class="input-group image-preview zindex bottom">
-								 <input type="text" class="form-control image-preview-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
-								 <span class="input-group-btn">
-										 <!-- image-preview-clear button -->
-										 <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
-												 <span class="glyphicon glyphicon-remove"></span> Clear
-										 </button>
-										 <!-- image-preview-input -->
-										 <div class="btn btn-default image-preview-input">
-												 <span class="glyphicon glyphicon-folder-open"></span>
-												 <span class="image-preview-input-title">Browse</span>
-												 <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/> <!-- rename it -->
-										 </div>
-								 </span>
-						 </div><!-- /input-group image-preview [TO HERE]-->
+					  <div class="tabbable-panel">
+					<div class="tabbable-line">
+					<ul class="nav nav-tabs ">
+					  <li class="active">
+					    <a href="#tab_default_2" data-toggle="tab">
+					    가격 </a>
+					  </li>
+					  <li>
+					    <a href="#tab_default_1" data-toggle="tab">
+					    시술정보 </a>
+					  </li>
+					  <li>
+					    <a href="#tab_default_3" data-toggle="tab">
+					    리뷰 </a>
+					  </li>
+					</ul>
+					<div class="tab-content">
+					        <!-- tab1 시작 -->
+					  <div class="tab-pane" id="tab_default_1">
+					    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-10 animatepop">
+					       <div class="wh100">
+					          <div class="input-group image-preview zindex bottom">
+					          <input type="text" class="form-control image-preview-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
+					          <span class="input-group-btn">
+					              <!-- image-preview-clear button -->
+					              <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
+					                  <span class="glyphicon glyphicon-remove"></span> Clear
+					              </button>
+					              <!-- image-preview-input -->
+					              <div class="btn btn-default image-preview-input">
+					                  <span class="glyphicon glyphicon-folder-open"></span>
+					                  <span class="image-preview-input-title">Browse</span>
+					                  <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/> <!-- rename it -->
+					              </div>
+					          </span>
+					      </div><!-- /input-group image-preview [TO HERE]-->
 
-								<img class="img-responsive radius14" src="http://placehold.it/350x250" alt="" >
-							</div>
-							</div>	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-10 animatepop">
-									<div class="wh100">
-				             <div class="input-group image-preview zindex bottom">
-		                 <input type="text" class="form-control image-preview-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
-		                 <span class="input-group-btn">
-		                     <!-- image-preview-clear button -->
-		                     <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
-		                         <span class="glyphicon glyphicon-remove"></span> Clear
-		                     </button>
-		                     <!-- image-preview-input -->
-		                     <div class="btn btn-default image-preview-input">
-		                         <span class="glyphicon glyphicon-folder-open"></span>
-		                         <span class="image-preview-input-title">Browse</span>
-		                         <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/> <!-- rename it -->
-		                     </div>
-		                 </span>
-		             </div><!-- /input-group image-preview [TO HERE]-->
+					         <img class="img-responsive radius14" src="http://placehold.it/350x250" alt="" >
+					       </div>
+					       </div>
 
-										<img class="img-responsive radius14" src="http://placehold.it/350x250" alt="" >
-									</div>
-									</div>	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-10 animatepop">
-											<div class="wh100">
-						             <div class="input-group image-preview zindex bottom">
-				                 <input type="text" class="form-control image-preview-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
-				                 <span class="input-group-btn">
-				                     <!-- image-preview-clear button -->
-				                     <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
-				                         <span class="glyphicon glyphicon-remove"></span> Clear
-				                     </button>
-				                     <!-- image-preview-input -->
-				                     <div class="btn btn-default image-preview-input">
-				                         <span class="glyphicon glyphicon-folder-open"></span>
-				                         <span class="image-preview-input-title">Browse</span>
-				                         <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/> <!-- rename it -->
-				                     </div>
-				                 </span>
-				             </div><!-- /input-group image-preview [TO HERE]-->
+					       <!-- <두번째 부터 이미지 출력> -->
+					       <div class="col-lg-4 col-md-4 col-sm-4 col-xs-10 animatepop">
+					         <div class="wh100">
+					            <div class="input-group image-preview zindex bottom">
+					            <input type="text" class="form-control image-preview-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
+					            <span class="input-group-btn">
+					                <!-- image-preview-clear button -->
+					                <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
+					                    <span class="glyphicon glyphicon-remove"></span> Clear
+					                </button>
+					                <!-- image-preview-input -->
+					                <div class="btn btn-default image-preview-input">
+					                    <span class="glyphicon glyphicon-folder-open"></span>
+					                    <span class="image-preview-input-title">Browse</span>
+					                    <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/> <!-- rename it -->
+					                </div>
+					            </span>
+					        </div><!-- /input-group image-preview [TO HERE]-->
 
-												<img class="img-responsive radius14" src="http://placehold.it/350x250" alt="" >
-											</div>
-											</div>
-						<style>
-						.image-preview-input { position: relative; overflow: hidden; margin: 0px; color: #333; background-color: #fff; border-color: #ccc; }
-						.image-preview-input input[type=file] { position: absolute; top: 0; right: 0; margin: 0; padding: 0; font-size: 20px; cursor: pointer; opacity: 0; filter: alpha(opacity=0); }
-						.image-preview-input-title { margin-left:2px; }
-						</style>
+					           <img class="img-responsive radius14" src="http://placehold.it/350x250" alt="" >
+					         </div>
+					         </div>
+					         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-10 animatepop">
+					           <div class="wh100">
+					              <div class="input-group image-preview zindex bottom">
+					              <input type="text" class="form-control image-preview-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
+					              <span class="input-group-btn">
+					                  <!-- image-preview-clear button -->
+					                  <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
+					                      <span class="glyphicon glyphicon-remove"></span> Clear
+					                  </button>
+					                  <!-- image-preview-input -->
+					                  <div class="btn btn-default image-preview-input">
+					                      <span class="glyphicon glyphicon-folder-open"></span>
+					                      <span class="image-preview-input-title">Browse</span>
+					                      <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/> <!-- rename it -->
+					                  </div>
+					              </span>
+					          </div><!-- /input-group image-preview [TO HERE]-->
+
+					             <img class="img-responsive radius14" src="http://placehold.it/350x250" alt="" >
+					           </div>
+					           </div>
+					  </div>
+					        <!-- tab1 끝 -->
+					  <div class="tab-pane active" id="tab_default_2">
+					    <p>
+					      Howdy, I'm in Tab 2.
+					    </p>
+					    <p>
+					      Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation.
+					    </p>
+					    <p>
+					      <a class="btn btn-warning" href="http://j.mp/metronictheme" target="_blank">
+					        Click for more features...
+					      </a>
+					    </p>
+					  </div>
+					  <div class="tab-pane" id="tab_default_3">
+					    <p>
+					      Howdy, I'm in Tab 3.
+					    </p>
+					    <p>
+					      Duis autem vel eum iriure dolor in hendrerit in vulputate. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat
+					    </p>
+					    <p>
+					      <a class="btn btn-info" href="http://j.mp/metronictheme" target="_blank">
+					        Learn more...
+					      </a>
+					    </p>
+					  </div>
+					  <!-- 3번째 탭 끝 -->
 					</div>
-					<div class="row appear" style="display:none;"><a href="더보기"> 더 보 기 </a> </div>
+					<!-- tab content 끝 -->
+					</div>
+					</div>
+					<!-- tab 화면 끝 -->
+
+					  <style>
+					    .image-preview-input { position: relative; overflow: hidden; margin: 0px; color: #333; background-color: #fff; border-color: #ccc; }
+					    .image-preview-input input[type=file] { position: absolute; top: 0; right: 0; margin: 0; padding: 0; font-size: 20px; cursor: pointer; opacity: 0; filter: alpha(opacity=0); }
+					    .image-preview-input-title { margin-left:2px; }
+							/* tab css */
+							/***
+							Bootstrap Line Tabs by @keenthemes
+							A component of Metronic Theme - #1 Selling Bootstrap 3 Admin Theme in Themeforest: http://j.mp/metronictheme
+							Licensed under MIT
+							***/
+
+							/* Tabs panel */
+							.tabbable-panel {
+							border:1px solid #eee;
+							padding: 10px;
+							}
+
+							/* Default mode */
+							.tabbable-line > .nav-tabs {
+							border: none;
+							margin: 0px;
+							}
+							.tabbable-line > .nav-tabs > li {
+							margin-right: 2px;
+							}
+							.tabbable-line > .nav-tabs > li > a {
+							border: 0;
+							margin-right: 0;
+							color: #737373;
+							}
+							.tabbable-line > .nav-tabs > li > a > i {
+							color: #a6a6a6;
+							}
+							.tabbable-line > .nav-tabs > li.open, .tabbable-line > .nav-tabs > li:hover {
+							border-bottom: 4px solid #fbcdcf;
+							}
+							.tabbable-line > .nav-tabs > li.open > a, .tabbable-line > .nav-tabs > li:hover > a {
+							border: 0;
+							background: none !important;
+							color: #333333;
+							}
+							.tabbable-line > .nav-tabs > li.open > a > i, .tabbable-line > .nav-tabs > li:hover > a > i {
+							color: #a6a6a6;
+							}
+							.tabbable-line > .nav-tabs > li.open .dropdown-menu, .tabbable-line > .nav-tabs > li:hover .dropdown-menu {
+							margin-top: 0px;
+							}
+							.tabbable-line > .nav-tabs > li.active {
+							border-bottom: 4px solid #ff989c;
+							position: relative;
+							}
+							.tabbable-line > .nav-tabs > li.active > a {
+							border: 0;
+							color: #333333;
+							}
+							.tabbable-line > .nav-tabs > li.active > a > i {
+							color: #404040;
+							}
+							.tabbable-line > .tab-content {
+							margin-top: -3px;
+							background-color: #fff;
+							border: 0;
+							border-top: 1px solid #eee;
+							padding: 15px 0;
+							}
+							.portlet .tabbable-line > .tab-content {
+							padding-bottom: 0;
+							}
+
+							/* Below tabs mode */
+
+							.tabbable-line.tabs-below > .nav-tabs > li {
+							border-top: 4px solid transparent;
+							}
+							.tabbable-line.tabs-below > .nav-tabs > li > a {
+							margin-top: 0;
+							}
+							.tabbable-line.tabs-below > .nav-tabs > li:hover {
+							border-bottom: 0;
+							border-top: 4px solid #fbcdcf;
+							}
+							.tabbable-line.tabs-below > .nav-tabs > li.active {
+							margin-bottom: -2px;
+							border-bottom: 0;
+							border-top: 4px solid #f3565d;
+							}
+							.tabbable-line.tabs-below > .tab-content {
+							margin-top: -10px;
+							border-top: 0;
+							border-bottom: 1px solid #eee;
+							padding-bottom: 15px;
+							}
+							/* tab css end */
+					</style>
+					</div>
+
 				</div>
 
 
@@ -1412,102 +1560,118 @@
 			},
 
 			dayClick: function(date, jsEvent, view, resource) {
-				var sysdate = new Date();
-				console.log(sysdate)
-				var year = sysdate.getFullYear();
-				var month = sysdate.getMonth() + 1;
-				var day = sysdate.getDate();
+          var sysdate = new Date();
+          var year = sysdate.getFullYear();
+          var month = sysdate.getMonth() + 1;
+          var day = sysdate.getDate();
+          var hour=sysdate.getHours()+1;
+          var minute=sysdate.getMinutes();
 
-				var nowDate = year + month + day;
-				console.log("nowDate" + nowDate);
+          var nowDate = year + month + day+minute;
+          console.log("nowDate" + nowDate);
 
-				console.log(
-					'dayClick',
-					reserDate = date.format(),
-					resource ? resource.id : '(no resource)'
-				);
-				console.log('reserDate ' + reserDate);
-				console.log('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
-				console.log('Current view: ' + view.name);
-				console.log('Clicked on: ' + date.format('YYYY년MM월DD일'));
-				//console.log(resource.businessHours[0].start);
-				//console.log(resource.businessHours[0].end);
-				console.log(date.format());
-				$('#reserDate').html(date.format('YYYY년MM월DD일 HH시mm분'));
-				clickDate = date.format('YYYY년MM월DD일');
+          console.log(
+            'dayClick',
+            reserDate = date.format(),
+            resource ? resource.id : '(no resource)'
+          );
+          console.log('reserDate ' + reserDate);
+          console.log('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
+          console.log('Current view: ' + view.name);
+          console.log('Clicked on: ' + date.format('YYYY년MM월DD일'));
+          //console.log(resource.businessHours[0].start);
+          //console.log(resource.businessHours[0].end);
+          console.log(date.format());
+          $('#reserDate').html(date.format('YYYY년MM월DD일 HH시mm분'));
+          var clickDate = date.format('YYYY년MM월DD일');
 
-				var checkDate = new Date(date);
+          var checkDate = new Date(date);
 
-				year = checkDate.getFullYear();
-				month = checkDate.getMonth() + 1;
-				day = checkDate.getDate();
-				checkDate = year + month + day;
-				// 현재날짜이전이면 못가게 로직처리하기
+          year = checkDate.getFullYear();
+          month = checkDate.getMonth() + 1;
+          day = checkDate.getDate();
+          hour=checkDate.getHours();
+          minute=checkDate.getMinutes();
 
-				if (resource != null) {
-					/*쉬는날 로직*/
-					if (resource.businessHours != null) {
-						if (resource.businessHours[0].start == clickDate || resource.businessHours[0].end == clickDate) {
-							alert("휴무입니다.");
-							//window.location.reload();
-							date = null;
-						} else {
-							//현재날짜면 예약불가로.
-							if (nowDate < checkDate) {
-								$('#calendarModal').modal();
-							} else {
-								alert("예약할수 없는 날짭입니다..");
-							}
-						}
-					} else {
-						//현재날짜면 예약불가로.
-						if (nowDate < checkDate) {
-							$('#calendarModal').modal();
-						}else {
-							alert("예약할수 없는 날짭입니다..");
-						}
-					}
-				}
-				//var title =$('select[name=choice1]').val()
-				var title = $('#reservation-userName').val();
-				var description = title + "-" + $('select[name=choice-employee]').val() + "디자이너 님 예약"
-				var id = $('#reservation-id').val();
-				var choice1 = $('#choice1').val();
-				var choice2 = $('#choice2').val();
-				var choice_employee = $('#choice-employee').val();
+          checkDate =year + month + day+minute;
+          // 현재날짜이전이면 못가게 로직처리하기
 
-				$("#result-reservaiton").one('click', function() {
-					//reservation 객체 추가로직
-					var aJson = new Object();
-					aJson.id = '8';
-					aJson.resourceId = 'a';
-					aJson.start = '2018-07-28T13:15:00';
-					aJson.end = '2018-07-28T15:15:00';
-					aJson.color = 'rgb(49, 128, 208)';
-					aJson.title = '홍성진님 예약'
-					reservaiton.push(aJson);
+          if (resource != null) {
+            /*쉬는날 로직*/
+            if (resource.businessHours != null) {
+              if (resource.businessHours[0].start == clickDate || resource.businessHours[0].end == clickDate) {
+                alert("휴무입니다.");
+                //window.location.reload();
+                date = null;
+              } else {
+                //현재날짜면 예약불가로.
+                if (nowDate <= checkDate) {
+                  $('#calendarModal').modal();
+                } else {
+                  date = null;
+                  alert("예약시간이 아닙니다...");
+                }
+              }
+            } else {
+              //현재날짜면 예약불가로.
+              if (nowDate <= checkDate) {
+                $('#calendarModal').modal();
+              }else {
+                date = null;
+                alert("예약시간이 아닙니다...");
+              }
+            }
+          }
+          //var title =$('select[name=choice1]').val()
+          var title = $('#reservation-userName').val();
+          var description = title + "-" + $('select[name=choice-employee]').val() + "디자이너 님 예약"
+          var id = $('#reservation-id').val();
+          var choice1 = $('#choice1').val();
+          var choice2 = $('#choice2').val();
+          var choice_employee = $('#choice-employee').val();
+
+          /*    var eventData;
+              if (title) {
+                eventData = {
+                  title: title,
+                  start: date
+                };
+                $('#calendar').fullCalendar('renderEvent', eventData, true); // stick? = true
+              }
+              $('#calendar').fullCalendar('unselect');*/
+
+          $("#result-reservaiton").one('click', function() {
+            //reservation 객체 추가로직
+            var aJson = new Object();
+            aJson.id = '8';
+            aJson.resourceId = 'a';
+            aJson.start = '2018-07-28T13:15:00';
+            aJson.end = '2018-07-28T15:15:00';
+            aJson.color = 'rgb(49, 128, 208)';
+            aJson.title = '홍성진님 예약'
+            reservaiton.push(aJson);
 
 
-					/*30분 추가*/
-					console.log(reservaiton);
-					var javaScriptRelease = Date.parse(date);
-					//alert(javaScriptRelease + 1800000);
-					javaScriptRelease += 1800000;
+            /*30분 추가*/
+            console.log(reservaiton);
+            var javaScriptRelease = Date.parse(date);
+            //alert(javaScriptRelease + 1800000);
+            javaScriptRelease += 1800000;
 
-					/*화면에 등록시키기*/
-					$('#calendar').fullCalendar('renderEvent', {
-						title: title,
-						start: date, //specify start date
-						id: '10',
-						description: description,
-						resourceId: resource.id,
-						end: javaScriptRelease
+            /*화면에 등록시키기*/
+            $('#calendar').fullCalendar('renderEvent', {
+              title: title,
+              start: date, //specify start date
+              id: '10',
+              description: description,
+              resourceId: resource.id,
+              end: javaScriptRelease
 
-					});
+            });
 
-				});
+          });
 
-			},
+        },
 
 
 			eventClick: function(calEvent, jsEvent, view) {
