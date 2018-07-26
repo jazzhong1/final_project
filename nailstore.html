@@ -645,10 +645,12 @@
 							<p>OpenTime : 11:00</p>
 							<p>CloseTime : 21:00</p>
 						</div><!--가게 Info 끝-->
-							<div class="col-lg-7 col-md-7 col-sm-7 col-xs-10">
+							<div class="col-lg-7 col-md-7 col-sm-7 col-xs-10" >
 								<form class="" action="/insertQnA.html" method="post">
 									<div class="form-group">
-										<label> 문의사항 :  <input type="text" class="form-control" placeholder="문의 내용 입력" autofocus></label>
+										<label> 문의사항 :  <input type="text" class="form-control" placeholder="제목 입력" autofocus size="20"></label>
+										<br>
+										<textarea name="content" cols="40" rows="6" ></textarea>
 										<button type="submit" name="answer-submit" class="btn btn-default">전송!</button>
 									</div>
 								</form>
