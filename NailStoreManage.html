@@ -5,11 +5,19 @@
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" type="text/css" href="css/index2.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<!-- <link href="js/index.js">
-<link href="css/index1.css" rel="stylesheet">
-<link href="css/index2.css" rel="stylesheet"> -->
+<!-- full calendar -->
+<link href='css/fullcalendar.min.css' rel='stylesheet' />
+<link href='css/scheduler.min.css' rel='stylesheet' />
+<script src='js/moment.min.js'></script>
+<script src='js/fullcalendar.min.js'></script>
+<script src='locale/ko.js'></script>
+<script src='js/gcal.min.js'></script>
+<script src='js/scheduler.min.js'></script>
+<link href="css/navbar.css" rel="stylesheet">
+<link href="css/footer.css" rel="stylesheet">
 
 <head>
 	<meta charset="utf-8">
@@ -469,6 +477,71 @@
 			bottom: 0px;
 		}
 	</style>
+	<!-- full calender css -->
+	<style>
+
+		#calendar {
+			max-width: 600px;
+			margin: 50px auto;
+		}
+
+		/*custom*/
+
+		.fc-highlight,
+		.alert-info {
+			background: rgb(255, 252, 253);
+		}
+
+		.fc-day-number {
+			color: black;
+		}
+
+		/*.ui-timepicker-container {
+			z-index: 1080 !important;
+		}*/
+
+		#reservaiton-form tr td {
+			border-top: 0px !important;
+		}
+
+		#reservaiton-form label {
+			padding-top: 5px;
+		}
+
+		#reserDate,
+		#reserName {
+			text-align: left;
+			padding-top: 3px;
+			padding-left: 3px;
+			font-size: 12pt;
+		}
+
+		/*.fc-day-grid-container {
+			pointer-events: none;
+			cursor: default;
+		}*/
+
+		.fc-more {
+			pointer-events: visible;
+		}
+
+		.fc-day-header.fc-sun span {
+			color: red;
+		}
+
+		.fc-sun .fc-day-number {
+			color: red;
+		}
+
+		.fc-day-number {
+			color: rgb(57, 113, 205);
+		}
+
+		.fc-license-message {
+			display: none !important;
+		}
+	</style>
+
 </head>
 
 <body>
@@ -742,9 +815,90 @@
 				<div id="third" class="active">
 
 
-					<h1>reserve </h1>
 
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at viverra est, eu finibus mauris. Quisque tempus vestibulum fringilla. Morbi tortor eros, sollicitudin eu arcu sit amet, aliquet sagittis dolor. </p>
+					  <div id='calendar'></div>
+					  <div id='calendarModal' class="modal fade pop-up-1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel-1" aria-hidden="true">
+					    <div class="modal-dialog" style="width:400px;">
+					      <form class="" action="" method="post">
+
+					        <div class="modal-content">
+					          <div class="modal-header">
+					            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					            <h4 class="modal-title" id="myLargeModalLabel-1">예약등록</h4>
+					          </div>
+					          <div class="modal-body">
+
+					            <div class="row">
+					              <div class="form-group">
+					                <table id="reservaiton-form" class="table">
+					                  <thead>
+					                    <tr>
+					                      <td><label for="sel1">예약자:</label></td>
+					                      <td colspan="6">
+					                        <p id="reserName" for="sel1">홍성진</p>
+					                        <!---->
+					                      </td>
+					                    </tr>
+					                  </thead>
+					                  <tbody>
+
+					                    <tr>
+					                      <td><label for="sel1">예약일시:</label></td>
+					                      <td colspan="6">
+					                        <p id="reserDate" for="sel1"></p>
+					                        <!--<input type="type" id="reservation-timepicker" class="timepicker form-control input-sm" name="reservation-timepicker" style="width:130px;" />-->
+					                        <input type="hidden" id="reservation-userName" name="reservation-userName" value="홍성진" />
+					                        <input type="hidden" id="reservation-id" name="reservation-id" value="10" />
+					                      </td>
+					                    </tr>
+
+					                    <tr>
+					                      <td><label for="sel1">시술선택:</label></td>
+					                      <td style="width:72">
+					                        <select class="form-control input-sm" id="choice1" name='choice1'> <!--점주레벨이 아니면 disabled-->
+					                        <option>손</option>
+					                        <option>발</option>
+					                        </select>
+					                      </td>
+					                      <td colspan="5" style="width: 172px;">
+					                        <select class="form-control input-sm" id="choice2" name='choice2'>  <!--점주레벨이 아니면 disabled-->
+					                          <option>메뉴1</option>
+					                          <option>메뉴2</option>
+					                          <option>메뉴3</option>
+					                          </select>
+					                      </td>
+					                    </tr>
+
+					                    <tr>
+					                      <td><label for="sel1">담당자:</label></td>
+					                      <td>
+					                        <select class="form-control input-sm" id="choice-employee" name="choice-employee">  <!--점주레벨이 아니면 disabled-->
+					                        <option value="a">원장</option>
+					                        <option value="b">디자이너1</option>
+					                        <option value="c">디자이너2</option>
+					                        </select></td>
+					                    </tr>
+					                </table>
+					                </tbody>
+					                <hr>
+					                <div class="col-xs-2"></div>
+					                <div class="col-xs-4" style="text-align:right;"><button id="result-reservaiton" type="button" class="btn btn-success" name="button">확인</button></div>
+					                <!--점주만 삭제-->
+					                <div class="col-xs-4" style="text-align:left;"><button id="remove-reservaiton" type="button" class="btn btn-danger" name="button">삭제</button></div>
+					                <div class="col-xs-2"></div>
+
+					              </div>
+
+					            </div>
+					          </div>
+					          <!-- /.modal-content -->
+					      </form>
+					      </div>
+					      <!-- /.modal-dialog -->
+					    </div>
+					    <!-- /.modal mixer image -->
+					  </div>
+
 
 				</div>
 				<div id="fourth">
@@ -1065,6 +1219,316 @@
  //파일 삽입 끝
 
 		</script>
+<!-- full calender script -->
+<script>
+	$(function() {
+		//영업시작시간~~
+		var min = '10:00:00';
+		var max = '23:00:00';
+		var reserDate;
+		var startTime;
+		var endTime;
+		var checkDate;
+		//직원휴일
+		var businessHours = [{
+			start: '2018년07월30일',
+			end: '2018년07월30일',
+		}];
+		/*변수 초기화*/
+		var reservaiton = [{
+				id: '1',
+				resourceId: 'a',
+				start: '2018-04-06',
+				end: '2018-04-08',
+				title: 'event 1'
+			},
+			{
+				id: '2',
+				resourceId: 'a',
+				start: '2018-04-07T09:00:00',
+				end: '2018-04-07T14:00:00',
+				title: 'event 2'
+			},
+			{
+				id: '3',
+				resourceId: 'b',
+				start: '2018-04-07T12:00:00',
+				end: '2018-04-08T06:00:00',
+				title: 'event 3'
+			},
+			{
+				id: '4',
+				resourceId: 'c',
+				start: '2018-04-07T07:30:00',
+				end: '2018-04-07T09:30:00',
+				title: 'event 4'
+			},
+			{
+				id: '5',
+				resourceId: 'd',
+				start: '2018-04-07T10:00:00',
+				end: '2018-04-07T15:00:00',
+				title: 'event 5'
+			},
+			{
+				id: '6',
+				resourceId: 'a',
+				start: '2018-07-24T10:00:00',
+				end: '2018-07-24T10:30:00',
+				color: 'rgb(49, 128, 208)',
+				title: '홍성진',
+				description: '- a 디자이너님 예약'
+			}, {
+				id: '7',
+				resourceId: 'b',
+				start: '2018-07-24T10:30:00',
+				end: '2018-07-24T11:00:00',
+				title: '홍성진',
+				description: '- a 디자이너님 예약'
+			},
+			{
+				id: '8',
+				resourceId: 'c',
+				start: '2018-07-24T11:30:00',
+				end: '2018-07-24T12:00:00',
+				title: '홍성진',
+				description: '- a 디자이너님 예약'
+			},
+			{
+				id: '9',
+				resourceId: 'c',
+				start: '2018-07-24T12:30:00',
+				end: '2018-07-24T13:00:00',
+				title: '홍성진',
+				description: '- a 디자이너님 예약'
+			}
+		];
+
+		var employee = [{
+				id: 'a',
+				title: '원장님',
+				eventColor: 'blue'
+			},
+			{
+				id: 'b',
+				title: '디자이너',
+				eventColor: 'green',
+
+			},
+			{
+				id: 'c',
+				title: '디자이너',
+				eventColor: 'orange',
+				businessHours: businessHours
+			},
+		];
+		$('#calendar').fullCalendar({
+			themeSystem: 'bootstrap3',
+
+			//// uncomment this line to hide the all-day slot
+			allDaySlot: false,
+
+			//설정
+			//영업 시작, 종료시간
+			minTime: min,
+			maxTime: max,
+
+			//디자이너 추가
+			resources: employee,
+
+			//예약내역 추가
+			events: reservaiton,
+
+			//이벤트에 시각까지 보여주기
+			displayEventTime: false,
+			editable: true, //드래그해서 움직이는것
+			eventLimit: true, // allow "more" link when too many events
+			displayEventTime: true,
+
+			navLinks: true, // can click day/week names to navigate views
+
+			select: function() {
+				dayClick();
+			},
+
+			lang: "ko",
+
+			//shows time in 15 min slot
+			slotDuration: '00:30:00',
+			slotLabelInterval: 30,
+			slotLabelFormat: 'a HH :mm ',
+
+
+			header: {
+				left: 'prev,next',
+				center: 'title',
+				right: 'month,agendaThreeDay,agendaDay' //agendaTwoDay
+			},
+
+			views: {
+				agendaThreeDay: {
+					duration: {
+						days: 3
+					},
+
+					type: 'agenda',
+
+					// views that are more than a day will NOT do this behavior by default
+					// so, we need to explicitly enable it
+					groupByResource: true
+
+					//// uncomment this line to group by day FIRST with resources underneath
+					//groupByDateAndResource: true
+				},
+				agendaDay: {
+					// options apply to basicWeek and basicDay views
+				}
+			},
+
+
+			googleCalendarApiKey: "AIzaSyDcnW6WejpTOCffshGDDb4neIrXVUA1EAE", // Google API KEY
+			eventSources: [
+				// 대한민국의 공휴일
+				{
+					googleCalendarId: "ko.south_korea#holiday@group.v.calendar.google.com",
+					className: "koHolidays",
+					color: "#be0000",
+					textColor: "#FFFFFF"
+				}
+			],
+
+
+			/* hover시 예약내역보여주기*/
+			eventRender: function(eventObj, $el) {
+				$el.popover({
+					title: '예약내역',
+					content: eventObj.description,
+					trigger: 'hover',
+					placement: 'top',
+					container: 'body'
+				});
+			},
+
+			dayClick: function(date, jsEvent, view, resource) {
+				var sysdate = new Date();
+				console.log(sysdate)
+				var year = sysdate.getFullYear();
+				var month = sysdate.getMonth() + 1;
+				var day = sysdate.getDate();
+
+				var nowDate = year + month + day;
+				console.log("nowDate" + nowDate);
+
+				console.log(
+					'dayClick',
+					reserDate = date.format(),
+					resource ? resource.id : '(no resource)'
+				);
+				console.log('reserDate ' + reserDate);
+				console.log('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
+				console.log('Current view: ' + view.name);
+				console.log('Clicked on: ' + date.format('YYYY년MM월DD일'));
+				//console.log(resource.businessHours[0].start);
+				//console.log(resource.businessHours[0].end);
+				console.log(date.format());
+				$('#reserDate').html(date.format('YYYY년MM월DD일 HH시mm분'));
+				clickDate = date.format('YYYY년MM월DD일');
+
+				var checkDate = new Date(date);
+
+				year = checkDate.getFullYear();
+				month = checkDate.getMonth() + 1;
+				day = checkDate.getDate();
+				checkDate = year + month + day;
+				// 현재날짜이전이면 못가게 로직처리하기
+
+				if (resource != null) {
+					/*쉬는날 로직*/
+					if (resource.businessHours != null) {
+						if (resource.businessHours[0].start == clickDate || resource.businessHours[0].end == clickDate) {
+							alert("휴무입니다.");
+							//window.location.reload();
+							date = null;
+						} else {
+							//현재날짜면 예약불가로.
+							if (nowDate < checkDate) {
+								$('#calendarModal').modal();
+							} else {
+								alert("예약할수 없는 날짭입니다..");
+							}
+						}
+					} else {
+						//현재날짜면 예약불가로.
+						if (nowDate < checkDate) {
+							$('#calendarModal').modal();
+						}else {
+							alert("예약할수 없는 날짭입니다..");
+						}
+					}
+				}
+				//var title =$('select[name=choice1]').val()
+				var title = $('#reservation-userName').val();
+				var description = title + "-" + $('select[name=choice-employee]').val() + "디자이너 님 예약"
+				var id = $('#reservation-id').val();
+				var choice1 = $('#choice1').val();
+				var choice2 = $('#choice2').val();
+				var choice_employee = $('#choice-employee').val();
+
+				$("#result-reservaiton").one('click', function() {
+					//reservation 객체 추가로직
+					var aJson = new Object();
+					aJson.id = '8';
+					aJson.resourceId = 'a';
+					aJson.start = '2018-07-28T13:15:00';
+					aJson.end = '2018-07-28T15:15:00';
+					aJson.color = 'rgb(49, 128, 208)';
+					aJson.title = '홍성진님 예약'
+					reservaiton.push(aJson);
+
+
+					/*30분 추가*/
+					console.log(reservaiton);
+					var javaScriptRelease = Date.parse(date);
+					//alert(javaScriptRelease + 1800000);
+					javaScriptRelease += 1800000;
+
+					/*화면에 등록시키기*/
+					$('#calendar').fullCalendar('renderEvent', {
+						title: title,
+						start: date, //specify start date
+						id: '10',
+						description: description,
+						resourceId: resource.id,
+						end: javaScriptRelease
+
+					});
+
+				});
+
+			},
+
+
+			eventClick: function(calEvent, jsEvent, view) {
+				$('#reserDate').html(calEvent.start.format('YYYY년MM월DD일 HH시mm분'));
+				var check = calEvent.choice1;
+				console.log(typeof calEvent.choice_employee);
+				$('#calendarModal').modal();
+				$('#remove-reservaiton').one('click', function() {
+					//var check = prompt("예약비밀번호입력");
+					var check1 = confirm("삭제하시겠습니까?")
+					if (check1 == true) {
+						$('#calendar').fullCalendar('removeEvents', calEvent.id);
+						$('#calendarModal').modal('toggle');
+					}
+				})
+			},
+
+		});
+
+	});
+</script>
+
+
 	</div>
 	<footer id="contact" class="contact-us">
 		<div class="container">
