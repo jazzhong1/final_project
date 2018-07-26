@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -48,10 +47,16 @@
 
     /*custom*/
 
+    .fc-past {
+      background: rgb(255, 249, 249);
+    }
+
     .fc-highlight,
     .alert-info {
-      background: rgb(255, 252, 253);
+      background: rgba(246, 252, 241, 0.96);
     }
+
+
 
     .fc-day-number {
       color: black;
@@ -252,7 +257,7 @@
 
         //shows time in 15 min slot
         slotDuration: '00:30:00',
-        slotLabelInterval: 30,
+        slotLabelInterval: 60,
         slotLabelFormat: 'a HH :mm ',
 
 
@@ -314,14 +319,12 @@
 
 
         dayClick: function(date, jsEvent, view, resource) {
-          var sysdate = new Date();
-          console.log(sysdate)
-          var year = sysdate.getFullYear();
-          var month = sysdate.getMonth() + 1;
-          var day = sysdate.getDate();
 
-          var nowDate = year + month + day;
+          var now = new Date
+          var nowDate = new Date(now.getFullYear(), now.getMonth(), now.getDate(), now.getHours() + 1, now.getMinutes());
+          //console.log("nowDate" + nowDate);
           console.log("nowDate" + nowDate);
+
 
           console.log(
             'dayClick',
@@ -336,16 +339,15 @@
           //console.log(resource.businessHours[0].end);
           console.log(date.format());
           $('#reserDate').html(date.format('YYYY년MM월DD일 HH시mm분'));
-          clickDate = date.format('YYYY년MM월DD일');
+          var clickDate = date.format('YYYY년MM월DD일');
 
-          var checkDate = new Date(date);
+          var checkDate = new Date(date.format());
 
-          year = checkDate.getFullYear();
-          month = checkDate.getMonth() + 1;
-          day = checkDate.getDate();
-          checkDate = year + month + day;
+
           // 현재날짜이전이면 못가게 로직처리하기
 
+          console.log("nowDate" + nowDate);
+          console.log("checkDate" + checkDate);
           if (resource != null) {
             /*쉬는날 로직*/
             if (resource.businessHours != null) {
@@ -355,17 +357,19 @@
                 date = null;
               } else {
                 //현재날짜면 예약불가로.
-                if (nowDate < checkDate) {
+                if (nowDate <= checkDate) {
                   $('#calendarModal').modal();
                 } else {
-                  alert("예약할수 없는 날짭입니다..");
+                  date = null;
+                  alert("예약시간이 아닙니다...");
                 }
               }
             } else {
               //현재날짜면 예약불가로.
-              if (nowDate < checkDate) {
+              if (nowDate <= checkDate) {
                 $('#calendarModal').modal();
-              }else {
+              } else {
+                date = null;
                 alert("예약할수 없는 날짭입니다..");
               }
             }
