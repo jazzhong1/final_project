@@ -5,6 +5,8 @@
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" type="text/css" href="css/footer.css">
+<link rel="stylesheet" type="text/css" href="css/navbar.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- <link href="js/index.js">
 <link href="css/index1.css" rel="stylesheet">
@@ -392,77 +394,157 @@
 			}
 		}
 		/* media end */
+/* tab css */
+/***
+Bootstrap Line Tabs by @keenthemes
+A component of Metronic Theme - #1 Selling Bootstrap 3 Admin Theme in Themeforest: http://j.mp/metronictheme
+Licensed under MIT
+***/
+
+/* Tabs panel */
+.tabbable-panel {
+border:1px solid #eee;
+padding: 10px;
+}
+
+/* Default mode */
+.tabbable-line > .nav-tabs {
+border: none;
+margin: 0px;
+}
+.tabbable-line > .nav-tabs > li {
+margin-right: 2px;
+}
+.tabbable-line > .nav-tabs > li > a {
+border: 0;
+margin-right: 0;
+color: #737373;
+}
+.tabbable-line > .nav-tabs > li > a > i {
+color: #a6a6a6;
+}
+.tabbable-line > .nav-tabs > li.open, .tabbable-line > .nav-tabs > li:hover {
+border-bottom: 4px solid #fbcdcf;
+}
+.tabbable-line > .nav-tabs > li.open > a, .tabbable-line > .nav-tabs > li:hover > a {
+border: 0;
+background: none !important;
+color: #333333;
+}
+.tabbable-line > .nav-tabs > li.open > a > i, .tabbable-line > .nav-tabs > li:hover > a > i {
+color: #a6a6a6;
+}
+.tabbable-line > .nav-tabs > li.open .dropdown-menu, .tabbable-line > .nav-tabs > li:hover .dropdown-menu {
+margin-top: 0px;
+}
+.tabbable-line > .nav-tabs > li.active {
+border-bottom: 4px solid #ff989c;
+position: relative;
+}
+.tabbable-line > .nav-tabs > li.active > a {
+border: 0;
+color: #333333;
+}
+.tabbable-line > .nav-tabs > li.active > a > i {
+color: #404040;
+}
+.tabbable-line > .tab-content {
+margin-top: -3px;
+background-color: #fff;
+border: 0;
+border-top: 1px solid #eee;
+padding: 15px 0;
+}
+.portlet .tabbable-line > .tab-content {
+padding-bottom: 0;
+}
+
+/* Below tabs mode */
+
+.tabbable-line.tabs-below > .nav-tabs > li {
+border-top: 4px solid transparent;
+}
+.tabbable-line.tabs-below > .nav-tabs > li > a {
+margin-top: 0;
+}
+.tabbable-line.tabs-below > .nav-tabs > li:hover {
+border-bottom: 0;
+border-top: 4px solid #fbcdcf;
+}
+.tabbable-line.tabs-below > .nav-tabs > li.active {
+margin-bottom: -2px;
+border-bottom: 0;
+border-top: 4px solid #f3565d;
+}
+.tabbable-line.tabs-below > .tab-content {
+margin-top: -10px;
+border-top: 0;
+border-bottom: 1px solid #eee;
+padding-bottom: 15px;
+}
+/* tab css end */
 	</style>
 </head>
 <body>
-	<header>
-		<nav class="navbar navbar-icon-top navbar-default navbar-fixed-top">
-			<div class="container-fluid">
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-										<span class="sr-only">Toggle navigation</span>
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-								</button>
-					<a class="navbar-brand" href="#">로고~~</a>
-				</div>
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav">
-						<li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-						<!--active사용시 home하얀색으로 변함-->
-						<li><a href="#">Introduce</a></li>
-						<li><a href="#">Shop</a></li>
-						<li><a href="#">Market</a></li>
-						<li><a href="#">Service center</a></li>
+		  <header>
+	    <nav class="navbar navbar-icon-top navbar-default navbar-fixed-top">
+	      <div class="container-fluid">
+	        <!-- Brand and toggle get grouped for better mobile display -->
+	        <div class="navbar-header">
+	          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	                    <span class="sr-only">Toggle navigation</span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                </button>
+	          <a class="navbar-brand" href="#">로고~~</a>
+	        </div>
+	        <!-- Collect the nav links, forms, and other content for toggling -->
+	        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	          <ul class="nav navbar-nav">
+	            <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+	            <!--active사용시 home하얀색으로 변함-->
+	            <li><a href="#">Introduce</a></li>
+	            <li><a href="#">Shop</a></li>
+	            <li><a href="#">Market</a></li>
+	            <li><a href="#">Service center</a></li>
 
-					</ul>
-					<form class="navbar-form navbar-left">
-						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Search">
-						</div>
-						<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search w3-spin"></span></button>
-					</form>
-					<ul class="nav navbar-nav navbar-right">
-						<li>
-							<a href="#">
-														<i class="fa fa-envelope-o">
-																<span class="badge badge-danger">11</span>
-														</i>
-														Messages
-												</a>
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-								<!--<i class="fa fa-user-circle-o"></i>-->
-								<img class="img-circle" src="images/image-7.jpg" alt="" style="width:50px; height:50px;">
-								<span class="caret"></span>
-							</a>
-							<ul class="dropdown-menu" style="border-radius:10px; border-color:white">
-								<li><a href="#">로그인</a></li>
-								<li><a href="#">회원가입</a></li>
-								<li><a href="#">마이페이지</a></li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-				<!-- /.navbar-collapse -->
-			</div>
-			<!-- /.container-fluid -->
-		</nav>
-		<br><br><br><br>
-		<!--
-
-								<li>
-									<div class="w3-threequarter">
-										<input type="text" class="w3-bar-item w3-input w3-border w3-round-xlarge" placeholder="검색" style="height:30px; margin-top:10px">
-									</div>
-								</li>-->
-
-
-	</header>
+	          </ul>
+	          <form class="navbar-form navbar-left">
+	            <div class="form-group">
+	              <input type="text" class="form-control" placeholder="Search">
+	            </div>
+	            <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search w3-spin"></span></button>
+	          </form>
+	          <ul class="nav navbar-nav navbar-right">
+	            <li>
+	              <a href="#">
+	                            <i class="fa fa-envelope-o">
+	                                <span class="badge badge-danger">11</span>
+	                            </i>
+	                            Messages
+	                        </a>
+	            </li>
+	            <li class="dropdown">
+	              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+	                <!--<i class="fa fa-user-circle-o"></i>-->
+	                <img class="img-circle" src="images/image-7.jpg" alt="" style="width:50px; height:50px;">
+	                <span class="caret"></span>
+	              </a>
+	              <ul class="dropdown-menu" style="border-radius:10px; border-color:white">
+	                <li><a href="#">로그인</a></li>
+	                <li><a href="#">회원가입</a></li>
+	                <li><a href="#">마이페이지</a></li>
+	              </ul>
+	            </li>
+	          </ul>
+	        </div>
+	        <!-- /.navbar-collapse -->
+	      </div>
+	      <!-- /.container-fluid -->
+	    </nav>
+	    <br><br><br><br>
+	  </header>
 	<div class="container-fluid">
 		<div id="wrapper">
 
@@ -486,47 +568,127 @@
 								</div>
 							</div><!--가게 이미지 끝-->
 						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-10">
-							<h3>가게 이름</h3>
-							<p>가게에 대한 설명 ex) 상세정보 시술가격표 등등...</p>
+							<h3>NailShop</h3>
+							<p>장소 : 서울 마포구 월드컵북로 396</p>
+							<p>Tel 02.355.2311 </p>
+							<p>평일 10:00 - 21:00 토요일 11:00 - 21:00 일요일 11:00 - 20:00 공휴일 10:00 - 20:00</p>
+							<p>속눈썹 연장, 왁싱, 스킨/바디케어, 주차, 무선 인터넷, 애완동물 동반</p>
 						</div>
-					</div>
+						</div>
 					<div class="row" style="margin-top:20px;">
 						<marquee>공지사항입니다~~~~~~~~~~~~</marquee>
 					</div>
 					<div class="row">
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-10 animatepop " style="margin-top:10px;">
-							<div class="hovereffect">
-								<img class="img-responsive radius14" src="http://placehold.it/350x250" alt="">
-								<div class="overlay">
-									<h2>네일 디자인 이름</h2>
-									<p>
-										<a href="#">더보기</a>
-									</p>
-								</div>
-							</div>
+						<div class="tabbable-panel">
+				<div class="tabbable-line">
+					<ul class="nav nav-tabs ">
+						<li class="active">
+							<a href="#tab_default_2" data-toggle="tab">
+							가격 </a>
+						</li>
+						<li>
+							<a href="#tab_default_1" data-toggle="tab">
+							시술정보 </a>
+						</li>
+						<li>
+							<a href="#tab_default_3" data-toggle="tab">
+							리뷰 </a>
+						</li>
+					</ul>
+					<div class="tab-content">
+									<!-- tab1 시작 -->
+						<div class="tab-pane" id="tab_default_1">
+							 <div class="carousel slide multi-item-carousel" id="theCarousel">
+	              <div class="carousel-inner">
+	                <div class="item active">
+										<div class="col-lg-4 col-md-4 col-sm-4 col-xs-10 animatepop " style="margin-top:10px;">
+											<div class="hovereffect">
+												<img class="img-responsive radius14 smail-carousel" src="http://placehold.it/350x250" alt="">
+												<div class="overlay">
+													<h2>네일 디자인 이름1</h2>
+													<p>
+														<a href="#">더보기</a>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="col-lg-4 col-md-4 col-sm-4 col-xs-10 animatepop" style="margin-top:10px;">
+											<div class="hovereffect">
+												<img class="img-responsive radius14 smail-carousel" src="http://placehold.it/350x250" alt="">
+												<div class="overlay">
+													<h2>네일 디자인 이름2</h2>
+													<p>
+														<a href="#">더보기</a>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="col-lg-4 col-md-4 col-sm-4 col-xs-10 animatepop disappear" style="margin-top:10px;">
+											<div class="hovereffect">
+												<img class="img-responsive radius14 smail-carousel" src="http://placehold.it/350x250" alt="">
+												<div class="overlay">
+													<h2>네일 디자인 이름3</h2>
+													<p>
+														<a href="#">더보기</a>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="col-lg-4 col-md-4 col-sm-4 col-xs-10 animatepop disappear" style="margin-top:10px;">
+											<div class="hovereffect">
+												<img class="img-responsive radius14 smail-carousel" src="http://placehold.it/350x250" alt="">
+												<div class="overlay">
+													<h2>네일 디자인 이름4</h2>
+													<p>
+														<a href="#">더보기</a>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+	                <!--  Example item end -->
+	              </div>
+	              <a class="left carousel-control" href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+	              <a class="right carousel-control" href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+	            </div>
 						</div>
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-10 animatepop" style="margin-top:10px;">
-							<div class="hovereffect">
-								<img class="img-responsive radius14" src="http://placehold.it/350x250" alt="">
-								<div class="overlay">
-									<h2>네일 디자인 이름</h2>
-									<p>
-										<a href="#">더보기</a>
-									</p>
-								</div>
-							</div>
+									<!-- tab1 끝 -->
+						<div class="tab-pane active" id="tab_default_2">
+							<p>
+								Howdy, I'm in Tab 2.
+							</p>
+							<p>
+								Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation.
+							</p>
+							<p>
+								<a class="btn btn-warning" href="http://j.mp/metronictheme" target="_blank">
+									Click for more features...
+								</a>
+							</p>
 						</div>
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-10 animatepop disappear" style="margin-top:10px;">
-							<div class="hovereffect">
-								<img class="img-responsive radius14" src="http://placehold.it/350x250" alt="">
-								<div class="overlay">
-									<h2>네일 디자인 이름</h2>
-									<p>
-										<a href="#">더보기</a>
-									</p>
-								</div>
-							</div>
+						<div class="tab-pane" id="tab_default_3">
+							<p>
+								Howdy, I'm in Tab 3.
+							</p>
+							<p>
+								Duis autem vel eum iriure dolor in hendrerit in vulputate. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat
+							</p>
+							<p>
+								<a class="btn btn-info" href="http://j.mp/metronictheme" target="_blank">
+									Learn more...
+								</a>
+							</p>
 						</div>
+					</div>
+				</div>
+			</div>
+
 						<style>
 							.hovereffect {
 								width: 100%;
@@ -613,8 +775,7 @@
 							}
 	</style>
 					</div>
-				<div class="row appear" style="display:none;"><a href="더보기"> 더 보 기 </a> </div>
-			</div>
+					</div>
 
 
 				<div id="second">
@@ -642,8 +803,8 @@
 						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-10 animatepop">
 							<h3>Nail Shop Name</h3>
 							<p>Nail Shop Tel 02.355.2311 </p>
-							<p>OpenTime : 11:00</p>
-							<p>CloseTime : 21:00</p>
+							<p>KakaoChat : nail0997</p>
+							<p>instagram : @beautyU21</p>
 						</div><!--가게 Info 끝-->
 							<div class="col-lg-7 col-md-7 col-sm-7 col-xs-10" >
 								<form class="" action="/insertQnA.html" method="post">
@@ -798,6 +959,31 @@
 				}
 			})
 		</script>
+
+		<script type="text/javascript">
+		  //작은케러셀
+		  // Instantiate the Bootstrap carousel
+		  $('.multi-item-carousel').carousel({
+		    interval: false
+		  });
+
+		  // for every slide in carousel, copy the next slide's item in the slide.
+		  // Do the same for the next, next item.
+		  $('.multi-item-carousel .item').each(function() {
+		    var next = $(this).next();
+		    if (!next.length) {
+		      next = $(this).siblings(':first');
+		    }
+		    next.children(':first-child').clone().appendTo($(this));
+
+		    if (next.next().length > 0) {
+		      next.next().children(':first-child').clone().appendTo($(this));
+		    } else {
+		      $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+		    }
+		  });
+		</script>
+
 	</div>
 	<footer id="contact" class="contact-us">
     <div class="container">

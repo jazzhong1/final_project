@@ -41,19 +41,6 @@
 
 /*navbar co*/
 
-.navbar-default {
-  background-color:rgb(255, 232, 232);
-  border-color:rgb(255, 232, 232);
-}
-
-.navbar-default .navbar-nav>li>a {
-  color:rgb(217, 170, 170);
-}
-
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
-  background-color: rgb(255, 232, 232);
-  color: #ffffff;
-}
 
 /* 네일이미지*/
 
@@ -149,22 +136,4 @@
   }
   .carousel-indicators .active {
     background: #428bca;
-  }
-
-
-  /**/
-  @media screen and (min-width:768px) {
-    .navbar-brand-centered {
-      position: absolute;
-      left: 50%;
-      display: block;
-      width: 160px;
-      text-align: center;
-      background-color: #eee;
-    }
-    .navbar>.container .navbar-brand-centered,
-    .navbar>.container-fluid .navbar-brand-centered {
-      margin-left: -80px;
-    }
-
   }
