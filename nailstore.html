@@ -71,7 +71,7 @@
 
 		#wrapper {
 			width: 100%;
-			height: auto;
+			height: 100%;
 			position: relative;
 			top: 0;
 			bottom: 0;
@@ -90,11 +90,12 @@
 			-ms-flex-pack: left;
 			justify-content: left;
 			overflow: hidden;
+			padding-top: 10px;
 		}
 
 		#right-side {
 			height: 90%;
-			width: 25%;
+			width: 20%;
 			margin-left: 5px;
 			display: -webkit-box;
 			display: -ms-flexbox;
@@ -119,6 +120,7 @@
 			cursor: pointer;
 			-webkit-transition: all .2s ease-out;
 			transition: all .2s ease-out;
+
 		}
 
 		#right-side ul li:hover {
@@ -553,9 +555,8 @@ padding-bottom: 15px;
 	      </div>
 	      <!-- /.container-fluid -->
 	    </nav>
-	    <br><br><br><br>
 	  </header>
-	<div class="container-fluid">
+	<div>
 		<div id="wrapper">
 
 			<div id="left-side">
@@ -1298,6 +1299,7 @@ padding-bottom: 15px;
 				<div id="line" class="one"></div>
 			</div>
 			<div id="right-side">
+				<div  style="position:fixed;">
 				<ul>
 					<li class="shop active">
 						<div class="icon active">
@@ -1324,6 +1326,7 @@ padding-bottom: 15px;
 						Contact(문의)
 					</li>
 				</ul>
+			</div>
 			</div>
 		</div>
 		<script src="https://maps.googleapis.com/maps/api/js"></script>
