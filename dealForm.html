@@ -8,22 +8,21 @@
 
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="js/index.js">
   <link href="css/index1.css" rel="stylesheet">
   <link href="css/index2.css" rel="stylesheet">
 
+<!--
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>-->
 
-  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-lite.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-lite.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-lite.js"></script>
 
 
 
@@ -146,7 +145,13 @@
 
     /*nav 끝*/
 
-    }
+    button, input {
+    overflow: visible;
+}
+    .dropdown-toggle:focus {
+    outline: 0;
+}
+
   </style>
 
 </head>
@@ -222,46 +227,26 @@
 
   </header>
   <style>
-        .page-header{
-            border-bottom: 0px;
-        }
-        .form-control{
-            border-radius:30px;
-        }
-       #btn-img{
-         border: 0px;
-       }
-       #btn-img:hover{
-         background-color:rgb(253, 191, 191);
 
-       }
-       #truck-img{
-         background-image: url('https://cdn4.iconfinder.com/data/icons/flatified/512/photos.png');
-         background-position:0px 0px;
-       }
-
-       .container{
-    margin-top:20px;
-}
 .image-preview-input {
     position: absolute;
-	  overflow: hidden;
-	  margin: 0px;
+     overflow: hidden;
+     margin: 0px;
     color: #333;
     background-color: #fff;
     border-color: #ccc;
     z-index: 2;
 }
 .image-preview-input input[type=file] {
-	position: absolute;
-	top: 0;
-	right: 0;
-	margin: 0;
-	padding: 0;
-	font-size: 20px;
-	cursor: pointer;
-	opacity: 0;
-	filter: alpha(opacity=0);
+   position: absolute;
+   top: 0;
+   right: 0;
+   margin: 0;
+   padding: 0;
+   font-size: 20px;
+   cursor: pointer;
+   opacity: 0;
+   filter: alpha(opacity=0);
 }
 .image-preview-input-title {
     margin-left:2px;
@@ -271,6 +256,8 @@
 
 <section>
     <div class="container">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
             <div class="panel">
 
 
@@ -280,18 +267,20 @@
                                     <h2> 게시판 글쓰기</h2>
                             </div>
                             <div id="summernote"></div>
+                            <br><br>
 
-                            <button class="btn-default" type="button" onclick="showContent();">작성</button>
-
-
-
+                            <div class="row1 text-right" id="btn-enroll">
+                              <button type="button" class="btn btn-warning" onclick="showContent();">작성</button>
+                          </div>
 
                             <script>
                               $('#summernote').summernote({
                                 placeholder: 'Hello stand alone ui',
                                 tabsize: 2,
                                 height: 100,
-                                maxHeight:300
+                                maxHeight:300,
+                                focus:false
+
                               });
                               function showContent() {
             $('.output').html($('#summernote').summernote('code'));
@@ -301,9 +290,9 @@
 
                         </div>
                 </div>
+              </div>
 
-
-
+                <div class="col-sm-2"></div>
     </div>
 </section>
 
@@ -338,64 +327,3 @@
 </body>
 
 </html>
-<script>
-$(document).on('click', '#close-preview', function(){
-    $('.image-preview').popover('hide');
-    // Hover befor close the preview
-    $('.image-preview').hover(
-        function () {
-           $('.image-preview').popover('show');
-        },
-         function () {
-           $('.image-preview').popover('hide');
-        }
-    );
-});
-
-$(function() {
-    // Create the close button
-    var closebtn = $('<button/>', {
-        type:"button",
-        text: 'x',
-        id: 'close-preview',
-        style: 'font-size: initial;',
-    });
-    closebtn.attr("class","close pull-right");
-    // Set the popover default content
-    $('.image-preview').popover({
-        trigger:'manual',
-        html:true,
-        title: "<strong>Preview</strong>"+$(closebtn)[0].outerHTML,
-        content: "There's no image",
-        placement:'bottom'
-    });
-    // Clear event
-    $('.image-preview-clear').click(function(){
-        $('.image-preview').attr("data-content","").popover('hide');
-        $('.image-preview-filename').val("");
-        $('.image-preview-clear').hide();
-        $('.image-preview-input input:file').val("");
-        $(".image-preview-input-title").text("Browse");
-    });
-    // Create the preview image
-    $(".image-preview-input input:file").change(function (){
-        var img = $('<img/>', {
-            id: 'dynamic',
-            width:250,
-            height:200
-        });
-        var file = this.files[0];
-        var reader = new FileReader();
-        // Set preview image into the popover data-content
-        reader.onload = function (e) {
-            $(".image-preview-input-title").text("Change");
-            $(".image-preview-clear").show();
-            $(".image-preview-filename").val(file.name);
-            img.attr('src', e.target.result);
-            $(".image-preview").attr("data-content",$(img)[0].outerHTML).popover("show");
-        }
-        reader.readAsDataURL(file);
-    });
-});
-
-</script>
