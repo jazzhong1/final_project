@@ -1559,119 +1559,113 @@
 				});
 			},
 
-			dayClick: function(date, jsEvent, view, resource) {
-          var sysdate = new Date();
-          var year = sysdate.getFullYear();
-          var month = sysdate.getMonth() + 1;
-          var day = sysdate.getDate();
-          var hour=sysdate.getHours()+1;
-          var minute=sysdate.getMinutes();
 
-          var nowDate = year + month + day+minute;
-          console.log("nowDate" + nowDate);
+			        dayClick: function(date, jsEvent, view, resource) {
 
-          console.log(
-            'dayClick',
-            reserDate = date.format(),
-            resource ? resource.id : '(no resource)'
-          );
-          console.log('reserDate ' + reserDate);
-          console.log('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
-          console.log('Current view: ' + view.name);
-          console.log('Clicked on: ' + date.format('YYYY년MM월DD일'));
-          //console.log(resource.businessHours[0].start);
-          //console.log(resource.businessHours[0].end);
-          console.log(date.format());
-          $('#reserDate').html(date.format('YYYY년MM월DD일 HH시mm분'));
-          var clickDate = date.format('YYYY년MM월DD일');
-
-          var checkDate = new Date(date);
-
-          year = checkDate.getFullYear();
-          month = checkDate.getMonth() + 1;
-          day = checkDate.getDate();
-          hour=checkDate.getHours();
-          minute=checkDate.getMinutes();
-
-          checkDate =year + month + day+minute;
-          // 현재날짜이전이면 못가게 로직처리하기
-
-          if (resource != null) {
-            /*쉬는날 로직*/
-            if (resource.businessHours != null) {
-              if (resource.businessHours[0].start == clickDate || resource.businessHours[0].end == clickDate) {
-                alert("휴무입니다.");
-                //window.location.reload();
-                date = null;
-              } else {
-                //현재날짜면 예약불가로.
-                if (nowDate <= checkDate) {
-                  $('#calendarModal').modal();
-                } else {
-                  date = null;
-                  alert("예약시간이 아닙니다...");
-                }
-              }
-            } else {
-              //현재날짜면 예약불가로.
-              if (nowDate <= checkDate) {
-                $('#calendarModal').modal();
-              }else {
-                date = null;
-                alert("예약시간이 아닙니다...");
-              }
-            }
-          }
-          //var title =$('select[name=choice1]').val()
-          var title = $('#reservation-userName').val();
-          var description = title + "-" + $('select[name=choice-employee]').val() + "디자이너 님 예약"
-          var id = $('#reservation-id').val();
-          var choice1 = $('#choice1').val();
-          var choice2 = $('#choice2').val();
-          var choice_employee = $('#choice-employee').val();
-
-          /*    var eventData;
-              if (title) {
-                eventData = {
-                  title: title,
-                  start: date
-                };
-                $('#calendar').fullCalendar('renderEvent', eventData, true); // stick? = true
-              }
-              $('#calendar').fullCalendar('unselect');*/
-
-          $("#result-reservaiton").one('click', function() {
-            //reservation 객체 추가로직
-            var aJson = new Object();
-            aJson.id = '8';
-            aJson.resourceId = 'a';
-            aJson.start = '2018-07-28T13:15:00';
-            aJson.end = '2018-07-28T15:15:00';
-            aJson.color = 'rgb(49, 128, 208)';
-            aJson.title = '홍성진님 예약'
-            reservaiton.push(aJson);
+			          var now = new Date
+			          var nowDate = new Date(now.getFullYear(), now.getMonth(), now.getDate(), now.getHours() + 1, now.getMinutes());
+			          //console.log("nowDate" + nowDate);
+			          console.log("nowDate" + nowDate);
 
 
-            /*30분 추가*/
-            console.log(reservaiton);
-            var javaScriptRelease = Date.parse(date);
-            //alert(javaScriptRelease + 1800000);
-            javaScriptRelease += 1800000;
+			          console.log(
+			            'dayClick',
+			            reserDate = date.format(),
+			            resource ? resource.id : '(no resource)'
+			          );
+			          console.log('reserDate ' + reserDate);
+			          console.log('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
+			          console.log('Current view: ' + view.name);
+			          console.log('Clicked on: ' + date.format('YYYY년MM월DD일'));
+			          //console.log(resource.businessHours[0].start);
+			          //console.log(resource.businessHours[0].end);
+			          console.log(date.format());
+			          $('#reserDate').html(date.format('YYYY년MM월DD일 HH시mm분'));
+			          var clickDate = date.format('YYYY년MM월DD일');
 
-            /*화면에 등록시키기*/
-            $('#calendar').fullCalendar('renderEvent', {
-              title: title,
-              start: date, //specify start date
-              id: '10',
-              description: description,
-              resourceId: resource.id,
-              end: javaScriptRelease
+			          var checkDate = new Date(date.format());
 
-            });
 
-          });
+			          // 현재날짜이전이면 못가게 로직처리하기
 
-        },
+			          console.log("nowDate" + nowDate);
+			          console.log("checkDate" + checkDate);
+			          if (resource != null) {
+			            /*쉬는날 로직*/
+			            if (resource.businessHours != null) {
+			              if (resource.businessHours[0].start == clickDate || resource.businessHours[0].end == clickDate) {
+			                alert("휴무입니다.");
+			                //window.location.reload();
+			                date = null;
+			              } else {
+			                //현재날짜면 예약불가로.
+			                if (nowDate <= checkDate) {
+			                  $('#calendarModal').modal();
+			                } else {
+			                  date = null;
+			                  alert("예약시간이 아닙니다...");
+			                }
+			              }
+			            } else {
+			              //현재날짜면 예약불가로.
+			              if (nowDate <= checkDate) {
+			                $('#calendarModal').modal();
+			              } else {
+			                date = null;
+			                alert("예약할수 없는 날짭입니다..");
+			              }
+			            }
+			          }
+			          //var title =$('select[name=choice1]').val()
+			          var title = $('#reservation-userName').val();
+			          var description = title + "-" + $('select[name=choice-employee]').val() + "디자이너 님 예약"
+			          var id = $('#reservation-id').val();
+			          var choice1 = $('#choice1').val();
+			          var choice2 = $('#choice2').val();
+			          var choice_employee = $('#choice-employee').val();
+
+			          /*    var eventData;
+			              if (title) {
+			                eventData = {
+			                  title: title,
+			                  start: date
+			                };
+			                $('#calendar').fullCalendar('renderEvent', eventData, true); // stick? = true
+			              }
+			              $('#calendar').fullCalendar('unselect');*/
+
+			          $("#result-reservaiton").one('click', function() {
+			            //reservation 객체 추가로직
+			            var aJson = new Object();
+			            aJson.id = '8';
+			            aJson.resourceId = 'a';
+			            aJson.start = '2018-07-28T13:15:00';
+			            aJson.end = '2018-07-28T15:15:00';
+			            aJson.color = 'rgb(49, 128, 208)';
+			            aJson.title = '홍성진님 예약'
+			            reservaiton.push(aJson);
+
+
+			            /*30분 추가*/
+			            console.log(reservaiton);
+			            var javaScriptRelease = Date.parse(date);
+			            //alert(javaScriptRelease + 1800000);
+			            javaScriptRelease += 1800000;
+
+			            /*화면에 등록시키기*/
+			            $('#calendar').fullCalendar('renderEvent', {
+			              title: title,
+			              start: date, //specify start date
+			              id: '10',
+			              description: description,
+			              resourceId: resource.id,
+			              end: javaScriptRelease
+
+			            });
+
+			          });
+
+			        },
 
 
 			eventClick: function(calEvent, jsEvent, view) {
