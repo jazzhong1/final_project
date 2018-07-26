@@ -394,6 +394,95 @@
 			}
 		}
 		/* media end */
+/* tab css */
+/***
+Bootstrap Line Tabs by @keenthemes
+A component of Metronic Theme - #1 Selling Bootstrap 3 Admin Theme in Themeforest: http://j.mp/metronictheme
+Licensed under MIT
+***/
+
+/* Tabs panel */
+.tabbable-panel {
+border:1px solid #eee;
+padding: 10px;
+}
+
+/* Default mode */
+.tabbable-line > .nav-tabs {
+border: none;
+margin: 0px;
+}
+.tabbable-line > .nav-tabs > li {
+margin-right: 2px;
+}
+.tabbable-line > .nav-tabs > li > a {
+border: 0;
+margin-right: 0;
+color: #737373;
+}
+.tabbable-line > .nav-tabs > li > a > i {
+color: #a6a6a6;
+}
+.tabbable-line > .nav-tabs > li.open, .tabbable-line > .nav-tabs > li:hover {
+border-bottom: 4px solid #fbcdcf;
+}
+.tabbable-line > .nav-tabs > li.open > a, .tabbable-line > .nav-tabs > li:hover > a {
+border: 0;
+background: none !important;
+color: #333333;
+}
+.tabbable-line > .nav-tabs > li.open > a > i, .tabbable-line > .nav-tabs > li:hover > a > i {
+color: #a6a6a6;
+}
+.tabbable-line > .nav-tabs > li.open .dropdown-menu, .tabbable-line > .nav-tabs > li:hover .dropdown-menu {
+margin-top: 0px;
+}
+.tabbable-line > .nav-tabs > li.active {
+border-bottom: 4px solid #ff989c;
+position: relative;
+}
+.tabbable-line > .nav-tabs > li.active > a {
+border: 0;
+color: #333333;
+}
+.tabbable-line > .nav-tabs > li.active > a > i {
+color: #404040;
+}
+.tabbable-line > .tab-content {
+margin-top: -3px;
+background-color: #fff;
+border: 0;
+border-top: 1px solid #eee;
+padding: 15px 0;
+}
+.portlet .tabbable-line > .tab-content {
+padding-bottom: 0;
+}
+
+/* Below tabs mode */
+
+.tabbable-line.tabs-below > .nav-tabs > li {
+border-top: 4px solid transparent;
+}
+.tabbable-line.tabs-below > .nav-tabs > li > a {
+margin-top: 0;
+}
+.tabbable-line.tabs-below > .nav-tabs > li:hover {
+border-bottom: 0;
+border-top: 4px solid #fbcdcf;
+}
+.tabbable-line.tabs-below > .nav-tabs > li.active {
+margin-bottom: -2px;
+border-bottom: 0;
+border-top: 4px solid #f3565d;
+}
+.tabbable-line.tabs-below > .tab-content {
+margin-top: -10px;
+border-top: 0;
+border-bottom: 1px solid #eee;
+padding-bottom: 15px;
+}
+/* tab css end */
 	</style>
 </head>
 <body>
@@ -478,52 +567,128 @@
 									</div>
 								</div>
 							</div><!--가게 이미지 끝-->
-						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-8">
-							<h3>가게 이름</h3>
-							<p>가게에 대한 설명 ex) 상세정보 시술가격표 등등...</p>
+						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-10">
+							<h3>NailShop</h3>
+							<p>장소 : 서울 마포구 월드컵북로 396</p>
+							<p>Tel 02.355.2311 </p>
+							<p>평일 10:00 - 21:00 토요일 11:00 - 21:00 일요일 11:00 - 20:00 공휴일 10:00 - 20:00</p>
+							<p>속눈썹 연장, 왁싱, 스킨/바디케어, 주차, 무선 인터넷, 애완동물 동반</p>
 						</div>
-						<div class="col-lg-2 col-md-2 col-sm-2 col-xs-4">
-							<p>휴무일 : 매주 일요일</p>
-							<p></p>
 						</div>
-					</div>
 					<div class="row" style="margin-top:20px;">
 						<marquee>공지사항입니다~~~~~~~~~~~~</marquee>
 					</div>
 					<div class="row">
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-10 animatepop " style="margin-top:10px;">
-							<div class="hovereffect">
-								<img class="img-responsive radius14" src="http://placehold.it/350x250" alt="">
-								<div class="overlay">
-									<h2>네일 디자인 이름</h2>
-									<p>
-										<a href="#">더보기</a>
-									</p>
-								</div>
-							</div>
+						<div class="tabbable-panel">
+				<div class="tabbable-line">
+					<ul class="nav nav-tabs ">
+						<li class="active">
+							<a href="#tab_default_2" data-toggle="tab">
+							가격 </a>
+						</li>
+						<li>
+							<a href="#tab_default_1" data-toggle="tab">
+							시술정보 </a>
+						</li>
+						<li>
+							<a href="#tab_default_3" data-toggle="tab">
+							리뷰 </a>
+						</li>
+					</ul>
+					<div class="tab-content">
+									<!-- tab1 시작 -->
+						<div class="tab-pane" id="tab_default_1">
+							 <div class="carousel slide multi-item-carousel" id="theCarousel">
+	              <div class="carousel-inner">
+	                <div class="item active">
+										<div class="col-lg-4 col-md-4 col-sm-4 col-xs-10 animatepop " style="margin-top:10px;">
+											<div class="hovereffect">
+												<img class="img-responsive radius14 smail-carousel" src="http://placehold.it/350x250" alt="">
+												<div class="overlay">
+													<h2>네일 디자인 이름1</h2>
+													<p>
+														<a href="#">더보기</a>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="col-lg-4 col-md-4 col-sm-4 col-xs-10 animatepop" style="margin-top:10px;">
+											<div class="hovereffect">
+												<img class="img-responsive radius14 smail-carousel" src="http://placehold.it/350x250" alt="">
+												<div class="overlay">
+													<h2>네일 디자인 이름2</h2>
+													<p>
+														<a href="#">더보기</a>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="col-lg-4 col-md-4 col-sm-4 col-xs-10 animatepop disappear" style="margin-top:10px;">
+											<div class="hovereffect">
+												<img class="img-responsive radius14 smail-carousel" src="http://placehold.it/350x250" alt="">
+												<div class="overlay">
+													<h2>네일 디자인 이름3</h2>
+													<p>
+														<a href="#">더보기</a>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="col-lg-4 col-md-4 col-sm-4 col-xs-10 animatepop disappear" style="margin-top:10px;">
+											<div class="hovereffect">
+												<img class="img-responsive radius14 smail-carousel" src="http://placehold.it/350x250" alt="">
+												<div class="overlay">
+													<h2>네일 디자인 이름4</h2>
+													<p>
+														<a href="#">더보기</a>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+	                <!--  Example item end -->
+	              </div>
+	              <a class="left carousel-control" href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+	              <a class="right carousel-control" href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+	            </div>
 						</div>
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-10 animatepop" style="margin-top:10px;">
-							<div class="hovereffect">
-								<img class="img-responsive radius14" src="http://placehold.it/350x250" alt="">
-								<div class="overlay">
-									<h2>네일 디자인 이름</h2>
-									<p>
-										<a href="#">더보기</a>
-									</p>
-								</div>
-							</div>
+									<!-- tab1 끝 -->
+						<div class="tab-pane active" id="tab_default_2">
+							<p>
+								Howdy, I'm in Tab 2.
+							</p>
+							<p>
+								Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation.
+							</p>
+							<p>
+								<a class="btn btn-warning" href="http://j.mp/metronictheme" target="_blank">
+									Click for more features...
+								</a>
+							</p>
 						</div>
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-10 animatepop disappear" style="margin-top:10px;">
-							<div class="hovereffect">
-								<img class="img-responsive radius14" src="http://placehold.it/350x250" alt="">
-								<div class="overlay">
-									<h2>네일 디자인 이름</h2>
-									<p>
-										<a href="#">더보기</a>
-									</p>
-								</div>
-							</div>
+						<div class="tab-pane" id="tab_default_3">
+							<p>
+								Howdy, I'm in Tab 3.
+							</p>
+							<p>
+								Duis autem vel eum iriure dolor in hendrerit in vulputate. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat
+							</p>
+							<p>
+								<a class="btn btn-info" href="http://j.mp/metronictheme" target="_blank">
+									Learn more...
+								</a>
+							</p>
 						</div>
+					</div>
+				</div>
+			</div>
+
 						<style>
 							.hovereffect {
 								width: 100%;
@@ -610,8 +775,7 @@
 							}
 	</style>
 					</div>
-				<div class="row appear" style="display:none;"><a href="더보기"> 더 보 기 </a> </div>
-			</div>
+					</div>
 
 
 				<div id="second">
@@ -639,8 +803,8 @@
 						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-10 animatepop">
 							<h3>Nail Shop Name</h3>
 							<p>Nail Shop Tel 02.355.2311 </p>
-							<p>OpenTime : 11:00</p>
-							<p>CloseTime : 21:00</p>
+							<p>KakaoChat : nail0997</p>
+							<p>instagram : @beautyU21</p>
 						</div><!--가게 Info 끝-->
 							<div class="col-lg-7 col-md-7 col-sm-7 col-xs-10" >
 								<form class="" action="/insertQnA.html" method="post">
@@ -795,6 +959,31 @@
 				}
 			})
 		</script>
+
+		<script type="text/javascript">
+		  //작은케러셀
+		  // Instantiate the Bootstrap carousel
+		  $('.multi-item-carousel').carousel({
+		    interval: false
+		  });
+
+		  // for every slide in carousel, copy the next slide's item in the slide.
+		  // Do the same for the next, next item.
+		  $('.multi-item-carousel .item').each(function() {
+		    var next = $(this).next();
+		    if (!next.length) {
+		      next = $(this).siblings(':first');
+		    }
+		    next.children(':first-child').clone().appendTo($(this));
+
+		    if (next.next().length > 0) {
+		      next.next().children(':first-child').clone().appendTo($(this));
+		    } else {
+		      $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+		    }
+		  });
+		</script>
+
 	</div>
 	<footer id="contact" class="contact-us">
     <div class="container">
