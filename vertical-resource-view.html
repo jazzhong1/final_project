@@ -76,10 +76,10 @@
       font-size: 12pt;
     }
 
-    .fc-day-grid-container {
+    /*.fc-day-grid-container {
       pointer-events: none;
       cursor: default;
-    }
+    }*/
 
     .fc-more {
       pointer-events: visible;
@@ -87,11 +87,14 @@
 
     .fc-day-header.fc-sun span {
       color: red;
-
     }
 
     .fc-sun .fc-day-number {
       color: red;
+    }
+
+    .fc-day-number {
+      color: rgb(57, 113, 205);
     }
 
     .fc-license-message {
@@ -103,9 +106,9 @@
 
 
   <script>
-    $(function() { // document ready
-      //$('fc-month-view').click(function(e) { e.preventDefault(); });
+    $(function() {
 
+      //영업시작시간~~
       var min = '10:00:00';
       var max = '23:00:00';
       var reserDate;
@@ -114,7 +117,7 @@
       var checkDate;
 
 
-
+      //직원휴일
       var businessHours = [{
         start: '2018년07월30일',
         end: '2018년07월30일',
@@ -236,6 +239,14 @@
 
         editable: true, //드래그해서 움직이는것
         eventLimit: true, // allow "more" link when too many events
+        displayEventTime: true,
+
+        navLinks: true, // can click day/week names to navigate views
+
+        select: function() {
+          dayClick();
+        },
+
         lang: "ko",
 
         //shows time in 15 min slot
@@ -286,7 +297,7 @@
         /* hover시 예약내역보여주기*/
         eventRender: function(eventObj, $el) {
           $el.popover({
-            title:'예약내역',
+            title: '예약내역',
             content: eventObj.description,
             trigger: 'hover',
             placement: 'top',
@@ -299,18 +310,18 @@
 
 
 
-        /*  select: function(start, end, jsEvent, view, resource) {
-            console.log(
-              'select',
-              startTime = start.format(),
-              endTime = end.format(),
-              resource ? resource.id : '(no resource)',
-            $(".fc-highlight").css("background", " rgb(255, 227, 235)");
-          },
-            );*/
 
 
         dayClick: function(date, jsEvent, view, resource) {
+          var sysdate = new Date();
+          console.log(sysdate)
+          var year = sysdate.getFullYear();
+          var month = sysdate.getMonth() + 1;
+          var day = sysdate.getDate();
+
+          var nowDate = year + month + day;
+          console.log("nowDate" + nowDate);
+
           console.log(
             'dayClick',
             reserDate = date.format(),
@@ -324,21 +335,40 @@
           //console.log(resource.businessHours[0].end);
           console.log(date.format());
           $('#reserDate').html(date.format('YYYY년MM월DD일 HH시mm분'));
+          clickDate = date.format('YYYY년MM월DD일');
 
+          var checkDate = new Date(date);
 
-          if (resource.businessHours != null) {
-            if (resource.businessHours[0].start == date.format('YYYY년MM월DD일') || resource.businessHours[0].end == date.format('YYYY년MM월DD일')) {
-              alert("휴무입니다.");
-              //window.location.reload();
-              date=null;
+          year = checkDate.getFullYear();
+          month = checkDate.getMonth() + 1;
+          day = checkDate.getDate();
+          checkDate = year + month + day;
+          // 현재날짜이전이면 못가게 로직처리하기
+
+          if (resource != null) {
+            /*쉬는날 로직*/
+            if (resource.businessHours != null) {
+              if (resource.businessHours[0].start == clickDate || resource.businessHours[0].end == clickDate) {
+                alert("휴무입니다.");
+                //window.location.reload();
+                date = null;
+              } else {
+                //현재날짜면 예약불가로.
+                if (nowDate < checkDate) {
+                  $('#calendarModal').modal();
+                } else {
+                  alert("예약할수 없는 날짭입니다..");
+                }
+              }
             } else {
-              $('#calendarModal').modal();
+              //현재날짜면 예약불가로.
+              if (nowDate < checkDate) {
+                $('#calendarModal').modal();
+              }else {
+                alert("예약할수 없는 날짭입니다..");
+              }
             }
-          } else {
-            $('#calendarModal').modal();
-
           }
-
           //var title =$('select[name=choice1]').val()
           var title = $('#reservation-userName').val();
           var description = title + "-" + $('select[name=choice-employee]').val() + "디자이너 님 예약"
@@ -357,8 +387,8 @@
               }
               $('#calendar').fullCalendar('unselect');*/
 
-        /*  $("#result-reservaiton").one('click', function() {
-            /*reservation 객체 추가로직
+          $("#result-reservaiton").one('click', function() {
+            //reservation 객체 추가로직
             var aJson = new Object();
             aJson.id = '8';
             aJson.resourceId = 'a';
@@ -366,17 +396,16 @@
             aJson.end = '2018-07-28T15:15:00';
             aJson.color = 'rgb(49, 128, 208)';
             aJson.title = '홍성진님 예약'
-            reservaiton.push(aJson);*/
+            reservaiton.push(aJson);
 
 
             /*30분 추가*/
             console.log(reservaiton);
             var javaScriptRelease = Date.parse(date);
-            alert(javaScriptRelease + 1800000);
+            //alert(javaScriptRelease + 1800000);
             javaScriptRelease += 1800000;
 
-
-          /*화면에 등록시키기*/
+            /*화면에 등록시키기*/
             $('#calendar').fullCalendar('renderEvent', {
               title: title,
               start: date, //specify start date
@@ -384,9 +413,7 @@
               description: description,
               resourceId: resource.id,
               end: javaScriptRelease
-              //choice1: choice1,
-              //choice2: choice2,
-              //choice_employee: choice_employee
+
             });
 
           });
