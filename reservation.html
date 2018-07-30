@@ -489,6 +489,9 @@
 
 
 
+          $("#close-modal").on('click',function() {
+            date=null;
+          })
 
 
 
@@ -531,8 +534,9 @@
           });
 
 
-
+          //date=null;
         },
+
 
 
         eventClick: function(calEvent, jsEvent, view) {
@@ -611,8 +615,6 @@
 
     });
   </script>
-  <style>
-  </style>
 </head>
 
 <body>
@@ -624,7 +626,7 @@
 
         <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <button id="close-modal" type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
             <h4 class="modal-title" id="myLargeModalLabel-1">예약등록</h4>
           </div>
           <div class="modal-body">
