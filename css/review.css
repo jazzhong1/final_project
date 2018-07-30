@@ -42,11 +42,11 @@
       font-weight: bold;
     }
 
-    .icon {
+    /*.icon {
       color: blue;
       font-size: 15px;
       /*추후수정*/
-    }
+  
 
     /*리뷰*/
 
@@ -114,21 +114,22 @@
       opacity: 0;
     }
 
-    .rating label .icon {
+    .rating label .star-icon {
       float: left;
       color: transparent;
+      font-size: 15px;
     }
 
-    .rating label:last-child .icon {
+    .rating label:last-child .star-icon {
       color: #000;
     }
 
-    .rating:not(:hover) label input:checked~.icon,
-    .rating:hover label:hover input~.icon {
+    .rating:not(:hover) label input:checked~.star-icon,
+    .rating:hover label:hover input~.star-icon {
       color: rgb(254, 255, 108);
     }
 
-    .rating label input:focus:not(:checked)~.icon:last-child {
+    .rating label input:focus:not(:checked)~.star-icon:last-child {
       color: #000;
       text-shadow: 0 0 5px #09f;
     }
@@ -185,7 +186,7 @@
     .btn-center {
       text-align: center;
     }
-    
+
 
     li#li-comment tr:hover {background:lightgray;}
     li#li-comment tr:hover button.btn-reply{display:inline;}
